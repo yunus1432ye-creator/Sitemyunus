@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO Geliştirmeleri: Arama Motorlarında Zirve Hedefi -->
-    <title>Yunus Emre Nakış | Muş Matematik Özel Ders & Online Eğitim</title>
-    <meta name="description" content="Muş içi yüz yüze ve Türkiye geneli online birebir veya grup özel dersleri. LGS, YKS (TYT-AYT) matematik ders planları, ücretsiz seviye analizi ve ispat odaklı kalıcı öğrenme metodu.">
-    <meta name="keywords" content="muş matematik özel ders, online matematik özel ders, muş birebir matematik, grup matematik dersi muş, ygs tyt ayt matematik muş, yunus emre nakış matematik">
+    <!-- SEO Geliştirmeleri -->
+    <title>Yunus Emre Nakış | Muş Matematik Özel Ders & Türkiye Yüzyılı Maarif Modeli</title>
+    <meta name="description" content="Muş içi yüz yüze ve Türkiye geneli online LGS, YKS ve KPSS matematik özel dersleri. Türkiye Yüzyılı Maarif Modeli müfredatına tam uyumlu, ispat odaklı ezbersiz öğrenme metodu.">
+    <meta name="keywords" content="muş matematik özel ders, türkiye yüzyılı maarif modeli matematik, lgs matematik muş, yks matematik özel ders, kpss matematik muş, yunus emre nakış">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://yunus1432ye-creator.github.io/Sitemyunus/">
 
@@ -131,23 +131,23 @@
         .countdown-wrapper {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 15px;
             margin-bottom: 30px;
             flex-wrap: wrap;
         }
 
         .countdown-box {
             background: rgba(255, 255, 255, 0.15);
-            padding: 10px 20px;
+            padding: 10px 15px;
             border-radius: 8px;
             color: white;
             border: 1px solid rgba(255, 255, 255, 0.2);
-            min-width: 160px;
+            min-width: 140px;
         }
 
         .countdown-box span {
             display: block;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             font-weight: 700;
             color: #60a5fa;
         }
@@ -247,68 +247,134 @@
             margin-bottom: 15px;
         }
 
-        /* Paketler ve Detaylar Bölümü */
-        .pricing-section {
+        /* TALEP EDİLEN ALAN: LGS - YKS - KPSS ÖZEL EKRANLARI */
+        .exam-screens-section {
             background-color: #ffffff;
         }
 
-        .price-card {
+        .exam-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .exam-screen-card {
             background: var(--light-color);
-            border: 2px solid transparent;
+            border: 1px solid #e2e8f0;
             border-radius: 16px;
-            padding: 40px 30px;
-            text-align: center;
-            position: relative;
+            padding: 35px 25px;
             transition: all 0.3s ease;
         }
 
-        .price-card.popular {
+        .exam-screen-card:hover {
             border-color: var(--primary-color);
-            background: white;
-            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.08);
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.05);
         }
 
-        .price-badge {
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--primary-color);
-            color: white;
-            padding: 4px 15px;
-            border-radius: 50px;
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
-
-        .price-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
+        .exam-screen-card h3 {
+            font-size: 1.4rem;
             color: var(--dark-color);
-        }
-
-        .price-features {
-            list-style: none;
-            margin: 25px 0;
-            text-align: left;
-        }
-
-        .price-features li {
-            margin-bottom: 12px;
-            color: #475569;
+            margin-bottom: 15px;
             display: flex;
             align-items: center;
             gap: 10px;
-            font-size: 0.95rem;
         }
 
-        .price-features i {
+        .exam-screen-card h3 i {
+            color: var(--primary-color);
+        }
+
+        .exam-features {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .exam-features li {
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+            color: #475569;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .exam-features li i {
             color: var(--accent-color);
+            margin-top: 5px;
+        }
+
+        /* Comeback / Başarı Hikayeleri Alanı */
+        .comeback-section {
+            background-color: var(--light-color);
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .comeback-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .comeback-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .student-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .student-avatar {
+            width: 50px;
+            height: 50px;
+            background: #eff6ff;
+            color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .stat-badge-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .stat-badge {
+            font-size: 0.8rem;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .stat-badge.before {
+            background: #fee2e2;
+            color: #ef4444;
+        }
+
+        .stat-badge.after {
+            background: #d1fae5;
+            color: #10b981;
         }
 
         /* Proofs Section */
         .proofs-section {
-            background-color: var(--light-color);
+            background-color: #ffffff;
             border-top: 1px solid #e2e8f0;
             border-bottom: 1px solid #e2e8f0;
         }
@@ -319,7 +385,7 @@
         }
 
         .proof-box {
-            background-color: #ffffff;
+            background-color: var(--light-color);
             border-left: 5px solid var(--primary-color);
             padding: 30px;
             border-radius: 0 8px 8px 0;
@@ -348,7 +414,7 @@
         }
 
         .visual-container {
-            background: var(--light-color);
+            background: #ffffff;
             border: 1px dashed #cbd5e1;
             border-radius: 8px;
             padding: 20px;
@@ -373,43 +439,6 @@
             left: 0;
             color: var(--accent-color);
             font-weight: bold;
-        }
-
-        /* Success Wall / Başarı Duvarı */
-        .success-section {
-            background-color: #ffffff;
-        }
-
-        .success-table {
-            width: 100%;
-            max-width: 900px;
-            margin: 0 auto;
-            border-collapse: collapse;
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
-            border: 1px solid #e2e8f0;
-        }
-
-        .success-table th, .success-table td {
-            padding: 15px 20px;
-            text-align: left;
-        }
-
-        .success-table th {
-            background-color: var(--primary-color);
-            color: white;
-            font-weight: 600;
-        }
-
-        .success-table tr:nth-child(even) {
-            background-color: var(--light-color);
-        }
-
-        .trend-up {
-            color: var(--accent-color);
-            font-weight: 600;
         }
 
         /* Sıkça Sorulan Sorular (FAQ) */
@@ -485,7 +514,6 @@
             .btn { width: 100%; justify-content: center; }
             .header-buttons .btn { display: none; }
             .header-buttons .btn-call-nav { display: inline-flex !important; padding: 6px 12px; font-size: 0.8rem; }
-            .success-table th, .success-table td { padding: 10px; font-size: 0.85rem; }
         }
     </style>
 </head>
@@ -506,14 +534,14 @@
         </div>
     </header>
 
-    <!-- Hero Section (Gelişmiş Canlı Sınav Sayaçları Dahil) -->
+    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-container">
-            <div class="badge"><i class="fas fa-gift"></i> Sınırlı Kontenjan: İlk Ders Tamamen Ücretsiz!</div>
+            <div class="badge"><i class="fas fa-gift"></i> Türkiye Yüzyılı Maarif Modeline Tam Uyumlu</div>
             <h1>Yunus Emre Nakış ile<br><span style="color: #60a5fa;">Muş Özel Matematik Dersi</span> Deneyimi</h1>
             <p>Hedeflerinize ulaşmanız için tamamen size özel hazırlanan ders planları ile başarıyı şansa bırakmayın. İster online, ister Muş içinde yüz yüze eğitimle eksiklerinizi hızla kapatın.</p>
             
-            <!-- Canlı Geri Sayım Alanı -->
+            <!-- Canlı Geri Sayım Alanı (LGS, YKS ve KPSS Dahil) -->
             <div class="countdown-wrapper">
                 <div class="countdown-box">
                     <span id="lgs-counter">--</span>
@@ -522,6 +550,10 @@
                 <div class="countdown-box">
                     <span id="yks-counter">--</span>
                     YKS Geri Sayım
+                </div>
+                <div class="countdown-box">
+                    <span id="kpss-counter">--</span>
+                    KPSS Geri Sayım
                 </div>
             </div>
 
@@ -536,113 +568,89 @@
         </div>
     </section>
 
-    <!-- Özellikler / Avantajlar Bölümü -->
-    <section class="features">
-        <h2 class="section-title">Neden Bu Eğitimi Seçmelisiniz?</h2>
-        <div class="grid">
-            <div class="card">
-                <div class="card-icon"><i class="fas fa-laptop-house"></i></div>
-                <h3>Türkiye Geneli Online Ders</h3>
-                <p>Mekandan bağımsız, evinizin konforunda, interaktif dijital araçlar ve materyallerle desteklenmiş yüksek verimli online dersler.</p>
-            </div>
-            <div class="card">
-                <div class="card-icon"><i class="fas fa-map-marker-alt"></i></div>
-                <h3>Muş İçi Yüz Yüze Eğitim</h3>
-                <p>Muş merkezde, öğrencinin ihtiyacına uygun planlamayla, odaklanmayı en üst düzeye çıkaran yüz yüze birebir eğitim imkanı.</p>
-            </div>
-            <div class="card">
-                <div class="card-icon"><i class="fas fa-star"></i></div>
-                <h3>İlk Ders Ücretsiz!</h3>
-                <p>Eğitim kalitemizi ve iletişimimizi görmeniz için ilk tanışma dersimiz tamamen ücretsizdir. Kendinizi denemeden karar vermeyin.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- STRATEJİK EKLEME 1: Doğru Kaynak Seçimi Rehberi (Müfredat Uyumu) -->
-    <section class="pricing-section" style="border-top: 1px solid #e2e8f0;">
-        <h2 class="section-title">Yeni Maarif Modeli ve Doğru Kaynak Rehberliği</h2>
-        <p style="text-align: center; max-width:800px; margin: -30px auto 40px auto; color: #475569;">
-            Velilerimizin en büyük çıkmazı doğru yayını seçmektir. Eğitim süreçlerimizde, MEB'in yeni nesil beceri temelli mantık-muhakeme sorularına tam uyumlu, öğrencinin seviyesine en uygun nokta atışı kaynak analizleri ve haftalık deneme takipleri sunuyoruz.
+    <!-- NEW: LGS - YKS - KPSS SINAV EKRANLARI VE MAARİF MÜFREDATI -->
+    <section class="exam-screens-section">
+        <h2 class="section-title">Sınav Kulvarları ve Müfredat Yaklaşımı</h2>
+        <p style="text-align: center; max-width:800px; margin: -30px auto 55px auto; color: #475569;">
+            Eğitim programlarımızın tamamı, beceri temelli ve derinlemesine öğrenmeyi hedefleyen <b>Türkiye Yüzyılı Maarif Modeli</b> yeni müfredat doğrultusunda, öğrencilerin akıl yürütme becerilerini üst seviyeye çıkaracak şekilde tasarlanmıştır.
         </p>
-        <div class="grid">
-            <div class="card">
-                <div class="card-icon" style="color: var(--accent-color);"><i class="fas fa-book-open"></i></div>
-                <h3>Yeni Nesil Soru Analizi</h3>
-                <p>Klasik ezber kalıpları bir kenara bırakıp, yeni müfredatın getirdiği günlük yaşam problemlerine dayalı sorularda hız kazanma yöntemleri.</p>
+        
+        <div class="exam-grid">
+            <!-- LGS Ekranı -->
+            <div class="exam-screen-card">
+                <h3><i class="fas fa-child"></i> LGS Matematik Ekranı</h3>
+                <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 10px;">Mantık-Muhakeme & Beceri Temelli Sorular</p>
+                <ul class="exam-features">
+                    <li><i class="fas fa-check"></i> Yeni Maarif müfredatına uygun akıl yürütme problemleri.</li>
+                    <li><i class="fas fa-check"></i> Uzun paragraf tipi matematik sorularında hızlı analiz yöntemleri.</li>
+                    <li><i class="fas fa-check"></i> Geometrik algı geliştirme ve şekilli soru çözme taktikleri.</li>
+                </ul>
             </div>
-            <div class="card">
-                <div class="card-icon" style="color: var(--accent-color);"><i class="fas fa-tasks"></i></div>
-                <h3>Haftalık Deneme Takibi</h3>
-                <p>Düzenli aralıklarla uyguladığımız tarama sınavları ve denemelerle konunun ne kadar pekiştiğini şeffaf grafiklerle veliye raporluyoruz.</p>
+
+            <!-- YKS Ekranı -->
+            <div class="exam-screen-card">
+                <h3><i class="fas fa-user-graduate"></i> YKS Matematik Ekranı</h3>
+                <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 10px;">TYT & AYT Tam Konsept Yönetimi</p>
+                <ul class="exam-features">
+                    <li><i class="fas fa-check"></i> TYT'de hız kazandıran pratik problem çözme stratejileri.</li>
+                    <li><i class="fas fa-check"></i> AYT'de formül ezberletmeyen, ispat odaklı kalıcı trigonometri ve fonksiyon mantığı.</li>
+                    <li><i class="fas fa-check"></i> Düzenli deneme taramaları ve Türkiye geneli sıralama takipleri.</li>
+                </ul>
+            </div>
+
+            <!-- KPSS Ekranı -->
+            <div class="exam-screen-card">
+                <h3><i class="fas fa-user-tie"></i> KPSS Matematik Ekranı</h3>
+                <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 10px;">Genel Yetenek Pratik Soru Çözümleri</p>
+                <ul class="exam-features">
+                    <li><i class="fas fa-check"></i> Sıfırdan başlayanlar için temeli güçlendiren özel anlatımlar.</li>
+                    <li><i class="fas fa-check"></i> Zaman yönetimini kusursuzlaştıran test teknikleri.</li>
+                    <li><i class="fas fa-check"></i> Sayısal mantık ve grafik yorumlama sorularında nokta atışı taktikler.</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <!-- Eğitim Paketleri ve Katılım Modelleri -->
-    <section class="pricing-section" style="background-color: var(--light-color); border-top: 1px solid #e2e8f0;">
-        <h2 class="section-title">Eğitim Paketleri ve Katılım Modelleri</h2>
-        <div class="grid">
-            <div class="price-card popular">
-                <div class="price-badge">En Çok Tercih Edilen</div>
-                <h3>Birebir Özel Ders</h3>
-                <p style="color: #64748b; font-size: 0.9rem;">Kişiye Özel %100 Odaklanma</p>
-                <ul class="price-features">
-                    <li><i class="fas fa-check-circle"></i> Öğrencinin seviyesine özel müfredat</li>
-                    <li><i class="fas fa-check-circle"></i> Eksik olunan konulara göre esnek planlama</li>
-                    <li><i class="fas fa-check-circle"></i> Muş içi yüz yüze veya Türkiye geneli online</li>
-                    <li><i class="fas fa-check-circle"></i> Sınav haftalarına özel ekstra soru çözümleri</li>
-                </ul>
-                <a href="https://wa.me/905392361836?text=Merhaba,%20birebir%20özel%20ders%20modeliniz%20hakkında%20görüşmek%20istiyorum." class="btn btn-call" style="width: 100%; justify-content: center;" target="_blank">Bilgi Al & Başla</a>
+    <!-- Comeback / Başarı Hikayeleri Alanı -->
+    <section class="comeback-section">
+        <h2 class="section-title">Efsanevi Geri Dönüşler (Comeback Hikayeleri)</h2>
+        <p style="text-align: center; color: #64748b; margin-top: -30px; margin-bottom: 50px;">"Matematik yapamıyorum" ön yargısını ispat ve mantık odaklı sistemimizle kırıp zirveye ulaşan öğrencilerimiz:</p>
+        
+        <div class="comeback-grid">
+            <div class="comeback-card">
+                <div class="student-info">
+                    <div class="student-avatar">A.K.</div>
+                    <div>
+                        <h4 style="color: var(--dark-color);">A. K. (LGS Hazırlık)</h4>
+                        <p style="font-size: 0.85rem; color: #64748b;">Hedef: Muş Fen Lisesi</p>
+                    </div>
+                </div>
+                <div class="stat-badge-group">
+                    <div class="stat-badge before">Başlangıç: 4 Net</div>
+                    <div class="stat-badge after">Sınav Sonucu: 19 Net</div>
+                </div>
+                <p style="font-size: 0.9rem; color: #475569; font-style: italic;">
+                    "Formülleri ezberlemekten tamamen bıkmıştım. Yunus hoca ile formüllerin geometrik mantığını ve ispatlarını görerek çalışmaya başladık. Netlerim hızla katlandı."
+                </p>
             </div>
 
-            <div class="price-card">
-                <h3>Butik Grup Dersleri</h3>
-                <p style="color: #64748b; font-size: 0.9rem;">2 - 4 Kişilik Arkadaş Grupları</p>
-                <ul class="price-features">
-                    <li><i class="fas fa-check-circle"></i> Arkadaş gruplarına özel sinerji ve rekabet</li>
-                    <li><i class="fas fa-check-circle"></i> Birebir kalitesinde soru sorma imkanı</li>
-                    <li><i class="fas fa-check-circle"></i> Çok daha ekonomik fiyat avantajı</li>
-                    <li><i class="fas fa-check-circle"></i> Düzenli grup ödevlendirmesi ve takibi</li>
-                </ul>
-                <a href="https://wa.me/905392361836?text=Merhaba,%20arkadaş%20grubumuz%20için%20butik%20grup%20dersi%20hakkında%20bilgi%20almak%20istiyoruz." class="btn btn-call" style="width: 100%; justify-content: center; background-color: var(--dark-color);" target="_blank">Grup İçin Bilgi Al</a>
+            <div class="comeback-card">
+                <div class="student-info">
+                    <div class="student-avatar">B.Y.</div>
+                    <div>
+                        <h4 style="color: var(--dark-color);">B. Y. (YKS - AYT Hazırlık)</h4>
+                        <p style="font-size: 0.85rem; color: #64748b;">Hedef: Mühendislik Fakültesi</p>
+                    </div>
+                </div>
+                <div class="stat-badge-group">
+                    <div class="stat-badge before">Başlangıç: 8 AYT Net</div>
+                    <div class="stat-badge after">Sınav Sonucu: 36 AYT Net</div>
+                </div>
+                <p style="font-size: 0.9rem; color: #475569; font-style: italic;">
+                    "Trigonometri formülleri kabusum gibiydi. Sin2a açılımının sinüs alan formülünden nasıl çıktığını gördüğüm o ilk günü unutmuyorum. Ezber bittiğinde matematikte hata yapma şansınız kalmıyor."
+                </p>
             </div>
         </div>
-    </section>
-
-    <!-- STRATEJİK EKLEME 2: Öğrenci Başarı Tablosu / Hedef Duvarı -->
-    <section class="success-section">
-        <h2 class="section-title">Gelişim ve Başarı Duvarımız</h2>
-        <p style="text-align: center; color: #64748b; margin-top: -30px; margin-bottom: 40px;">Birlikte çalıştığımız öğrencilerin sınav ve net artış süreçlerinden küçük bir kesit:</p>
-        <table class="success-table">
-            <thead>
-                <tr>
-                    <th>Öğrenci (Anonim)</th>
-                    <th>Hedef / Sınav</th>
-                    <th>Başlangıç Net</th>
-                    <th>Mevcut / Son Durum</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>M. A. (LGS Öğrencisi)</td>
-                    <td>Muş Fen Lisesi</td>
-                    <td>6 Net</td>
-                    <td class="trend-up">18 Net <i class="fas fa-arrow-up"></i></td>
-                </tr>
-                <tr>
-                    <td>Z. K. (YKS - AYT)</td>
-                    <td>Mühendislik Fakültesi</td>
-                    <td>12 Net</td>
-                    <td class="trend-up">34 Net <i class="fas fa-arrow-up"></i></td>
-                </tr>
-                <tr>
-                    <td>E. Y. (Okul Takviye)</td>
-                    <td>Matematik Yazılısı</td>
-                    <td>45 Puan</td>
-                    <td class="trend-up">95 Puan <i class="fas fa-arrow-up"></i></td>
-                </tr>
-            </tbody>
-        </table>
     </section>
 
     <!-- İspatlarla Öğrenme Modülü -->
@@ -702,18 +710,6 @@
                     <li>Sol tarafta iki adet S toplandığı için 2S = n * (n + 1) eşitliğini buluruz. Her iki tarafı da 2'ye böldüğümüzde meşhur formül kendiliğinden ortaya çıkar.</li>
                 </ul>
             </div>
-
-            <!-- İspat 3: e Sayısı -->
-            <div class="proof-box">
-                <h3><i class="fas fa-chart-line"></i> 3. "e" Sayısının (Euler Sayısı) Sezgisel Mantığı</h3>
-                <div class="formula-highlight">e ≈ 2.71828... (Doğal Üstel Büyüme Sınırı)</div>
-                <ul class="proof-steps">
-                    <li>Düşünün ki cebinizde 1 TL var ve bir banka size yılda %100 faiz veriyor. 1 yılın sonunda paranız 1 + 1 = 2 TL olur.</li>
-                    <li>Eğer banka faizi 6 ayda bir (%50 + %50 bileşik faiz şeklinde) işletseydi, yıl sonunda paranız 2.25 TL olurdu.</li>
-                    <li>Peki faiz işletme sıklığını saniyelere bölüp sürekli (sonsuz) bir büyüme modeline çevirirsek paramız sonsuza mı gider? Hayır, doğadaki üstel büyüme limitine takılır.</li>
-                    <li>Dönem sayısını sonsuza doğru götürdüğümüzde ulaştığımız o maksimum üst limit noktası tam olarak 2.71828... yani e sayısıdır!</li>
-                </ul>
-            </div>
         </div>
     </section>
 
@@ -731,18 +727,13 @@
                 <h4><i class="fas fa-question-circle"></i> Dersler nerede ve nasıl işleniyor?</h4>
                 <p>Muş içi derslerimizi yüz yüze, öğrencinin evinde veya sessiz/verimli bir çalışma ortamında gerçekleştiriyoruz. Online derslerimizi ise profesyonel grafik tablet ve interaktif beyaz tahta altyapısı ile uzaktan canlı gerçekleştiriyoruz.</p>
             </div>
-
-            <div class="faq-item">
-                <h4><i class="fas fa-question-circle"></i> Ders süreleri ve takipleri nasıl yapılıyor?</h4>
-                <p>Ders seanslarımız öğrencinin odaklanma süresine uygun olarak planlanır. Her ders sonrasında işlenen konuların özet dökümanları, ödevlendirmeleri ve düzenli gelişim raporları velilerimizle paylaşılmaktadır.</p>
-            </div>
         </div>
     </section>
 
     <!-- Alt Çağrı Alanı (CTA) -->
     <section class="cta">
         <h2>Eksiklerinizi Birlikte Tamamlayalım</h2>
-        <p>Sınavlara hazırlık, okul derslerine takviye ve kalıcı başarı için ilk adımı bugün atın.</p>
+        <p style="margin-bottom: 35px;">Sınavlara hazırlık, okul derslerine takviye ve kalıcı başarı için ilk adımı bugün atın.</p>
         <div class="hero-buttons-wrapper">
             <a href="https://wa.me/905392361836?text=Merhaba,%20özel%20dersleriniz%20ve%20yüz%20yüze%20eğitim%20hakkında%20detaylı%20bilgi%20almak%20istiyorum." class="btn btn-whatsapp" target="_blank">
                 <i class="fab fa-whatsapp"></i> WhatsApp ile Detaylı Bilgi Al
@@ -758,35 +749,34 @@
         <p>&copy; 2026 Yunus Emre Nakış Matematik Akademisi - Tüm Hakları Saklıdır.</p>
     </footer>
 
-    <!-- STRATEJİK EKLEME 3: Canlı Geri Sayım Hesaplayıcı Motoru -->
+    <!-- Canlı Geri Sayım Hesaplayıcı Motoru -->
     <script>
         function updateCounters() {
             var now = new Date().getTime();
 
-            // Örnek Sınav Tarihleri (Haziran 2027) - Dinamik olarak gün sayar
+            // Sınav Tarihleri (Haziran 2027 Hedefleri)
             var lgsDate = new Date("Jun 6, 2027 09:30:00").getTime();
             var yksDate = new Date("Jun 19, 2027 10:15:00").getTime();
+            var kpssDate = new Date("Jul 25, 2027 10:15:00").getTime();
 
             var distanceLGS = lgsDate - now;
             var distanceYKS = yksDate - now;
+            var distanceKPSS = kpssDate - now;
 
             var daysLGS = Math.floor(distanceLGS / (1000 * 60 * 60 * 24));
             var daysYKS = Math.floor(distanceYKS / (1000 * 60 * 60 * 24));
+            var daysKPSS = Math.floor(distanceKPSS / (1000 * 60 * 60 * 24));
 
-            if (distanceLGS > 0) {
-                document.getElementById("lgs-counter").innerHTML = daysLGS + " Gün";
-            } else {
-                document.getElementById("lgs-counter").innerHTML = "Sınav Yapıldı";
-            }
+            if (distanceLGS > 0) document.getElementById("lgs-counter").innerHTML = daysLGS + " Gün";
+            else document.getElementById("lgs-counter").innerHTML = "Sınav Yapıldı";
 
-            if (distanceYKS > 0) {
-                document.getElementById("yks-counter").innerHTML = daysYKS + " Gün";
-            } else {
-                document.getElementById("yks-counter").innerHTML = "Sınav Yapıldı";
-            }
+            if (distanceYKS > 0) document.getElementById("yks-counter").innerHTML = daysYKS + " Gün";
+            else document.getElementById("yks-counter").innerHTML = "Sınav Yapıldı";
+
+            if (distanceKPSS > 0) document.getElementById("kpss-counter").innerHTML = daysKPSS + " Gün";
+            else document.getElementById("kpss-counter").innerHTML = "Sınav Yapıldı";
         }
         
-        // Sayfa açıldığında ve her saniye sayaçları tetikle
         updateCounters();
         setInterval(updateCounters, 60000);
     </script>
