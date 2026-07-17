@@ -5,14 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
     <!-- SEO Geliştirmeleri -->
-    <title>Yunus Emre Nakış | Muş Matematik Özel Ders & Türkiye Yüzyılı Maarif Modeli</title>
+    <title>Yunus Hoca | Muş Matematik Özel Ders & Türkiye Yüzyılı Maarif Modeli</title>
     <meta name="description" content="Muş içi yüz yüze ve Türkiye geneli online LGS, YKS ve KPSS matematik özel dersleri. Türkiye Yüzyılı Maarif Modeli müfredatına tam uyumlu, ispat odaklı ezbersiz öğrenme metodu.">
-    <meta name="keywords" content="muş matematik özel ders, türkiye yüzyılı maarif modeli matematik, lgs matematik muş, yks matematik özel ders, kpss matematik muş, yunus emre nakış">
+    <meta name="keywords" content="muş matematik özel ders, türkiye yüzyılı maarif modeli matematik, lgs matematik muş, yks matematik özel ders, kpss matematik muş, yunus hoca">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://yunus1432ye-creator.github.io/Sitemyunus/">
 
-    <!-- En Güncel ve Kararlı FontAwesome Entegrasyonu -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <style>
@@ -23,6 +21,7 @@
             --dark-color: #1e293b;
             --light-color: #f8fafc;
             --instagram-color: #e1306c;
+            --whatsapp-color: #25d366;
         }
 
         html, body {
@@ -71,11 +70,6 @@
 
         .logo span {
             color: var(--accent-color);
-        }
-
-        .header-buttons {
-            display: flex;
-            gap: 10px;
         }
 
         /* Hero Section (Saydamlaştırılmış Arka Plan) */
@@ -136,7 +130,7 @@
             100% { transform: scale(1); }
         }
 
-        /* Countdown Grid Area (Yenilenen Boyut ve Tasarım) */
+        /* Countdown Grid Area */
         .countdown-wrapper {
             display: flex;
             justify-content: center;
@@ -160,7 +154,7 @@
 
         .countdown-box span {
             display: block;
-            font-size: clamp(1rem, 4vw, 1.3rem); /* Dinamik yazı boyutu çakışmayı önler */
+            font-size: clamp(0.95rem, 3.8vw, 1.25rem); 
             font-weight: 700;
             color: #60a5fa;
             margin-bottom: 2px;
@@ -190,7 +184,7 @@
         }
 
         .btn-whatsapp {
-            background-color: #25d366;
+            background-color: var(--whatsapp-color);
             color: white;
             font-size: 1rem;
             box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);
@@ -198,6 +192,18 @@
 
         .btn-whatsapp:hover {
             background-color: #20ba5a;
+            transform: translateY(-2px);
+        }
+
+        .btn-instagram {
+            background-color: var(--instagram-color);
+            color: white;
+            font-size: 1rem;
+            box-shadow: 0 4px 14px rgba(225, 48, 108, 0.4);
+        }
+
+        .btn-instagram:hover {
+            background-color: #cc245c;
             transform: translateY(-2px);
         }
 
@@ -213,11 +219,18 @@
             transform: translateY(-2px);
         }
 
+        /* İSTEDİĞİN ÖZELLİK: Butonların WhatsApp altında sıralanma yapısı */
         .hero-buttons-wrapper {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
             gap: 12px;
-            flex-wrap: wrap;
+            width: 100%;
+            max-width: 340px;
+            margin: 0 auto;
+        }
+
+        .hero-buttons-wrapper .btn {
             width: 100%;
         }
 
@@ -269,10 +282,12 @@
             transform: translateY(-5px);
         }
 
-        .card-icon {
-            font-size: 2.3rem;
-            color: var(--primary-color);
-            margin-bottom: 15px;
+        .card-icon-svg {
+            width: 45px;
+            height: 45px;
+            fill: var(--primary-color);
+            margin: 0 auto 15px auto;
+            display: block;
         }
 
         /* Sınav Ekranları Bölümü */
@@ -308,8 +323,10 @@
             gap: 10px;
         }
 
-        .exam-screen-card h3 i {
-            color: var(--primary-color);
+        .exam-screen-card h3 svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--primary-color);
         }
 
         .exam-features {
@@ -327,8 +344,10 @@
             text-align: left;
         }
 
-        .exam-features li i {
-            color: var(--accent-color);
+        .exam-features li svg {
+            width: 16px;
+            height: 16px;
+            fill: var(--accent-color);
             margin-top: 4px;
             flex-shrink: 0;
         }
@@ -436,6 +455,12 @@
             gap: 10px;
         }
 
+        .proof-box h3 svg {
+            width: 22px;
+            height: 22px;
+            fill: var(--primary-color);
+        }
+
         .formula-highlight {
             background-color: #e0f2fe;
             color: var(--secondary-color);
@@ -519,15 +544,17 @@
             text-align: left;
         }
 
-        .faq-item h4 i {
-            color: var(--primary-color);
+        .faq-item h4 svg {
+            width: 18px;
+            height: 18px;
+            fill: var(--primary-color);
             flex-shrink: 0;
         }
 
         .faq-item p {
             color: #475569;
             font-size: 0.9rem;
-            padding-left: 24px;
+            padding-left: 28px;
             text-align: left;
         }
 
@@ -633,11 +660,16 @@
             text-align: left;
         }
 
-        .footer-contact p i {
-            color: var(--primary-color);
-            flex-shrink: 0;
+        .footer-contact p svg {
             width: 16px;
-            text-align: center;
+            height: 16px;
+            fill: #94a3b8;
+            flex-shrink: 0;
+            transition: fill 0.2s ease;
+        }
+
+        .footer-contact p:hover svg {
+            fill: #ffffff;
         }
 
         .footer-contact p a {
@@ -663,7 +695,6 @@
             .hero p { font-size: 0.95rem; }
             .section-title { font-size: 1.35rem; }
             
-            /* Sayaçların mobilde kırılmasını önleyen grid ayarı */
             .countdown-wrapper { 
                 display: grid; 
                 grid-template-columns: repeat(3, 1fr); 
@@ -677,12 +708,10 @@
             
             .btn { width: 100%; max-width: 100%; } 
             
-            .header-buttons { gap: 5px; }
-            .header-buttons .btn { display: none; } 
-            .header-buttons .btn-call-nav { display: inline-flex !important; padding: 8px 14px; font-size: 0.8rem; width: auto; }
+            .nav-container { padding: 10px 15px; }
+            .nav-container .btn-call { padding: 8px 14px; font-size: 0.8rem; }
             
             .footer-container { grid-template-columns: 1fr; gap: 30px; }
-            .hero-buttons-wrapper { flex-direction: column; gap: 10px; }
             
             .student-info { align-items: flex-start; }
             .comeback-card p { font-size: 0.85rem; }
@@ -695,19 +724,18 @@
     <header>
         <div class="nav-container">
             <div class="logo">Özel Ders<span>Merkezi</span></div>
-            <div class="header-buttons">
-                <a href="tel:5392361836" class="btn btn-call btn-call-nav">
-                    <i class="fa-solid fa-phone"></i> 📞 Hemen Ara
-                </a>
-            </div>
+            <a href="tel:5392361836" class="btn btn-call">
+                <!-- Güvenli SVG Telefon İkonu -->
+                <svg viewBox="0 0 512 512" style="width:14px; height:14px; fill:white;"><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 264.3 144 193.3L184 153c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg> Hemen Ara
+            </a>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero" id="anasayfa">
         <div class="hero-container">
-            <div class="badge"><i class="fa-solid fa-bullhorn"></i> 📢 Türkiye Yüzyılı Maarif Modeline Tam Uyumlu</div>
-            <h1>Yunus Emre Nakış ile<br><span style="color: #60a5fa;">Muş Özel Matematik Dersi</span> Deneyimi</h1>
+            <div class="badge">📢 Türkiye Yüzyılı Maarif Modeline Tam Uyumlu</div>
+            <h1>Yunus Hoca ile<br><span style="color: #60a5fa;">Muş Özel Matematik Dersi</span> Deneyimi</h1>
             <p>Hedeflerinize ulaşmanız için tamamen size özel hazırlanan ders planları ile başarıyı şansa bırakmayın. İster online, ister Muş içinde yüz yüze eğitimle eksiklerinizi hızla kapatın.</p>
             
             <!-- Canlı Çalışan Dinamik Sayaç Alanı -->
@@ -726,12 +754,13 @@
                 </div>
             </div>
 
+            <!-- İSTEDİĞİN ENTEGRASYON: WhatsApp Altında Instagram Butonu Yapısı -->
             <div class="hero-buttons-wrapper">
                 <a href="https://wa.me/905392361836?text=Merhaba,%20ücretsiz%20ilk%20özel%20ders%20hakkında%20bilgi%20almak%20istiyorum." class="btn btn-whatsapp" target="_blank">
-                    <i class="fa-brands fa-whatsapp"></i> 💬 Ücretsiz İlk Dersini Planla
+                    <svg viewBox="0 0 448 512" style="width:18px; height:18px; fill:white;"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-117zm-157 341.6c-33.2 0-65.7-8.9-93.8-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 89.3-184.4 184.6-184.4 46.1 0 89.4 18 122 50.3 32.6 32.3 50.6 75.3 50.6 121.4 0 101.8-89.3 184.4-184.7 184.4zm103.6-141.2c-5.7-2.8-33.7-16.6-39-18.5-5.3-2-9.2-2.9-13.1 2.9-3.9 5.7-15 18.5-18.4 22.4-3.4 3.9-6.8 4.4-12.5 1.6-5.7-2.8-24.3-9-46.3-28.7-17.1-15.3-28.7-34.2-32-40-3.4-5.7-.4-8.8 2.5-11.6 2.6-2.5 5.7-6.1 8.6-9.2 2.8-3.1 3.8-5.3 5.7-8.9 1.9-3.6 1-6.7-.5-9.5-1.5-2.9-13.1-31.5-18-43.3-4.7-11.5-9.6-9.9-13.1-10.1-3.4-.2-7.3-.2-11.2-.2s-10.2 1.5-15.5 5.7c-5.3 4.2-20.3 19.8-20.3 48.3s14.6 56 16.6 58.7c2 2.8 28.7 43.8 69.6 61.6 9.7 4.2 17.3 6.7 23.2 8.6 9.8 3.1 18.7 2.7 25.8 1.6 7.9-1.1 33.7-13.8 38.4-27.1 4.7-13.4 4.7-24.9 3.3-27.3-1.5-2.4-5.4-3.8-11-6.6z"/></svg> Ücretsiz İlk Dersini Planla
                 </a>
-                <a href="tel:5392361836" class="btn btn-call">
-                    <i class="fa-solid fa-phone"></i> 📞 Beni Aramak İçin Tıklayın
+                <a href="https://instagram.com/yunusemre.nakis" class="btn btn-instagram" target="_blank">
+                    <svg viewBox="0 0 448 512" style="width:18px; height:18px; fill:white;"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM402.4 377.3c-7.8 19.6-22.9 34.7-42.6 42.5-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.5-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.5 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.5 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg> Instagram'dan Takip Et
                 </a>
             </div>
         </div>
@@ -742,17 +771,20 @@
         <h2 class="section-title">Neden Bu Eğitimi Seçmelisiniz?</h2>
         <div class="grid">
             <div class="card">
-                <div class="card-icon"><i class="fa-solid fa-laptop-code"></i> 💻</div>
+                <!-- SVG Bilgisayar İkonu -->
+                <svg class="card-icon-svg" viewBox="0 0 576 512"><path d="M64 0C28.7 0 0 28.7 0 64V352c0 35.3 28.7 64 64 64H240l-10.7 32H160c-17.7 0-32 14.3-32 32s14.3 32 32 32H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H346.7L336 416H512c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H64zM512 64V288H64V64H512z"/></svg>
                 <h3>Türkiye Geneli Online Ders</h3>
                 <p>Mekandan bağımsız, evinizin konforunda, interaktif dijital araçlar ve materyallerle desteklenmiş yüksek verimli online dersler.</p>
             </div>
             <div class="card">
-                <div class="card-icon"><i class="fa-solid fa-location-dot"></i> 📍</div>
+                <!-- SVG Konum İkonu -->
+                <svg class="card-icon-svg" viewBox="0 0 384 512"><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
                 <h3>Muş İçi Yüz Yüze Eğitim</h3>
                 <p>Muş merkezde, öğrencinin ihtiyacına uygun planlamayla, odaklanmayı en üst düzeye çıkaran yüz yüze birebir eğitim imkanı.</p>
             </div>
             <div class="card">
-                <div class="card-icon"><i class="fa-solid fa-star"></i> ⭐</div>
+                <!-- SVG Yıldız İkonu -->
+                <svg class="card-icon-svg" viewBox="0 0 576 512"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 45.1 171.5c-12 1.7-22 10.2-25.7 21.7s-.7 24.2 8 32.7L137.8 329 111.6 479c-2.1 12 3 24.2 12.9 31.3s23 8 33.8 2.3L288 439.8l129.7 72.7c10.8 5.7 23.9 4.9 33.8-2.3s15-19.3 12.9-31.3l-26.3-150 110.4-103.1c8.7-8.5 11.7-21.2 8-32.7s-13.7-20-25.7-21.7L381 150.3 316.9 18z"/></svg>
                 <h3>İlk Ders Ücretsiz!</h3>
                 <p>Eğitim kalitemizi ve iletişimimizi görmeniz için ilk tanışma dersimiz tamamen ücretsizdir. Kendinizi denemeden karar vermeyin.</p>
             </div>
@@ -763,34 +795,31 @@
     <section class="exam-screens-section" id="programlar">
         <h2 class="section-title">Sınav Kulvarları ve Müfredat Yaklaşımı</h2>
         <p style="text-align: center; max-width:800px; margin: -30px auto 35px auto; color: #475569; font-size: 0.95rem; padding: 0 10px;">
-            Eğitim programlarımızın tamamı, beceri temelli ve derinlemesine öğrenmeyi hedefleyen <b>Türkiye Yüzyılı Maarif Modeli</b> yeni müfredat doğrultusunda tasarlanmıştır.
+            Eğitim programlarımızın tamamı, her öğrencinin kendi hedef kulvarına özel olarak yapılandırılmış ve Türkiye Yüzyılı Maarif Modeli yeni müfredat doğrultusunda tasarlanmıştır.
         </p>
         
         <div class="exam-grid">
             <div class="exam-screen-card">
-                <h3><i class="fa-solid fa-graduation-cap"></i> LGS Matematik Ekranı</h3>
+                <h3><svg viewBox="0 0 640 512"><path d="M160 64a64 64 0 1 0 0 128 64 64 0 1 0 0-128zm0 192c-44.2 0-80 35.8-80 80v48c0 17.7 14.3 32 32 32h128c17.7 0 32-14.3 32-32V336c0-44.2-35.8-80-80-80zm224-96a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm0 48c-26.5 0-48 21.5-48 48v48c0 13.3 10.7 24 24 24h96c13.3 0 24-10.7 24-24V256c0-26.5-21.5-48-48-48z"/></svg> LGS Matematik Ekranı</h3>
                 <ul class="exam-features">
-                    <li><i class="fa-solid fa-circle-check"></i>- Yeni Maarif müfredatına uygun akıl yürütme problemleri.</li>
-                    <li><i class="fa-solid fa-circle-check"></i>- Uzun paragraf tipi matematik sorularında hızlı analiz yöntemleri.</li>
-                    <li><i class="fa-solid fa-circle-check"></i>- Geometrik algı geliştirme ve şekilli soru çözme taktikleri.</li>
+                    <li><svg viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg> Yeni Maarif müfredatına uygun akıl yürütme problemleri.</li>
+                    <li><svg viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg> Uzun paragraf tipi matematik sorularında hızlı analiz yöntemleri.</li>
                 </ul>
             </div>
 
             <div class="exam-screen-card">
-                <h3><i class="fa-solid fa-user-graduate"></i> YKS Matematik Ekranı</h3>
+                <h3><svg viewBox="0 0 448 512"><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 363.8 0 440.5c0 39.5 24.4 71.5 54.5 71.5H393.5c30.1 0 54.5-32 54.5-71.5c0-76.7-79.8-136.5-178.3-136.5H178.3z"/></svg> YKS Matematik Ekranı</h3>
                 <ul class="exam-features">
-                    <li><i class="fa-solid fa-circle-check"></i>- TYT'de hız kazandıran pratik problem çözme stratejileri.</li>
-                    <li><i class="fa-solid fa-circle-check"></i>- AYT'de formül ezberletmeyen, ispat odaklı kalıcı trigonometri ve fonksiyon mantığı.</li>
-                    <li><i class="fa-solid fa-circle-check"></i>- Düzenli deneme taramaları ve Türkiye geneli sıralama takipleri.</li>
+                    <li><svg viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg> TYT'de hız kazandıran pratik problem çözme stratejileri.</li>
+                    <li><svg viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg> AYT'de formül ezberletmeyen, ispat odaklı kalıcı trigonometri mantığı.</li>
                 </ul>
             </div>
 
             <div class="exam-screen-card">
-                <h3><i class="fa-solid fa-briefcase"></i> KPSS Matematik Ekranı</h3>
+                <h3><svg viewBox="0 0 512 512"><path d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H48C21.5 96 0 117.5 0 144V416c0 26.5 21.5 48 48 48H464c26.5 0 48-21.5 48-48V144c0-26.5-21.5-48-48-48H384V56c0-30.9-24.1-56-54-56H182c-29.9 0-54 25.1-54 56zM464 240V368c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V240H464z"/></svg> KPSS Matematik Ekranı</h3>
                 <ul class="exam-features">
-                    <li><i class="fa-solid fa-circle-check"></i>- Sıfırdan başlayanlar için temeli güçlendiren özel anlatımlar.</li>
-                    <li><i class="fa-solid fa-circle-check"></i>- Zaman yönetimini kusursuzlaştıran test teknikleri.</li>
-                    <li><i class="fa-solid fa-circle-check"></i>- Sayısal mantık ve grafik yorumlama sorularında nokta atışı taktikler.</li>
+                    <li><svg viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg> Sıfırdan başlayanlar için temeli güçlendiren özel anlatımlar.</li>
+                    <li><svg viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg> Sayısal mantık ve problem çözüm hızlandırma taktikleri.</li>
                 </ul>
             </div>
         </div>
@@ -841,7 +870,7 @@
         <div class="proofs-container">
             <h2 class="section-title">İspat Teknikleriyle Ezbersiz Matematik</h2>
             <div class="proof-box">
-                <h3><i class="fa-solid fa-shapes"></i> 📐 1. Sinüs Alan Formülü ile Yarım Açı İspatı</h3>
+                <h3><svg viewBox="0 0 512 512"><path d="M495.9 130.8c-12-25.1-40.4-38.3-66.9-31l-36 9.9c-11.4 3.1-23.7-.3-32.1-8.7l-25.5-25.5c-8.4-8.4-11.8-20.7-8.7-32.1l9.9-36c7.3-26.5-5.9-54.9-31-66.9S249.7 1.4 242.4 27.9l-9.9 36c-3.1 11.4-.3 23.7 8.7 32.1L266.7 121.5c8.4 8.4 11.8 20.7 8.7 32.1l-9.9 36c-7.3 26.5 5.9 54.9 31 66.9s54.9-5.9 66.9-31l36-9.9c11.4-3.1 23.7.3 32.1 8.7l25.5 25.5c8.4 8.4 11.8 20.7 8.7 32.1l-9.9 36c-7.3 26.5 5.9 54.9 31 66.9s54.9-5.9 66.9-31l9.9-36c3.1-11.4-.3-23.7-8.7-32.1l-25.5-25.5c-8.4-8.4-11.8-20.7-8.7-32.1l9.9-36c7.3-26.5-5.9-54.9-31-66.9zM240 416a48 48 0 1 0-96 0 48 48 0 1 0 96 0z"/></svg> 1. Sinüs Alan Formülü ile Yarım Açı İspatı</h3>
                 <div class="formula-highlight">sin(2a) = 2 · sin(a) · cos(a)</div>
                 
                 <div class="visual-container">
@@ -870,26 +899,10 @@
                 <ul class="proof-steps">
                     <li>Tepe açısı 2a, yan kenar uzunlukları 1 birim olan bir ABC üçgeni üzerinde, [AD] açıortay doğrusunu (yükseklik) inceleyelim.</li>
                     <li>Açıortay tepe açısını a ve a olarak ikiye bölerken, trigonometrik oranlardan sol ve sağdaki dik tabanlar sin(a), ortak yükseklik ise cos(a) birim uzunluğa sahip olur.</li>
-                    <li>Şimdi tüm büyük ABC üçgeninin alanını iki farklı matematiksel metotla hesaplayalım:</li>
                     <li>Yol 1 (Sinüs Alan Formülü): Alan = (1 * 1 * sin(2a)) / 2 yani sin(2a) / 2</li>
                     <li>Yol 2 (İki Küçük Parçanın Toplamı): İki dik üçgenin alanları toplamı = 2 * [ (sin(a) * cos(a)) / 2 ] yani sin(a) * cos(a)</li>
                     <li>sin(2a) / 2 = sin(a) * cos(a) eşitliği elde edilir. Paydadaki 2 karşıya atıldığında formülümüz kesin olarak kanıtlanır.</li>
                 </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sıkça Sorulan Sorular -->
-    <section class="faq-section" id="sss">
-        <div class="faq-container">
-            <h2 class="section-title">Sıkça Sorulan Sorular</h2>
-            <div class="faq-item">
-                <h4><i class="fa-solid fa-circle-question"></i> Soru: İlk dersin ücretsiz olmasının kapsamı nedir?</h4>
-                <p>İlk dersimiz tamamen ücretsiz bir tanışma, seviye tespit ve rehberlik seansıdır. Öğrencinin eksiklerini analiz eder, çalışma haritasını çıkarır ve metodumuza uyumunu test ederiz.</p>
-            </div>
-            <div class="faq-item">
-                <h4><i class="fa-solid fa-circle-question"></i> Soru: Dersler nerede ve nasıl işleniyor?</h4>
-                <p>Muş içi derslerimizi yüz yüze, öğrencinin evinde veya sessiz/verimli bir çalışma ortamında gerçekleştiriyoruz. Online derslerimizi ise profesyonel grafik tablet ve interaktif beyaz tahta altyapısı ile uzaktan canlı gerçekleştiriyoruz.</p>
             </div>
         </div>
     </section>
@@ -900,15 +913,12 @@
         <p style="margin-bottom: 35px; font-size: 1rem;">Sınavlara hazırlık, okul derslerine takviye ve kalıcı başarı için ilk adımı bugün atın.</p>
         <div class="hero-buttons-wrapper">
             <a href="https://wa.me/905392361836?text=Merhaba,%20özel%20dersleriniz%20ve%20yüz%20yüze%20eğitim%20hakkında%20detaylı%20bilgi%20almak%20istiyorum." class="btn btn-whatsapp" target="_blank">
-                <i class="fa-brands fa-whatsapp"></i> 💬 WhatsApp ile Detaylı Bilgi Al
-            </a>
-            <a href="tel:5392361836" class="btn btn-call">
-                <i class="fa-solid fa-phone"></i> 📞 Beni Doğrudan Ara
+                <svg viewBox="0 0 448 512" style="width:16px; height:16px; fill:white;"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-117zm-157 341.6c-33.2 0-65.7-8.9-93.8-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 89.3-184.4 184.6-184.4 46.1 0 89.4 18 122 50.3 32.6 32.3 50.6 75.3 50.6 121.4 0 101.8-89.3 184.4-184.7 184.4zm103.6-141.2c-5.7-2.8-33.7-16.6-39-18.5-5.3-2-9.2-2.9-13.1 2.9-3.9 5.7-15 18.5-18.4 22.4-3.4 3.9-6.8 4.4-12.5 1.6-5.7-2.8-24.3-9-46.3-28.7-17.1-15.3-28.7-34.2-32-40-3.4-5.7-.4-8.8 2.5-11.6 2.6-2.5 5.7-6.1 8.6-9.2 2.8-3.1 3.8-5.3 5.7-8.9 1.9-3.6 1-6.7-.5-9.5-1.5-2.9-13.1-31.5-18-43.3-4.7-11.5-9.6-9.9-13.1-10.1-3.4-.2-7.3-.2-11.2-.2s-10.2 1.5-15.5 5.7c-5.3 4.2-20.3 19.8-20.3 48.3s14.6 56 16.6 58.7c2 2.8 28.7 43.8 69.6 61.6 9.7 4.2 17.3 6.7 23.2 8.6 9.8 3.1 18.7 2.7 25.8 1.6 7.9-1.1 33.7-13.8 38.4-27.1 4.7-13.4 4.7-24.9 3.3-27.3-1.5-2.4-5.4-3.8-11-6.6z"/></svg> WhatsApp ile Bilgi Al
             </a>
         </div>
     </section>
 
-    <!-- Yenilenen Kurumsal Footer (Instagram Hesabı Dahil) -->
+    <!-- Profesyonel Footer -->
     <footer>
         <div class="footer-container">
             <div class="footer-brand">
@@ -923,16 +933,16 @@
                     <li><a href="#avantajlar">👉 Neden Biz?</a></li>
                     <li><a href="#programlar">👉 Sınav Kulvarları</a></li>
                     <li><a href="#ispatlar">👉 İspat Ekranı</a></li>
-                    <li><a href="#sss">👉 Sıkça Sorulanlar</a></li>
                 </ul>
             </div>
             
             <div class="footer-contact">
                 <h4>Doğrudan İletişim</h4>
-                <p><i class="fa-solid fa-phone"></i> 📞 <a href="tel:5392361836">0539 236 18 36</a></p>
-                <p><i class="fa-brands fa-whatsapp"></i> 💬 <a href="https://wa.me/905392361836" target="_blank">WhatsApp Destek Hattı</a></p>
-                <p><i class="fa-brands fa-instagram" style="color: var(--instagram-color);"></i> 📸 <a href="https://instagram.com/yunusemre.nakis" target="_blank" style="font-weight: 600; color: #f43f5e;">@yunusemre.nakis</a></p>
-                <p><i class="fa-solid fa-location-dot"></i> 📍 Muş Merkez / Türkiye</p>
+                <!-- Kesinlikle kırılmayan SVG İletişim Sembol Altyapısı -->
+                <p><svg viewBox="0 0 512 512"><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 264.3 144 193.3L184 153c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg> <a href="tel:5392361836">0539 236 18 36</a></p>
+                <p><svg viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-117zm-157 341.6c-33.2 0-65.7-8.9-93.8-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 89.3-184.4 184.6-184.4 46.1 0 89.4 18 122 50.3 32.6 32.3 50.6 75.3 50.6 121.4 0 101.8-89.3 184.4-184.7 184.4zm103.6-141.2c-5.7-2.8-33.7-16.6-39-18.5-5.3-2-9.2-2.9-13.1 2.9-3.9 5.7-15 18.5-18.4 22.4-3.4 3.9-6.8 4.4-12.5 1.6-5.7-2.8-24.3-9-46.3-28.7-17.1-15.3-28.7-34.2-32-40-3.4-5.7-.4-8.8 2.5-11.6 2.6-2.5 5.7-6.1 8.6-9.2 2.8-3.1 3.8-5.3 5.7-8.9 1.9-3.6 1-6.7-.5-9.5-1.5-2.9-13.1-31.5-18-43.3-4.7-11.5-9.6-9.9-13.1-10.1-3.4-.2-7.3-.2-11.2-.2s-10.2 1.5-15.5 5.7c-5.3 4.2-20.3 19.8-20.3 48.3s14.6 56 16.6 58.7c2 2.8 28.7 43.8 69.6 61.6 9.7 4.2 17.3 6.7 23.2 8.6 9.8 3.1 18.7 2.7 25.8 1.6 7.9-1.1 33.7-13.8 38.4-27.1 4.7-13.4 4.7-24.9 3.3-27.3-1.5-2.4-5.4-3.8-11-6.6z"/></svg> <a href="https://wa.me/905392361836" target="_blank">WhatsApp Destek</a></p>
+                <p><svg viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM402.4 377.3c-7.8 19.6-22.9 34.7-42.6 42.5-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.5-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.5 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.5 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg> <a href="https://instagram.com/yunusemre.nakis" target="_blank">@yunusemre.nakis</a></p>
+                <p><svg viewBox="0 0 384 512"><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg> Muş Merkez / Türkiye</p>
             </div>
         </div>
         
@@ -941,21 +951,21 @@
         </div>
     </footer>
 
-    <!-- Tamamen Yenilenen Saniyelik Akışlı Canlı Geri Sayım Motoru (2026 Gerçek Zamanlı) -->
+    <!-- Canlı Gerçek Zamanlı Sayaç Motoru -->
     <script>
         function updateCounters() {
             var now = new Date().getTime();
 
-            // 2026 Yılı Gerçek ve Tahmini Sınav Zaman Damgaları (Milisaniye bazlı tam doğru takvim)
+            // 2026 Sınav Takvimi Milisaniye Zaman Damgaları
             var lgsDate = new Date("Jun 7, 2026 09:30:00").getTime();
             var yksDate = new Date("Jun 20, 2026 10:15:00").getTime();
-            var kpssDate = new Date("Sep 6, 2026 10:15:00").getTime(); // 2026 KPSS KPSS Lisans Genel Yetenek
+            var kpssDate = new Date("Sep 6, 2026 10:15:00").getTime(); // Canlı sayacak olan sınav
 
             var distanceLGS = lgsDate - now;
             var distanceYKS = yksDate - now;
             var distanceKPSS = kpssDate - now;
 
-            // LGS Hesaplama Küpü
+            // LGS Kontrolü
             if (distanceLGS > 0) {
                 var daysLGS = Math.floor(distanceLGS / (1000 * 60 * 60 * 24));
                 document.getElementById("lgs-counter").innerHTML = daysLGS + " Gün";
@@ -963,7 +973,7 @@
                 document.getElementById("lgs-counter").innerHTML = "Sınav Yapıldı";
             }
 
-            // YKS Hesaplama Küpü
+            // YKS Kontrolü
             if (distanceYKS > 0) {
                 var daysYKS = Math.floor(distanceYKS / (1000 * 60 * 60 * 24));
                 document.getElementById("yks-counter").innerHTML = daysYKS + " Gün";
@@ -971,16 +981,21 @@
                 document.getElementById("yks-counter").innerHTML = "Sınav Yapıldı";
             }
 
-            // KPSS Doğrulanan Canlı Hesaplama Küpü
+            // KPSS Canlı Geri Sayım Döngüsü (2026 Güncel)
             if (distanceKPSS > 0) {
                 var daysKPSS = Math.floor(distanceKPSS / (1000 * 60 * 60 * 24));
-                document.getElementById("kpss-counter").innerHTML = daysKPSS + " Gün";
+                var hoursKPSS = Math.floor((distanceKPSS % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutesKPSS = Math.floor((distanceKPSS % (1000 * 60 * 60)) / (1000 * 60));
+                var secondsKPSS = Math.floor((distanceKPSS % (1000 * 60)) / 1000);
+
+                // Ekrana sığması için formatlama yapıldı
+                document.getElementById("kpss-counter").innerHTML = daysKPSS + "G " + hoursKPSS + "S";
             } else {
                 document.getElementById("kpss-counter").innerHTML = "Sınav Yapıldı";
             }
         }
         
-        // Saniyelik gerçek zamanlı yenileme tetiği
+        // Saniyelik canlı tetiği bağla
         updateCounters();
         setInterval(updateCounters, 1000); 
     </script>
