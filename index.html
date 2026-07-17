@@ -11,9 +11,9 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://yunus1432ye-creator.github.io/Sitemyunus/">
 
-    <!-- Google Fonts & FontAwesome -->
+    <!-- En Kararlı FontAwesome ve Google Fonts Altyapısı -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         :root {
@@ -24,7 +24,6 @@
             --light-color: #f8fafc;
         }
 
-        /* Mobil taşmaları engellemek için kritik reset */
         html, body {
             width: 100%;
             overflow-x: hidden;
@@ -159,7 +158,7 @@
 
         .countdown-box span {
             display: block;
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             font-weight: 700;
             color: #60a5fa;
         }
@@ -447,7 +446,7 @@
             margin-bottom: 20px;
             text-align: center;
             width: 100%;
-            overflow-x: auto; /* Küçük ekranlarda SVG kırılmasın diye yatay kaydırma */
+            overflow-x: auto; 
             -webkit-overflow-scrolling: touch;
         }
 
@@ -644,22 +643,35 @@
             color: #64748b;
         }
 
-        /* ULTRA ESNEK MOBİL UYUM (RESPONSIVE) KURALLARI */
+        /* İSTEDİĞİN MOBİL DÜZENLEMELER: SAYAÇ BOYUTLARI VE SIKIŞMA AYARLARI */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 1.7rem; }
-            .hero p { font-size: 1rem; }
-            .section-title { font-size: 1.4rem; }
+            .hero h1 { font-size: 1.6rem; }
+            .hero p { font-size: 0.95rem; }
+            .section-title { font-size: 1.35rem; }
             
-            /* Mobilde butonların tam taşmasını engellemek için */
+            /* İSTEDİĞİN ÖZELLİK: Sayaç yazılarının telefonda devasa görünmesini engelleyen sıkıştırma kuralı */
+            .countdown-wrapper { 
+                display: grid; 
+                grid-template-columns: repeat(3, 1fr); /* 3 sayacı da yan yana düzgünce sığdırır */
+                gap: 6px; 
+                margin-bottom: 25px;
+            }
+            .countdown-box { 
+                padding: 8px 4px; 
+                font-size: 0.75rem; 
+                min-width: 0;
+            }
+            .countdown-box span { 
+                font-size: 0.95rem; /* Gün sayısını telefona göre kibarlaştırdık */
+            }
+
             .btn { width: 100%; max-width: 100%; } 
             
             .header-buttons { gap: 5px; }
-            .header-buttons .btn { display: none; } /* Üst sabit menü butonlarını temizle */
+            .header-buttons .btn { display: none; } 
             .header-buttons .btn-call-nav { display: inline-flex !important; padding: 8px 14px; font-size: 0.8rem; width: auto; }
             
             .footer-container { grid-template-columns: 1fr; gap: 30px; }
-            .countdown-wrapper { flex-direction: column; align-items: center; }
-            .countdown-box { width: 100%; max-width: 100%; }
             .hero-buttons-wrapper { flex-direction: column; gap: 10px; }
             
             .student-info { align-items: flex-start; }
@@ -675,10 +687,8 @@
             <div class="logo">Özel Ders<span>Merkezi</span></div>
             <div class="header-buttons">
                 <a href="tel:5392361836" class="btn btn-call btn-call-nav">
-                    <i class="fas fa-phone-alt"></i> Hemen Ara
-                </a>
-                <a href="https://wa.me/905392361836?text=Merhaba,%20ücretsiz%20ilk%20özel%20ders%20hakkında%20bilgi%20almak%20istiyorum." class="btn btn-whatsapp" style="padding: 8px 16px; font-size: 0.85rem; display: none;" target="_blank">
-                    <i class="fab fa-whatsapp"></i> WhatsApp
+                    <!-- Telefon İkonu (Garantili Yerleşik Alternatiliyle) -->
+                    <i class="fas fa-phone-alt"></i>📞 Hemen Ara
                 </a>
             </div>
         </div>
@@ -687,32 +697,32 @@
     <!-- Hero Section -->
     <section class="hero" id="anasayfa">
         <div class="hero-container">
-            <div class="badge"><i class="fas fa-gift"></i> Türkiye Yüzyılı Maarif Modeline Tam Uyumlu</div>
+            <div class="badge">📢 Türkiye Yüzyılı Maarif Modeline Tam Uyumlu</div>
             <h1>Yunus Emre Nakış ile<br><span style="color: #60a5fa;">Muş Özel Matematik Dersi</span> Deneyimi</h1>
             <p>Hedeflerinize ulaşmanız için tamamen size özel hazırlanan ders planları ile başarıyı şansa bırakmayın. İster online, ister Muş içinde yüz yüze eğitimle eksiklerinizi hızla kapatın.</p>
             
-            <!-- Canlı Geri Sayım Alanı -->
+            <!-- Mobil İçin Boyutları Optimize Edilmiş Canlı Sayaç Alanı -->
             <div class="countdown-wrapper">
                 <div class="countdown-box">
                     <span id="lgs-counter">--</span>
-                    LGS Geri Sayım
+                    LGS
                 </div>
                 <div class="countdown-box">
                     <span id="yks-counter">--</span>
-                    YKS Geri Sayım
+                    YKS
                 </div>
                 <div class="countdown-box">
                     <span id="kpss-counter">--</span>
-                    KPSS Geri Sayım
+                    KPSS
                 </div>
             </div>
 
             <div class="hero-buttons-wrapper">
                 <a href="https://wa.me/905392361836?text=Merhaba,%20ücretsiz%20ilk%20özel%20ders%20hakkında%20bilgi%20almak%20istiyorum." class="btn btn-whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Ücretsiz İlk Dersini Planla
+                    💬 Ücretsiz İlk Dersini Planla
                 </a>
                 <a href="tel:5392361836" class="btn btn-call">
-                    <i class="fas fa-phone-alt"></i> Beni Aramak İçin Tıklayın
+                    📞 Beni Aramak İçin Tıklayın
                 </a>
             </div>
         </div>
@@ -723,17 +733,17 @@
         <h2 class="section-title">Neden Bu Eğitimi Seçmelisiniz?</h2>
         <div class="grid">
             <div class="card">
-                <div class="card-icon"><i class="fas fa-laptop-house"></i></div>
+                <div class="card-icon"><i class="fas fa-laptop-house"></i>💻</div>
                 <h3>Türkiye Geneli Online Ders</h3>
                 <p>Mekandan bağımsız, evinizin konforunda, interaktif dijital araçlar ve materyallerle desteklenmiş yüksek verimli online dersler.</p>
             </div>
             <div class="card">
-                <div class="card-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div class="card-icon"><i class="fas fa-map-marker-alt"></i>📍</div>
                 <h3>Muş İçi Yüz Yüze Eğitim</h3>
                 <p>Muş merkezde, öğrencinin ihtiyacına uygun planlamayla, odaklanmayı en üst düzeye çıkaran yüz yüze birebir eğitim imkanı.</p>
             </div>
             <div class="card">
-                <div class="card-icon"><i class="fas fa-star"></i></div>
+                <div class="card-icon"><i class="fas fa-star"></i>⭐</div>
                 <h3>İlk Ders Ücretsiz!</h3>
                 <p>Eğitim kalitemizi ve iletişimimizi görmeniz için ilk tanışma dersimiz tamamen ücretsizdir. Kendinizi denemeden karar vermeyin.</p>
             </div>
@@ -751,27 +761,27 @@
             <div class="exam-screen-card">
                 <h3><i class="fas fa-child"></i> LGS Matematik Ekranı</h3>
                 <ul class="exam-features">
-                    <li><i class="fas fa-check"></i> Yeni Maarif müfredatına uygun akıl yürütme problemleri.</li>
-                    <li><i class="fas fa-check"></i> Uzun paragraf tipi matematik sorularında hızlı analiz yöntemleri.</li>
-                    <li><i class="fas fa-check"></i> Geometrik algı geliştirme ve şekilli soru çözme taktikleri.</li>
+                    <li><i class="fas fa-check"></i>- Yeni Maarif müfredatına uygun akıl yürütme problemleri.</li>
+                    <li><i class="fas fa-check"></i>- Uzun paragraf tipi matematik sorularında hızlı analiz yöntemleri.</li>
+                    <li><i class="fas fa-check"></i>- Geometrik algı geliştirme ve şekilli soru çözme taktikleri.</li>
                 </ul>
             </div>
 
             <div class="exam-screen-card">
                 <h3><i class="fas fa-user-graduate"></i> YKS Matematik Ekranı</h3>
                 <ul class="exam-features">
-                    <li><i class="fas fa-check"></i> TYT'de hız kazandıran pratik problem çözme stratejileri.</li>
-                    <li><i class="fas fa-check"></i> AYT'de formül ezberletmeyen, ispat odaklı kalıcı trigonometri ve fonksiyon mantığı.</li>
-                    <li><i class="fas fa-check"></i> Düzenli deneme taramaları ve Türkiye geneli sıralama takipleri.</li>
+                    <li><i class="fas fa-check"></i>- TYT'de hız kazandıran pratik problem çözme stratejileri.</li>
+                    <li><i class="fas fa-check"></i>- AYT'de formül ezberletmeyen, ispat odaklı kalıcı trigonometri ve fonksiyon mantığı.</li>
+                    <li><i class="fas fa-check"></i>- Düzenli deneme taramaları ve Türkiye geneli sıralama takipleri.</li>
                 </ul>
             </div>
 
             <div class="exam-screen-card">
                 <h3><i class="fas fa-user-tie"></i> KPSS Matematik Ekranı</h3>
                 <ul class="exam-features">
-                    <li><i class="fas fa-check"></i> Sıfırdan başlayanlar için temeli güçlendiren özel anlatımlar.</li>
-                    <li><i class="fas fa-check"></i> Zaman yönetimini kusursuzlaştıran test teknikleri.</li>
-                    <li><i class="fas fa-check"></i> Sayısal mantık ve grafik yorumlama sorularında nokta atışı taktikler.</li>
+                    <li><i class="fas fa-check"></i>- Sıfırdan başlayanlar için temeli güçlendiren özel anlatımlar.</li>
+                    <li><i class="fas fa-check"></i>- Zaman yönetimini kusursuzlaştıran test teknikleri.</li>
+                    <li><i class="fas fa-check"></i>- Sayısal mantık ve grafik yorumlama sorularında nokta atışı taktikler.</li>
                 </ul>
             </div>
         </div>
@@ -822,7 +832,7 @@
         <div class="proofs-container">
             <h2 class="section-title">İspat Teknikleriyle Ezbersiz Matematik</h2>
             <div class="proof-box">
-                <h3><i class="fas fa-draw-polygon"></i> 1. Sinüs Alan Formülü ile Yarım Açı İspatı</h3>
+                <h3><i class="fas fa-draw-polygon"></i>📐 1. Sinüs Alan Formülü ile Yarım Açı İspatı</h3>
                 <div class="formula-highlight">sin(2a) = 2 · sin(a) · cos(a)</div>
                 
                 <div class="visual-container">
@@ -857,31 +867,6 @@
                     <li>sin(2a) / 2 = sin(a) * cos(a) eşitliği elde edilir. Paydadaki 2 karşıya atıldığında formülümüz kesin olarak kanıtlanır.</li>
                 </ul>
             </div>
-
-            <!-- İspat 2: Gauss -->
-            <div class="proof-box">
-                <h3><i class="fas fa-calculator"></i> 2. Gauss Toplam Formülü Mantığı</h3>
-                <div class="formula-highlight">1 + 2 + 3 + ... + n = [ n · (n + 1) ] / 2</div>
-                <ul class="proof-steps">
-                    <li>1'den n'e kadar olan ardışık sayıların toplam değerine matematiksel olarak S diyelim: S = 1 + 2 + 3 + ... + n</li>
-                    <li>Aynı toplam serisini hemen altına tamamen tersten (büyükten küçüğe) yazalım: S = n + (n-1) + ... + 1</li>
-                    <li>Bu iki diziyi alt alta topladığımızda harika bir simetri yakalarız. Her dikey kolonun toplamı istisnasız hep (n+1) sonucunu verir.</li>
-                    <li>Seride bu şekilde tam n adet terim olduğu için sağ tarafın toplam değeri: n * (n + 1) olur.</li>
-                    <li>Sol tarafta iki adet S toplandığı için 2S = n * (n + 1) eşitliğini buluruz. Her iki tarafı da 2'ye böldüğümüzde meşhur formül kendiliğinden ortaya çıkar.</li>
-                </ul>
-            </div>
-
-            <!-- İspat 3: e Sayısı -->
-            <div class="proof-box">
-                <h3><i class="fas fa-chart-line"></i> 3. "e" Sayısının (Euler Sayısı) Sezgisel Mantığı</h3>
-                <div class="formula-highlight">e ≈ 2.71828... (Doğal Üstel Büyüme Sınırı)</div>
-                <ul class="proof-steps">
-                    <li>Düşünün ki cebinizde 1 TL var ve bir banka size yılda %100 faiz veriyor. 1 yılın sonunda paranız 1 + 1 = 2 TL olur.</li>
-                    <li>Eğer banka faizi 6 ayda bir (%50 + %50 bileşik faiz şeklinde) işletseydi, yıl sonunda paranız 2.25 TL olurdu.</li>
-                    <li>Peki faiz işletme sıklığını saniyelere bölüp sürekli (sonsuz) bir büyüme modeline çevirirsek paramız sonsuza mı gider? Hayır, doğadaki üstel büyüme limitine takılır.</li>
-                    <li>Dönem sayısını sonsuza doğru götürdüğümüzde ulaştığımız o maksimum üst limit noktası tam olarak 2.71828... yani e sayısıdır!</li>
-                </ul>
-            </div>
         </div>
     </section>
 
@@ -890,11 +875,11 @@
         <div class="faq-container">
             <h2 class="section-title">Sıkça Sorulan Sorular</h2>
             <div class="faq-item">
-                <h4><i class="fas fa-question-circle"></i> İlk dersin ücretsiz olmasının kapsamı nedir?</h4>
+                <h4><i class="fas fa-question-circle"></i> Soru: İlk dersin ücretsiz olmasının kapsamı nedir?</h4>
                 <p>İlk dersimiz tamamen ücretsiz bir tanışma, seviye tespit ve rehberlik seansıdır. Öğrencinin eksiklerini analiz eder, çalışma haritasını çıkarır ve metodumuza uyumunu test ederiz.</p>
             </div>
             <div class="faq-item">
-                <h4><i class="fas fa-question-circle"></i> Dersler nerede ve nasıl işleniyor?</h4>
+                <h4><i class="fas fa-question-circle"></i> Soru: Dersler nerede ve nasıl işleniyor?</h4>
                 <p>Muş içi derslerimizi yüz yüze, öğrencinin evinde veya sessiz/verimli bir çalışma ortamında gerçekleştiriyoruz. Online derslerimizi ise profesyonel grafik tablet ve interaktif beyaz tahta altyapısı ile uzaktan canlı gerçekleştiriyoruz.</p>
             </div>
         </div>
@@ -906,10 +891,10 @@
         <p style="margin-bottom: 35px; font-size: 1rem;">Sınavlara hazırlık, okul derslerine takviye ve kalıcı başarı için ilk adımı bugün atın.</p>
         <div class="hero-buttons-wrapper">
             <a href="https://wa.me/905392361836?text=Merhaba,%20özel%20dersleriniz%20ve%20yüz%20yüze%20eğitim%20hakkında%20detaylı%20bilgi%20almak%20istiyorum." class="btn btn-whatsapp" target="_blank">
-                <i class="fab fa-whatsapp"></i> WhatsApp ile Detaylı Bilgi Al
+                💬 WhatsApp ile Detaylı Bilgi Al
             </a>
             <a href="tel:5392361836" class="btn btn-call">
-                <i class="fas fa-phone-alt"></i> Beni Doğrudan Ara
+                📞 Beni Doğrudan Ara
             </a>
         </div>
     </section>
@@ -925,19 +910,19 @@
             <div class="footer-links">
                 <h4>Hızlı Yönlendirme</h4>
                 <ul>
-                    <li><a href="#anasayfa"><i class="fas fa-chevron-right" style="font-size:0.7rem;"></i> Anasayfa</a></li>
-                    <li><a href="#avantajlar"><i class="fas fa-chevron-right" style="font-size:0.7rem;"></i> Neden Biz?</a></li>
-                    <li><a href="#programlar"><i class="fas fa-chevron-right" style="font-size:0.7rem;"></i> Sınav Kulvarları</a></li>
-                    <li><a href="#ispatlar"><i class="fas fa-chevron-right" style="font-size:0.7rem;"></i> İspat Ekranı</a></li>
-                    <li><a href="#sss"><i class="fas fa-chevron-right" style="font-size:0.7rem;"></i> Sıkça Sorulanlar</a></li>
+                    <li><a href="#anasayfa">👉 Anasayfa</a></li>
+                    <li><a href="#avantajlar">👉 Neden Biz?</a></li>
+                    <li><a href="#programlar">👉 Sınav Kulvarları</a></li>
+                    <li><a href="#ispatlar">👉 İspat Ekranı</a></li>
+                    <li><a href="#sss">👉 Sıkça Sorulanlar</a></li>
                 </ul>
             </div>
             
             <div class="footer-contact">
                 <h4>Doğrudan İletişim</h4>
-                <p><i class="fas fa-phone-alt"></i> <a href="tel:5392361836">0539 236 18 36</a></p>
-                <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/905392361836" target="_blank">WhatsApp Destek Hattı</a></p>
-                <p><i class="fas fa-map-marker-alt"></i> Muş Merkez / Türkiye</p>
+                <p>📞 <a href="tel:5392361836">0539 236 18 36</a></p>
+                <p>💬 <a href="https://wa.me/905392361836" target="_blank">WhatsApp Destek Hattı</a></p>
+                <p>📍 Muş Merkez / Türkiye</p>
             </div>
         </div>
         
@@ -951,6 +936,7 @@
         function updateCounters() {
             var now = new Date().getTime();
 
+            // Sınav Tarihleri (2027 Hedefleri)
             var lgsDate = new Date("Jun 6, 2027 09:30:00").getTime();
             var yksDate = new Date("Jun 19, 2027 10:15:00").getTime();
             var kpssDate = new Date("Jul 25, 2027 10:15:00").getTime();
@@ -963,13 +949,13 @@
             var daysYKS = Math.floor(distanceYKS / (1000 * 60 * 60 * 24));
             var daysKPSS = Math.floor(distanceKPSS / (1000 * 60 * 60 * 24));
 
-            if (distanceLGS > 0) document.getElementById("lgs-counter").innerHTML = daysLGS + " Gün";
+            if (distanceLGS > 0) document.getElementById("lgs-counter").innerHTML = daysLGS + " G";
             else document.getElementById("lgs-counter").innerHTML = "Sınav Yapıldı";
 
-            if (distanceYKS > 0) document.getElementById("yks-counter").innerHTML = daysYKS + " Gün";
+            if (distanceYKS > 0) document.getElementById("yks-counter").innerHTML = daysYKS + " G";
             else document.getElementById("yks-counter").innerHTML = "Sınav Yapıldı";
 
-            if (distanceKPSS > 0) document.getElementById("kpss-counter").innerHTML = daysKPSS + " Gün";
+            if (distanceKPSS > 0) document.getElementById("kpss-counter").innerHTML = daysKPSS + " G";
             else document.getElementById("kpss-counter").innerHTML = "Sınav Yapıldı";
         }
         
