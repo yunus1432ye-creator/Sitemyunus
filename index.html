@@ -289,9 +289,66 @@
             display: block;
         }
 
+        /* YENİ ALAN: ODAKLANMA TABANLI DERS SAATLERİ VE ÇALIŞMA MODELLERİ */
+        .focus-hours-section {
+            background-color: #ffffff;
+            max-width: 100%;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .focus-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .focus-card {
+            background: var(--light-color);
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 30px 20px;
+            text-align: left;
+        }
+
+        .focus-card h3 {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .focus-card h3 svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--primary-color);
+        }
+
+        .time-badge {
+            background-color: rgba(37, 99, 235, 0.1);
+            color: var(--primary-color);
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .focus-card p {
+            font-size: 0.9rem;
+            color: #475569;
+            margin-bottom: 15px;
+        }
+
         /* Sınav Ekranları Bölümü */
         .exam-screens-section {
-            background-color: #ffffff;
+            background-color: var(--light-color);
+            border-top: 1px solid #e2e8f0;
             max-width: 100%;
         }
 
@@ -305,7 +362,7 @@
         }
 
         .exam-screen-card {
-            background: var(--light-color);
+            background: #ffffff;
             border: 1px solid #e2e8f0;
             border-radius: 16px;
             padding: 25px 20px;
@@ -353,7 +410,7 @@
 
         /* Comeback / Başarı Hikayeleri Alanı */
         .comeback-section {
-            background-color: var(--light-color);
+            background-color: #ffffff;
             max-width: 100%;
             border-top: 1px solid #e2e8f0;
         }
@@ -366,7 +423,7 @@
         }
 
         .comeback-card {
-            background: #ffffff;
+            background: var(--light-color);
             border: 1px solid #e2e8f0;
             border-radius: 12px;
             padding: 25px;
@@ -423,7 +480,7 @@
 
         /* Proofs Section */
         .proofs-section {
-            background-color: #ffffff;
+            background-color: var(--light-color);
             max-width: 100%;
             border-top: 1px solid #e2e8f0;
             border-bottom: 1px solid #e2e8f0;
@@ -436,7 +493,7 @@
         }
 
         .proof-box {
-            background-color: var(--light-color);
+            background-color: #ffffff;
             border-left: 5px solid var(--primary-color);
             padding: 25px 20px;
             border-radius: 0 8px 8px 0;
@@ -707,11 +764,10 @@
             
             .btn { width: 100%; max-width: 100%; } 
             
-            /* DÜZELTİLEN ALAN: Mobil Cihazlar İçin Standartlara Uygun Buton Ölçüsü (UX/UI Standardı) */
             .nav-container { padding: 8px 15px; }
             .nav-container .btn-call { 
-                padding: 10px 18px; /* Tıklama alanını parmak yapısına göre genişlettik */
-                font-size: 0.9rem; /* Tam okunabilir standart metin boyutu */
+                padding: 10px 18px; 
+                font-size: 0.9rem; 
                 width: auto;
                 font-weight: 600;
                 box-shadow: 0 2px 8px rgba(37, 99, 235, 0.2);
@@ -735,7 +791,6 @@
     <header>
         <div class="nav-container">
             <div class="logo">Özel Ders<span>Merkezi</span></div>
-            <!-- DÜZELTİLEN ALAN: Mobilde ideal kurumsal standartlara getirilen arama/arama logosu butonu -->
             <a href="tel:5392361836" class="btn btn-call">
                 <svg viewBox="0 0 512 512"><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 264.3 144 193.3L184 153c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg> Hemen Ara
             </a>
@@ -745,7 +800,7 @@
     <!-- Hero Section -->
     <section class="hero" id="anasayfa">
         <div class="hero-container">
-            <div class="badge"><i class="fa-solid fa-bullhorn"></i> 📢 Türkiye Yüzyılı Maarif Modeline Tam Uyumlu</div>
+            <div class="badge">📢 Türkiye Yüzyılı Maarif Modeline Tam Uyumlu</div>
             <h1>Yunus Hoca ile<br><span style="color: #60a5fa;">Muş Özel Matematik Dersi</span> Deneyimi</h1>
             <p>Hedeflerinize ulaşmanız için tamamen size özel hazırlanan ders planları ile başarıyı şansa bırakmayın. İster online, ister Muş içinde yüz yüze eğitimle eksiklerinizi hızla kapatın.</p>
             
@@ -798,13 +853,33 @@
         </div>
     </section>
 
+    <!-- STRATEJİK YENİLİK: ODAKLANMA TABANLI ÇALIŞMA MODELLERİ VE SEANSLAR -->
+    <section class="focus-hours-section" id="odaklanma">
+        <h2 class="section-title">Odaklanma Sürelerine Göre Ders Planlaması</h2>
+        <p style="text-align: center; max-width:800px; margin: -30px auto 40px auto; color: #475569; font-size: 0.95rem; padding: 0 10px;">
+            Her öğrencinin dikkat eşiği farklıdır. Ezbere dayalı uzun bloklar yerine, bilimsel odaklanma kriterlerini baz alarak bireysel ve grup çalışmalarımızı kişiye özel saat dökümleriyle planlıyoruz.
+        </p>
+        
+        <div class="focus-grid">
+            <!-- Bireysel Çalışma Modeli -->
+            <div class="focus-card" style="border-top: 4px solid var(--primary-color);">
+                <h3><svg viewBox="0 0 448 512"><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 363.8 0 440.5c0 39.5 24.4 71.5 54.5 71.5H393.5c30.1 0 54.5-32 54.5-71.5c0-76.7-79.8-136.5-178.3-136.5H178.3z"/></svg> Bireysel (Birebir) Çalışma</h3>
+                <div class="time-badge">Seans Süresi: 50 Dk Ders + 10 Dk Mola</div>
+                <p>Öğrencinin dikkat dağınıklığı seviyesine ve soru çözme hızına göre saf odaklanma sağlayan Pomodoro seansları uygulanır. Öğretmen tüm süre boyunca sadece tek bir öğrencinin eksiklerine ve ispat süreçlerine yoğunlaşır.</p>
+            </div>
+
+            <!-- Grup Çalışma Modeli -->
+            <div class="focus-card" style="border-top: 4px solid var(--accent-color);">
+                <h3><svg viewBox="0 0 640 512"><path d="M144 160a80 80 0 1 1 160 0A80 80 0 1 1 144 160zm368 0a80 80 0 1 1 160 0A80 80 0 1 1 512 160zM0 384c0-53 43-96 96-96h128c53 0 96 43 96 96v48c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V384zm448-96h128c53 0 96 43 96 96v48c0 17.7-14.3 32-32 32H480c-17.7 0-32-14.3-32-32V384c0-53 43-96 96-96z"/></svg> Butik Grup Çalışması</h3>
+                <div class="time-badge">Seans Süresi: 80 Dk Blok Ders + 15 Dk Mola</div>
+                <p>2-4 kişilik seviye gruplarında, öğrencilerin karşılıklı akıl yürütme ve tartışma süreçlerini tetiklemek için daha uzun blok seanslar tercih edilir. Akran öğrenmesi ile odaklanma süresi kolektif olarak yukarı çekilir.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Sınav Kulvarları -->
     <section class="exam-screens-section" id="programlar">
         <h2 class="section-title">Sınav Kulvarları ve Müfredat Yaklaşımı</h2>
-        <p style="text-align: center; max-width:800px; margin: -30px auto 35px auto; color: #475569; font-size: 0.95rem; padding: 0 10px;">
-            Eğitim programlarımızın tamamı, her öğrencinin kendi hedef kulvarına özel olarak yapılandırılmış ve Türkiye Yüzyılı Maarif Modeli yeni müfredat doğrultusunda tasarlanmıştır.
-        </p>
-        
         <div class="exam-grid">
             <div class="exam-screen-card">
                 <h3><svg viewBox="0 0 640 512"><path d="M160 64a64 64 0 1 0 0 128 64 64 0 1 0 0-128zm0 192c-44.2 0-80 35.8-80 80v48c0 17.7 14.3 32 32 32h128c17.7 0 32-14.3 32-32V336c0-44.2-35.8-80-80-80zm224-96a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm0 48c-26.5 0-48 21.5-48 48v48c0 13.3 10.7 24 24 24h96c13.3 0 24-10.7 24-24V256c0-26.5-21.5-48-48-48z"/></svg> LGS Matematik Ekranı</h3>
@@ -826,7 +901,7 @@
                 <h3><svg viewBox="0 0 512 512"><path d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H48C21.5 96 0 117.5 0 144V416c0 26.5 21.5 48 48 48H464c26.5 0 48-21.5 48-48V144c0-26.5-21.5-48-48-48H384V56c0-30.9-24.1-56-54-56H182c-29.9 0-54 25.1-54 56zM464 240V368c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V240H464z"/></svg> KPSS Matematik Ekranı</h3>
                 <ul class="exam-features">
                     <li><svg viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>- Sıfırdan başlayanlar için temeli güçlendiren özel anlatımlar.</li>
-                    <li><svg viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>- Sayısal mantık ve problem çözüm hızlandırma taktikleri.</li>
+                    <li><svg viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>- Sayısal mantık uyuşmalı soru taktikleri.</li>
                 </ul>
             </div>
         </div>
@@ -906,7 +981,6 @@
                 <ul class="proof-steps">
                     <li>Tepe açısı 2a, yan kenar uzunlukları 1 birim olan bir ABC üçgeni üzerinde, [AD] açıortay doğrusunu (yükseklik) inceleyelim.</li>
                     <li>Açıortay tepe açısını a ve a olarak ikiye bölerken, trigonometrik oranlardan sol ve sağdaki dik tabanlar sin(a), ortak yükseklik ise cos(a) birim uzunluğa sahip olur.</li>
-                    <li>Şimdi tüm büyük ABC üçgeninin alanını iki farklı matematiksel metotla hesaplayalım:</li>
                     <li>Yol 1 (Sinüs Alan Formülü): Alan = (1 * 1 * sin(2a)) / 2 yani sin(2a) / 2</li>
                     <li>Yol 2 (İki Küçük Parçanın Toplamı): İki dik üçgenin alanları toplamı = 2 * [ (sin(a) * cos(a)) / 2 ] yani sin(a) * cos(a)</li>
                     <li>sin(2a) / 2 = sin(a) * cos(a) eşitliği elde edilir. Paydadaki 2 karşıya atıldığında formülümüz kesin olarak kanıtlanır.</li>
@@ -922,10 +996,6 @@
             <div class="faq-item">
                 <h4><i class="fa-solid fa-circle-question"></i> Soru: İlk dersin ücretsiz olmasının kapsamı nedir?</h4>
                 <p>İlk dersimiz tamamen ücretsiz bir tanışma, seviye tespit ve rehberlik seansıdır. Öğrencinin eksiklerini analiz eder, çalışma haritasını çıkarır ve metodumuza uyumunu test ederiz.</p>
-            </div>
-            <div class="faq-item">
-                <h4><i class="fa-solid fa-circle-question"></i> Soru: Dersler nerede ve nasıl işleniyor?</h4>
-                <p>Muş içi derslerimizi yüz yüze, öğrencinin evinde veya sessiz/verimli bir çalışma ortamında gerçekleştiriyoruz. Online derslerimizi ise profesyonel grafik tablet ve interaktif beyaz tahta altyapısı ile uzaktan canlı gerçekleştiriyoruz.</p>
             </div>
         </div>
     </section>
@@ -954,8 +1024,8 @@
                 <ul>
                     <li><a href="#anasayfa">👉 Anasayfa</a></li>
                     <li><a href="#avantajlar">👉 Neden Biz?</a></li>
+                    <li><a href="#odaklanma">👉 Ders Saatleri</a></li>
                     <li><a href="#programlar">👉 Sınav Kulvarları</a></li>
-                    <li><a href="#ispatlar">👉 İspat Ekranı</a></li>
                 </ul>
             </div>
             
@@ -973,12 +1043,11 @@
         </div>
     </footer>
 
-    <!-- Yeni Sezon 2027 Canlı Geri Sayım Motoru -->
+    <!-- 2027 Sınav Dönemi Aktif Geri Sayım Motoru -->
     <script>
         function updateCounters() {
             var now = new Date().getTime();
 
-            // 2027 Sınav Dönemi Aktif Geri Sayım Zaman Damgaları
             var lgsDate = new Date("Jun 6, 2027 09:30:00").getTime();
             var yksDate = new Date("Jun 19, 2027 10:15:00").getTime();
             var kpssDate = new Date("Sep 6, 2026 10:15:00").getTime(); 
@@ -987,7 +1056,6 @@
             var distanceYKS = yksDate - now;
             var distanceKPSS = kpssDate - now;
 
-            // LGS 2027 Canlı Sayaç Motoru
             if (distanceLGS > 0) {
                 var daysLGS = Math.floor(distanceLGS / (1000 * 60 * 60 * 24));
                 document.getElementById("lgs-counter").innerHTML = daysLGS + " Gün";
@@ -995,7 +1063,6 @@
                 document.getElementById("lgs-counter").innerHTML = "Sınav Yapıldı";
             }
 
-            // YKS 2027 Canlı Sayaç Motoru
             if (distanceYKS > 0) {
                 var daysYKS = Math.floor(distanceYKS / (1000 * 60 * 60 * 24));
                 document.getElementById("yks-counter").innerHTML = daysYKS + " Gün";
@@ -1003,7 +1070,6 @@
                 document.getElementById("yks-counter").innerHTML = "Sınav Yapıldı";
             }
 
-            // KPSS Canlı Geri Sayım Motoru
             if (distanceKPSS > 0) {
                 var daysKPSS = Math.floor(distanceKPSS / (1000 * 60 * 60 * 24));
                 var hoursKPSS = Math.floor((distanceKPSS % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
