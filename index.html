@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO Optimizasyonu: Arama Motorları İçin Kritik Ayarlar -->
+    <!-- SEO Geliştirmeleri: Arama Motorlarında Zirve Hedefi -->
     <title>Yunus Emre Nakış | Muş Matematik Özel Ders & Online Eğitim</title>
-    <meta name="description" content="Muş içi yüz yüze ve Türkiye geneli online matematik özel dersi. Sin2a açılımı, Gauss toplamı gibi konuları ispat teknikleriyle ezbersiz öğrenin. İlk ders ücretsiz!">
-    <meta name="keywords" content="muş matematik özel ders, online matematik özel ders, matematik ispat teknikleri, muş özel ders, yunus emre nakış matematik">
+    <meta name="description" content="Muş içi yüz yüze ve Türkiye geneli online birebir veya grup özel dersleri. LGS, YKS (TYT-AYT) matematik ders planları, ücretsiz seviye analizi ve ispat odaklı kalıcı öğrenme metodu.">
+    <meta name="keywords" content="muş matematik özel ders, online matematik özel ders, muş birebir matematik, grup matematik dersi muş, ygs tyt ayt matematik muş, yunus emre nakış matematik">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://yunus1432ye-creator.github.io/Sitemyunus/">
 
-    <!-- Google Fonts & FontAwesome Icons -->
+    <!-- Google Fonts & FontAwesome -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -71,22 +71,20 @@
             gap: 10px;
         }
 
-        /* Hero Section (İstediğin Opak/Saydam Değişiklik Alanı) */
+        /* Hero Section (Saydamlaştırılmış Arka Plan) */
         .hero {
             padding: 160px 20px 100px 20px;
-            /* Arka plandaki matematiksel görsel */
             background: url('https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
             text-align: center;
             position: relative;
         }
 
-        /* İSTEDİĞİN ÖZELLİK: Görselin önündeki opak katmanı yumuşatıp saydamlaştırdık */
         .hero::before {
             content: '';
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(15, 23, 42, 0.75); /* Opak siyah katman %75 saydamlığa çekildi, arkadaki görsel şıkça beliriyor */
-            backdrop-filter: blur(4px); /* Hafif puslu/bulanık efekt ile kurumsal görünüm */
+            background: rgba(15, 23, 42, 0.75); 
+            backdrop-filter: blur(4px); 
             z-index: 1;
         }
 
@@ -97,7 +95,6 @@
             z-index: 2;
         }
 
-        /* Karanlık arka planda yazıların okunması için renk güncellemeleri */
         .hero h1 {
             font-size: 2.8rem;
             color: #ffffff;
@@ -174,11 +171,9 @@
             flex-wrap: wrap;
         }
 
-        /* Features Section */
-        .features {
+        /* Sections General */
+        section {
             padding: 80px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
         }
 
         .section-title {
@@ -202,8 +197,11 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
+        /* Card Designs */
         .card {
             background: white;
             padding: 30px;
@@ -224,10 +222,68 @@
             margin-bottom: 15px;
         }
 
+        /* RAKİPLERDE OLMAYAN ALAN 1: Ders Katılım Modelleri (Bireysel / Grup) */
+        .pricing-section {
+            background-color: #ffffff;
+        }
+
+        .price-card {
+            background: var(--light-color);
+            border: 2px solid transparent;
+            border-radius: 16px;
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .price-card.popular {
+            border-color: var(--primary-color);
+            background: white;
+            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.08);
+        }
+
+        .price-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary-color);
+            color: white;
+            padding: 4px 15px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .price-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+
+        .price-features {
+            list-style: none;
+            margin: 25px 0;
+            text-align: left;
+        }
+
+        .price-features li {
+            margin-bottom: 12px;
+            color: #475569;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.95rem;
+        }
+
+        .price-features i {
+            color: var(--accent-color);
+        }
+
         /* Proofs Section */
         .proofs-section {
-            background-color: #ffffff;
-            padding: 80px 20px;
+            background-color: var(--light-color);
             border-top: 1px solid #e2e8f0;
             border-bottom: 1px solid #e2e8f0;
         }
@@ -238,7 +294,7 @@
         }
 
         .proof-box {
-            background-color: var(--light-color);
+            background-color: #ffffff;
             border-left: 5px solid var(--primary-color);
             padding: 30px;
             border-radius: 0 8px 8px 0;
@@ -267,7 +323,7 @@
         }
 
         .visual-container {
-            background: #ffffff;
+            background: var(--light-color);
             border: 1px dashed #cbd5e1;
             border-radius: 8px;
             padding: 20px;
@@ -292,6 +348,43 @@
             left: 0;
             color: var(--accent-color);
             font-weight: bold;
+        }
+
+        /* RAKİPLERDE OLMAYAN ALAN 2: Sıkça Sorulan Sorular (FAQ) - SEO İçin Dev Değer */
+        .faq-section {
+            background-color: var(--light-color);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .faq-item h4 {
+            font-size: 1.1rem;
+            color: var(--dark-color);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .faq-item h4 i {
+            color: var(--primary-color);
+        }
+
+        .faq-item p {
+            color: #475569;
+            font-size: 0.95rem;
+            padding-left: 24px;
         }
 
         /* CTA Section */
@@ -350,7 +443,7 @@
         </div>
     </header>
 
-    <!-- Hero Section (Görsel Saydamlaştırılmış Yeni Nesil Giriş Alanı) -->
+    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-container">
             <div class="badge"><i class="fas fa-gift"></i> Sınırlı Kontenjan: İlk Ders Tamamen Ücretsiz!</div>
@@ -367,7 +460,7 @@
         </div>
     </section>
 
-    <!-- Özellikler Bölümü -->
+    <!-- Features Section -->
     <section class="features">
         <h2 class="section-title">Neden Bu Eğitimi Seçmelisiniz?</h2>
         <div class="grid">
@@ -379,12 +472,45 @@
             <div class="card">
                 <div class="card-icon"><i class="fas fa-map-marker-alt"></i></div>
                 <h3>Muş İçi Yüz Yüze Eğitim</h3>
-                <p>Muş merkezde, öğrencinin ihtiyacına uygun planlamayla, odaklanmayı en üst düzeye çıkaran yüz yüze birebir eğitim imkanı.</p>
+                <p>Muş merkezde, öğrencinin ihtiyacına uygun planlamayla, odaklanmayı en üst düzeni çıkaran yüz yüze birebir eğitim imkanı.</p>
             </div>
             <div class="card">
                 <div class="card-icon"><i class="fas fa-star"></i></div>
                 <h3>İlk Ders Ücretsiz!</h3>
                 <p>Eğitim kalitemizi ve iletişimimizi görmeniz için ilk tanışma dersimiz tamamen ücretsizdir. Kendinizi denemeden karar vermeyin.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW/SEO ÖZEL ALAN: Ders Çalışma Paketleri ve Detayları -->
+    <section class="pricing-section">
+        <h2 class="section-title">Eğitim Paketleri ve Katılım Modelleri</h2>
+        <div class="grid">
+            <!-- Paket 1: Bireysel -->
+            <div class="price-card popular">
+                <div class="price-badge">En Çok Tercih Edilen</div>
+                <h3>Birebir Özel Ders</h3>
+                <p style="color: #64748b; font-size: 0.9rem;">Kişiye Özel %100 Odaklanma</p>
+                <ul class="price-features">
+                    <li><i class="fas fa-check-circle"></i> Öğrencinin seviyesine özel müfredat</li>
+                    <li><i class="fas fa-check-circle"></i> Eksik olunan konulara göre esnek planlama</li>
+                    <li><i class="fas fa-check-circle"></i> Muş içi yüz yüze veya Türkiye geneli online</li>
+                    <li><i class="fas fa-check-circle"></i> Sınav haftalarına özel ekstra soru çözümleri</li>
+                </ul>
+                <a href="https://wa.me/905392361836?text=Merhaba,%20birebir%20özel%20ders%20modeliniz%20hakkında%20görüşmek%20istiyorum." class="btn btn-call" style="width: 100%; justify-content: center;" target="_blank">Bilgi Al & Başla</a>
+            </div>
+
+            <!-- Paket 2: Grup -->
+            <div class="price-card">
+                <h3>Butik Grup Dersleri</h3>
+                <p style="color: #64748b; font-size: 0.9rem;">2 - 4 Kişilik Arkadaş Grupları</p>
+                <ul class="price-features">
+                    <li><i class="fas fa-check-circle"></i> Arkadaş gruplarına özel sinerji ve rekabet</li>
+                    <li><i class="fas fa-check-circle"></i> Birebir kalitesinde soru sorma imkanı</li>
+                    <li><i class="fas fa-check-circle"></i> Çok daha ekonomik fiyat avantajı</li>
+                    <li><i class="fas fa-check-circle"></i> Düzenli grup ödevlendirmesi ve takibi</li>
+                </ul>
+                <a href="https://wa.me/905392361836?text=Merhaba,%20arkadaş%20grubumuz%20için%20butik%20grup%20dersi%20hakkında%20bilgi%20almak%20istiyoruz." class="btn btn-call" style="width: 100%; justify-content: center; background-color: var(--dark-color);" target="_blank">Grup İçin Bilgi Al</a>
             </div>
         </div>
     </section>
@@ -402,7 +528,7 @@
                 
                 <div class="visual-container">
                     <p style="font-size:0.85rem; color:#64748b; margin-bottom:10px;"><i class="fas fa-eye"></i> İspatın Geometrik Modeli:</p>
-                    <svg width="280" height="220" viewBox="0 0 280 220" style="background:#f8fafc; border-radius:6px;">
+                    <svg width="280" height="220" viewBox="0 0 280 220" style="background:#ffffff; border-radius:6px;">
                         <polygon points="140,20 60,180 140,180" fill="#eff6ff" stroke="none" />
                         <polygon points="140,20 220,180 140,180" fill="#f0fdf4" stroke="none" />
                         <line x1="140" y1="20" x2="60" y2="180" stroke="#1e293b" stroke-width="2"/>
@@ -457,6 +583,28 @@
                     <li>Peki faiz işletme sıklığını saniyelere bölüp <b>sürekli (sonsuz) bir büyüme</b> modeline çevirirsek paramız sonsuza mı gider? Hayır, doğadaki üstel büyüme limitine takılır.</li>
                     <li>Dönem sayısını sonsuza doğru götürdüğümüzde ulaştığımız o maksimum üst limit noktası tam olarak <b>2.71828...</b> yani <b>e</b> sayısıdır!</li>
                 </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW/SEO ÖZEL ALAN 2: Sıkça Sorulan Sorular (Google'da Üst Sıralar İçin Altın Anahtar) -->
+    <section class="faq-section">
+        <div class="faq-container">
+            <h2 class="section-title">Sıkça Sorulan Sorular</h2>
+            
+            <div class="faq-item">
+                <h4><i class="fas fa-question-circle"></i> İlk dersin ücretsiz olmasının kapsamı nedir?</h4>
+                <p>İlk dersimiz tamamen ücretsiz bir tanışma, seviye tespit ve rehberlik seansıdır. Öğrencinin eksiklerini analiz eder, çalışma haritasını çıkarır ve metodumuza uyumunu test ederiz.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4><i class="fas fa-question-circle"></i> Dersler nerede ve nasıl işleniyor?</h4>
+                <p>Muş içi derslerimizi yüz yüze, öğrencinin evinde veya sessiz/verimli bir çalışma ortamında gerçekleştiriyoruz. Online derslerimizi ise profesyonel grafik tablet ve interaktif beyaz tahta altyapısı ile uzaktan canlı gerçekleştiriyoruz.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4><i class="fas fa-question-circle"></i> Ders süreleri ve takipleri nasıl yapılıyor?</h4>
+                <p>Ders seanslarımız öğrencinin odaklanma süresine uygun olarak planlanır. Her ders sonrasında işlenen konuların özet dökümanları, ödevlendirmeleri ve düzenli gelişim raporları velilerimizle paylaşılmaktadır.</p>
             </div>
         </div>
     </section>
