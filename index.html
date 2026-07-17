@@ -11,8 +11,8 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://yunus1432ye-creator.github.io/Sitemyunus/">
 
-    <!-- En Kararlı FontAwesome ve Google Fonts Altyapısı -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- En Güncel ve Kararlı FontAwesome Entegrasyonu -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <style>
@@ -22,6 +22,7 @@
             --accent-color: #10b981;
             --dark-color: #1e293b;
             --light-color: #f8fafc;
+            --instagram-color: #e1306c;
         }
 
         html, body {
@@ -135,7 +136,7 @@
             100% { transform: scale(1); }
         }
 
-        /* Countdown Grid Area */
+        /* Countdown Grid Area (Yenilenen Boyut ve Tasarım) */
         .countdown-wrapper {
             display: flex;
             justify-content: center;
@@ -146,21 +147,31 @@
         }
 
         .countdown-box {
-            background: rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.12);
             padding: 12px 10px;
             border-radius: 8px;
             color: white;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.18);
             flex: 1 1 140px;
             max-width: 180px;
             box-sizing: border-box;
+            backdrop-filter: blur(2px);
         }
 
         .countdown-box span {
             display: block;
-            font-size: 1.25rem;
+            font-size: clamp(1rem, 4vw, 1.3rem); /* Dinamik yazı boyutu çakışmayı önler */
             font-weight: 700;
             color: #60a5fa;
+            margin-bottom: 2px;
+        }
+
+        .countdown-title {
+            font-size: 0.8rem;
+            color: #cbd5e1;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         /* Buttons */
@@ -625,11 +636,14 @@
         .footer-contact p i {
             color: var(--primary-color);
             flex-shrink: 0;
+            width: 16px;
+            text-align: center;
         }
 
         .footer-contact p a {
             color: #94a3b8;
             text-decoration: none;
+            transition: color 0.2s ease;
         }
 
         .footer-contact p a:hover {
@@ -643,28 +657,24 @@
             color: #64748b;
         }
 
-        /* İSTEDİĞİN MOBİL DÜZENLEMELER: SAYAÇ BOYUTLARI VE SIKIŞMA AYARLARI */
+        /* Mobil Ekran Düzenleme Alanları */
         @media (max-width: 768px) {
             .hero h1 { font-size: 1.6rem; }
             .hero p { font-size: 0.95rem; }
             .section-title { font-size: 1.35rem; }
             
-            /* İSTEDİĞİN ÖZELLİK: Sayaç yazılarının telefonda devasa görünmesini engelleyen sıkıştırma kuralı */
+            /* Sayaçların mobilde kırılmasını önleyen grid ayarı */
             .countdown-wrapper { 
                 display: grid; 
-                grid-template-columns: repeat(3, 1fr); /* 3 sayacı da yan yana düzgünce sığdırır */
+                grid-template-columns: repeat(3, 1fr); 
                 gap: 6px; 
                 margin-bottom: 25px;
             }
             .countdown-box { 
                 padding: 8px 4px; 
-                font-size: 0.75rem; 
                 min-width: 0;
             }
-            .countdown-box span { 
-                font-size: 0.95rem; /* Gün sayısını telefona göre kibarlaştırdık */
-            }
-
+            
             .btn { width: 100%; max-width: 100%; } 
             
             .header-buttons { gap: 5px; }
@@ -687,8 +697,7 @@
             <div class="logo">Özel Ders<span>Merkezi</span></div>
             <div class="header-buttons">
                 <a href="tel:5392361836" class="btn btn-call btn-call-nav">
-                    <!-- Telefon İkonu (Garantili Yerleşik Alternatiliyle) -->
-                    <i class="fas fa-phone-alt"></i>📞 Hemen Ara
+                    <i class="fa-solid fa-phone"></i> 📞 Hemen Ara
                 </a>
             </div>
         </div>
@@ -697,32 +706,32 @@
     <!-- Hero Section -->
     <section class="hero" id="anasayfa">
         <div class="hero-container">
-            <div class="badge">📢 Türkiye Yüzyılı Maarif Modeline Tam Uyumlu</div>
+            <div class="badge"><i class="fa-solid fa-bullhorn"></i> 📢 Türkiye Yüzyılı Maarif Modeline Tam Uyumlu</div>
             <h1>Yunus Emre Nakış ile<br><span style="color: #60a5fa;">Muş Özel Matematik Dersi</span> Deneyimi</h1>
             <p>Hedeflerinize ulaşmanız için tamamen size özel hazırlanan ders planları ile başarıyı şansa bırakmayın. İster online, ister Muş içinde yüz yüze eğitimle eksiklerinizi hızla kapatın.</p>
             
-            <!-- Mobil İçin Boyutları Optimize Edilmiş Canlı Sayaç Alanı -->
+            <!-- Canlı Çalışan Dinamik Sayaç Alanı -->
             <div class="countdown-wrapper">
                 <div class="countdown-box">
                     <span id="lgs-counter">--</span>
-                    LGS
+                    <div class="countdown-title">LGS</div>
                 </div>
                 <div class="countdown-box">
                     <span id="yks-counter">--</span>
-                    YKS
+                    <div class="countdown-title">YKS</div>
                 </div>
                 <div class="countdown-box">
                     <span id="kpss-counter">--</span>
-                    KPSS
+                    <div class="countdown-title">KPSS</div>
                 </div>
             </div>
 
             <div class="hero-buttons-wrapper">
                 <a href="https://wa.me/905392361836?text=Merhaba,%20ücretsiz%20ilk%20özel%20ders%20hakkında%20bilgi%20almak%20istiyorum." class="btn btn-whatsapp" target="_blank">
-                    💬 Ücretsiz İlk Dersini Planla
+                    <i class="fa-brands fa-whatsapp"></i> 💬 Ücretsiz İlk Dersini Planla
                 </a>
                 <a href="tel:5392361836" class="btn btn-call">
-                    📞 Beni Aramak İçin Tıklayın
+                    <i class="fa-solid fa-phone"></i> 📞 Beni Aramak İçin Tıklayın
                 </a>
             </div>
         </div>
@@ -733,17 +742,17 @@
         <h2 class="section-title">Neden Bu Eğitimi Seçmelisiniz?</h2>
         <div class="grid">
             <div class="card">
-                <div class="card-icon"><i class="fas fa-laptop-house"></i>💻</div>
+                <div class="card-icon"><i class="fa-solid fa-laptop-code"></i> 💻</div>
                 <h3>Türkiye Geneli Online Ders</h3>
                 <p>Mekandan bağımsız, evinizin konforunda, interaktif dijital araçlar ve materyallerle desteklenmiş yüksek verimli online dersler.</p>
             </div>
             <div class="card">
-                <div class="card-icon"><i class="fas fa-map-marker-alt"></i>📍</div>
+                <div class="card-icon"><i class="fa-solid fa-location-dot"></i> 📍</div>
                 <h3>Muş İçi Yüz Yüze Eğitim</h3>
                 <p>Muş merkezde, öğrencinin ihtiyacına uygun planlamayla, odaklanmayı en üst düzeye çıkaran yüz yüze birebir eğitim imkanı.</p>
             </div>
             <div class="card">
-                <div class="card-icon"><i class="fas fa-star"></i>⭐</div>
+                <div class="card-icon"><i class="fa-solid fa-star"></i> ⭐</div>
                 <h3>İlk Ders Ücretsiz!</h3>
                 <p>Eğitim kalitemizi ve iletişimimizi görmeniz için ilk tanışma dersimiz tamamen ücretsizdir. Kendinizi denemeden karar vermeyin.</p>
             </div>
@@ -759,29 +768,29 @@
         
         <div class="exam-grid">
             <div class="exam-screen-card">
-                <h3><i class="fas fa-child"></i> LGS Matematik Ekranı</h3>
+                <h3><i class="fa-solid fa-graduation-cap"></i> LGS Matematik Ekranı</h3>
                 <ul class="exam-features">
-                    <li><i class="fas fa-check"></i>- Yeni Maarif müfredatına uygun akıl yürütme problemleri.</li>
-                    <li><i class="fas fa-check"></i>- Uzun paragraf tipi matematik sorularında hızlı analiz yöntemleri.</li>
-                    <li><i class="fas fa-check"></i>- Geometrik algı geliştirme ve şekilli soru çözme taktikleri.</li>
+                    <li><i class="fa-solid fa-circle-check"></i>- Yeni Maarif müfredatına uygun akıl yürütme problemleri.</li>
+                    <li><i class="fa-solid fa-circle-check"></i>- Uzun paragraf tipi matematik sorularında hızlı analiz yöntemleri.</li>
+                    <li><i class="fa-solid fa-circle-check"></i>- Geometrik algı geliştirme ve şekilli soru çözme taktikleri.</li>
                 </ul>
             </div>
 
             <div class="exam-screen-card">
-                <h3><i class="fas fa-user-graduate"></i> YKS Matematik Ekranı</h3>
+                <h3><i class="fa-solid fa-user-graduate"></i> YKS Matematik Ekranı</h3>
                 <ul class="exam-features">
-                    <li><i class="fas fa-check"></i>- TYT'de hız kazandıran pratik problem çözme stratejileri.</li>
-                    <li><i class="fas fa-check"></i>- AYT'de formül ezberletmeyen, ispat odaklı kalıcı trigonometri ve fonksiyon mantığı.</li>
-                    <li><i class="fas fa-check"></i>- Düzenli deneme taramaları ve Türkiye geneli sıralama takipleri.</li>
+                    <li><i class="fa-solid fa-circle-check"></i>- TYT'de hız kazandıran pratik problem çözme stratejileri.</li>
+                    <li><i class="fa-solid fa-circle-check"></i>- AYT'de formül ezberletmeyen, ispat odaklı kalıcı trigonometri ve fonksiyon mantığı.</li>
+                    <li><i class="fa-solid fa-circle-check"></i>- Düzenli deneme taramaları ve Türkiye geneli sıralama takipleri.</li>
                 </ul>
             </div>
 
             <div class="exam-screen-card">
-                <h3><i class="fas fa-user-tie"></i> KPSS Matematik Ekranı</h3>
+                <h3><i class="fa-solid fa-briefcase"></i> KPSS Matematik Ekranı</h3>
                 <ul class="exam-features">
-                    <li><i class="fas fa-check"></i>- Sıfırdan başlayanlar için temeli güçlendiren özel anlatımlar.</li>
-                    <li><i class="fas fa-check"></i>- Zaman yönetimini kusursuzlaştıran test teknikleri.</li>
-                    <li><i class="fas fa-check"></i>- Sayısal mantık ve grafik yorumlama sorularında nokta atışı taktikler.</li>
+                    <li><i class="fa-solid fa-circle-check"></i>- Sıfırdan başlayanlar için temeli güçlendiren özel anlatımlar.</li>
+                    <li><i class="fa-solid fa-circle-check"></i>- Zaman yönetimini kusursuzlaştıran test teknikleri.</li>
+                    <li><i class="fa-solid fa-circle-check"></i>- Sayısal mantık ve grafik yorumlama sorularında nokta atışı taktikler.</li>
                 </ul>
             </div>
         </div>
@@ -832,7 +841,7 @@
         <div class="proofs-container">
             <h2 class="section-title">İspat Teknikleriyle Ezbersiz Matematik</h2>
             <div class="proof-box">
-                <h3><i class="fas fa-draw-polygon"></i>📐 1. Sinüs Alan Formülü ile Yarım Açı İspatı</h3>
+                <h3><i class="fa-solid fa-shapes"></i> 📐 1. Sinüs Alan Formülü ile Yarım Açı İspatı</h3>
                 <div class="formula-highlight">sin(2a) = 2 · sin(a) · cos(a)</div>
                 
                 <div class="visual-container">
@@ -875,11 +884,11 @@
         <div class="faq-container">
             <h2 class="section-title">Sıkça Sorulan Sorular</h2>
             <div class="faq-item">
-                <h4><i class="fas fa-question-circle"></i> Soru: İlk dersin ücretsiz olmasının kapsamı nedir?</h4>
+                <h4><i class="fa-solid fa-circle-question"></i> Soru: İlk dersin ücretsiz olmasının kapsamı nedir?</h4>
                 <p>İlk dersimiz tamamen ücretsiz bir tanışma, seviye tespit ve rehberlik seansıdır. Öğrencinin eksiklerini analiz eder, çalışma haritasını çıkarır ve metodumuza uyumunu test ederiz.</p>
             </div>
             <div class="faq-item">
-                <h4><i class="fas fa-question-circle"></i> Soru: Dersler nerede ve nasıl işleniyor?</h4>
+                <h4><i class="fa-solid fa-circle-question"></i> Soru: Dersler nerede ve nasıl işleniyor?</h4>
                 <p>Muş içi derslerimizi yüz yüze, öğrencinin evinde veya sessiz/verimli bir çalışma ortamında gerçekleştiriyoruz. Online derslerimizi ise profesyonel grafik tablet ve interaktif beyaz tahta altyapısı ile uzaktan canlı gerçekleştiriyoruz.</p>
             </div>
         </div>
@@ -891,15 +900,15 @@
         <p style="margin-bottom: 35px; font-size: 1rem;">Sınavlara hazırlık, okul derslerine takviye ve kalıcı başarı için ilk adımı bugün atın.</p>
         <div class="hero-buttons-wrapper">
             <a href="https://wa.me/905392361836?text=Merhaba,%20özel%20dersleriniz%20ve%20yüz%20yüze%20eğitim%20hakkında%20detaylı%20bilgi%20almak%20istiyorum." class="btn btn-whatsapp" target="_blank">
-                💬 WhatsApp ile Detaylı Bilgi Al
+                <i class="fa-brands fa-whatsapp"></i> 💬 WhatsApp ile Detaylı Bilgi Al
             </a>
             <a href="tel:5392361836" class="btn btn-call">
-                📞 Beni Doğrudan Ara
+                <i class="fa-solid fa-phone"></i> 📞 Beni Doğrudan Ara
             </a>
         </div>
     </section>
 
-    <!-- Profesyonel Footer -->
+    <!-- Yenilenen Kurumsal Footer (Instagram Hesabı Dahil) -->
     <footer>
         <div class="footer-container">
             <div class="footer-brand">
@@ -920,9 +929,10 @@
             
             <div class="footer-contact">
                 <h4>Doğrudan İletişim</h4>
-                <p>📞 <a href="tel:5392361836">0539 236 18 36</a></p>
-                <p>💬 <a href="https://wa.me/905392361836" target="_blank">WhatsApp Destek Hattı</a></p>
-                <p>📍 Muş Merkez / Türkiye</p>
+                <p><i class="fa-solid fa-phone"></i> 📞 <a href="tel:5392361836">0539 236 18 36</a></p>
+                <p><i class="fa-brands fa-whatsapp"></i> 💬 <a href="https://wa.me/905392361836" target="_blank">WhatsApp Destek Hattı</a></p>
+                <p><i class="fa-brands fa-instagram" style="color: var(--instagram-color);"></i> 📸 <a href="https://instagram.com/yunusemre.nakis" target="_blank" style="font-weight: 600; color: #f43f5e;">@yunusemre.nakis</a></p>
+                <p><i class="fa-solid fa-location-dot"></i> 📍 Muş Merkez / Türkiye</p>
             </div>
         </div>
         
@@ -931,36 +941,48 @@
         </div>
     </footer>
 
-    <!-- Canlı Geri Sayım Hesaplayıcı Motoru -->
+    <!-- Tamamen Yenilenen Saniyelik Akışlı Canlı Geri Sayım Motoru (2026 Gerçek Zamanlı) -->
     <script>
         function updateCounters() {
             var now = new Date().getTime();
 
-            // Sınav Tarihleri (2027 Hedefleri)
-            var lgsDate = new Date("Jun 6, 2027 09:30:00").getTime();
-            var yksDate = new Date("Jun 19, 2027 10:15:00").getTime();
-            var kpssDate = new Date("Jul 25, 2027 10:15:00").getTime();
+            // 2026 Yılı Gerçek ve Tahmini Sınav Zaman Damgaları (Milisaniye bazlı tam doğru takvim)
+            var lgsDate = new Date("Jun 7, 2026 09:30:00").getTime();
+            var yksDate = new Date("Jun 20, 2026 10:15:00").getTime();
+            var kpssDate = new Date("Sep 6, 2026 10:15:00").getTime(); // 2026 KPSS KPSS Lisans Genel Yetenek
 
             var distanceLGS = lgsDate - now;
             var distanceYKS = yksDate - now;
             var distanceKPSS = kpssDate - now;
 
-            var daysLGS = Math.floor(distanceLGS / (1000 * 60 * 60 * 24));
-            var daysYKS = Math.floor(distanceYKS / (1000 * 60 * 60 * 24));
-            var daysKPSS = Math.floor(distanceKPSS / (1000 * 60 * 60 * 24));
+            // LGS Hesaplama Küpü
+            if (distanceLGS > 0) {
+                var daysLGS = Math.floor(distanceLGS / (1000 * 60 * 60 * 24));
+                document.getElementById("lgs-counter").innerHTML = daysLGS + " Gün";
+            } else {
+                document.getElementById("lgs-counter").innerHTML = "Sınav Yapıldı";
+            }
 
-            if (distanceLGS > 0) document.getElementById("lgs-counter").innerHTML = daysLGS + " G";
-            else document.getElementById("lgs-counter").innerHTML = "Sınav Yapıldı";
+            // YKS Hesaplama Küpü
+            if (distanceYKS > 0) {
+                var daysYKS = Math.floor(distanceYKS / (1000 * 60 * 60 * 24));
+                document.getElementById("yks-counter").innerHTML = daysYKS + " Gün";
+            } else {
+                document.getElementById("yks-counter").innerHTML = "Sınav Yapıldı";
+            }
 
-            if (distanceYKS > 0) document.getElementById("yks-counter").innerHTML = daysYKS + " G";
-            else document.getElementById("yks-counter").innerHTML = "Sınav Yapıldı";
-
-            if (distanceKPSS > 0) document.getElementById("kpss-counter").innerHTML = daysKPSS + " G";
-            else document.getElementById("kpss-counter").innerHTML = "Sınav Yapıldı";
+            // KPSS Doğrulanan Canlı Hesaplama Küpü
+            if (distanceKPSS > 0) {
+                var daysKPSS = Math.floor(distanceKPSS / (1000 * 60 * 60 * 24));
+                document.getElementById("kpss-counter").innerHTML = daysKPSS + " Gün";
+            } else {
+                document.getElementById("kpss-counter").innerHTML = "Sınav Yapıldı";
+            }
         }
         
+        // Saniyelik gerçek zamanlı yenileme tetiği
         updateCounters();
-        setInterval(updateCounters, 60000);
+        setInterval(updateCounters, 1000); 
     </script>
 
 </body>
