@@ -35,6 +35,7 @@
             background-color: var(--light-color);
             color: var(--dark-color);
             line-height: 1.6;
+            scroll-behavior: smooth;
         }
 
         /* Header / Navbar */
@@ -247,7 +248,7 @@
             margin-bottom: 15px;
         }
 
-        /* TALEP EDİLEN ALAN: LGS - YKS - KPSS ÖZEL EKRANLARI */
+        /* Sınav Ekranları Bölümü */
         .exam-screens-section {
             background-color: #ffffff;
         }
@@ -478,7 +479,7 @@
             padding-left: 24px;
         }
 
-        /* CTA Section */
+        /* Alt Çağrı Alanı (CTA) */
         .cta {
             background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(2, 6, 23, 0.98) 100%),
                         url('https://images.unsplash.com/photo-1453733190148-c44698c26578?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
@@ -492,20 +493,103 @@
             margin-bottom: 20px;
         }
 
-        .cta p {
-            color: #94a3b8;
-            margin-bottom: 35px;
-            font-size: 1.1rem;
-        }
-
-        /* Footer */
+        /* İSTEDİĞİN GELİŞTİRME: YENİ PROFESYONEL VE ZENGİN FOOTER ALANI */
         footer {
             background-color: #0f172a;
-            color: #64748b;
-            text-align: center;
-            padding: 20px;
+            color: #94a3b8;
+            padding: 60px 20px 20px 20px;
             border-top: 1px solid #1e293b;
             font-size: 0.9rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #1e293b;
+        }
+
+        .footer-brand h3 {
+            color: #ffffff;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        .footer-brand h3 span {
+            color: var(--accent-color);
+        }
+
+        .footer-brand p {
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+
+        .footer-links h4, .footer-contact h4 {
+            color: #ffffff;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .footer-links h4::after, .footer-contact h4::after {
+            content: '';
+            display: block;
+            width: 35px;
+            height: 2px;
+            background-color: var(--primary-color);
+            margin-top: 5px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 12px;
+        }
+
+        /* Hızlı Link Yönlendirmeleri */
+        .footer-links ul li a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-links ul li a:hover {
+            color: #ffffff;
+        }
+
+        .footer-contact p {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-contact p i {
+            color: var(--primary-color);
+        }
+
+        .footer-contact p a {
+            color: #94a3b8;
+            text-decoration: none;
+        }
+
+        .footer-contact p a:hover {
+            color: #ffffff;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            font-size: 0.8rem;
+            color: #64748b;
         }
 
         @media (max-width: 768px) {
@@ -514,6 +598,7 @@
             .btn { width: 100%; justify-content: center; }
             .header-buttons .btn { display: none; }
             .header-buttons .btn-call-nav { display: inline-flex !important; padding: 6px 12px; font-size: 0.8rem; }
+            .footer-container { grid-template-columns: 1fr; gap: 30px; }
         }
     </style>
 </head>
@@ -535,13 +620,13 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="anasayfa">
         <div class="hero-container">
             <div class="badge"><i class="fas fa-gift"></i> Türkiye Yüzyılı Maarif Modeline Tam Uyumlu</div>
             <h1>Yunus Emre Nakış ile<br><span style="color: #60a5fa;">Muş Özel Matematik Dersi</span> Deneyimi</h1>
             <p>Hedeflerinize ulaşmanız için tamamen size özel hazırlanan ders planları ile başarıyı şansa bırakmayın. İster online, ister Muş içinde yüz yüze eğitimle eksiklerinizi hızla kapatın.</p>
             
-            <!-- Canlı Geri Sayım Alanı (LGS, YKS ve KPSS Dahil) -->
+            <!-- Canlı Geri Sayım Alanı -->
             <div class="countdown-wrapper">
                 <div class="countdown-box">
                     <span id="lgs-counter">--</span>
@@ -568,15 +653,36 @@
         </div>
     </section>
 
-    <!-- NEW: LGS - YKS - KPSS SINAV EKRANLARI VE MAARİF MÜFREDATI -->
-    <section class="exam-screens-section">
+    <!-- Özellikler Bölümü -->
+    <section class="features" id="avantajlar">
+        <h2 class="section-title">Neden Bu Eğitimi Seçmelisiniz?</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="card-icon"><i class="fas fa-laptop-house"></i></div>
+                <h3>Türkiye Geneli Online Ders</h3>
+                <p>Mekandan bağımsız, evinizin konforunda, interaktif dijital araçlar ve materyallerle desteklenmiş yüksek verimli online dersler.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <h3>Muş İçi Yüz Yüze Eğitim</h3>
+                <p>Muş merkezde, öğrencinin ihtiyacına uygun planlamayla, odaklanmayı en üst düzeye çıkaran yüz yüze birebir eğitim imkanı.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon"><i class="fas fa-star"></i></div>
+                <h3>İlk Ders Ücretsiz!</h3>
+                <p>Eğitim kalitemizi ve iletişimimizi görmeniz için ilk tanışma dersimiz tamamen ücretsizdir. Kendinizi denemeden karar vermeyin.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sınav Kulvarları -->
+    <section class="exam-screens-section" id="programlar">
         <h2 class="section-title">Sınav Kulvarları ve Müfredat Yaklaşımı</h2>
         <p style="text-align: center; max-width:800px; margin: -30px auto 55px auto; color: #475569;">
-            Eğitim programlarımızın tamamı, beceri temelli ve derinlemesine öğrenmeyi hedefleyen <b>Türkiye Yüzyılı Maarif Modeli</b> yeni müfredat doğrultusunda, öğrencilerin akıl yürütme becerilerini üst seviyeye çıkaracak şekilde tasarlanmıştır.
+            Eğitim programlarımızın tamamı, beceri temelli ve derinlemesine öğrenmeyi hedefleyen <b>Türkiye Yüzyılı Maarif Modeli</b> yeni müfredat doğrultusunda tasarlanmıştır.
         </p>
         
         <div class="exam-grid">
-            <!-- LGS Ekranı -->
             <div class="exam-screen-card">
                 <h3><i class="fas fa-child"></i> LGS Matematik Ekranı</h3>
                 <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 10px;">Mantık-Muhakeme & Beceri Temelli Sorular</p>
@@ -587,7 +693,6 @@
                 </ul>
             </div>
 
-            <!-- YKS Ekranı -->
             <div class="exam-screen-card">
                 <h3><i class="fas fa-user-graduate"></i> YKS Matematik Ekranı</h3>
                 <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 10px;">TYT & AYT Tam Konsept Yönetimi</p>
@@ -598,7 +703,6 @@
                 </ul>
             </div>
 
-            <!-- KPSS Ekranı -->
             <div class="exam-screen-card">
                 <h3><i class="fas fa-user-tie"></i> KPSS Matematik Ekranı</h3>
                 <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 10px;">Genel Yetenek Pratik Soru Çözümleri</p>
@@ -611,11 +715,9 @@
         </div>
     </section>
 
-    <!-- Comeback / Başarı Hikayeleri Alanı -->
-    <section class="comeback-section">
+    <!-- Comeback / Başarı Hikayeleri -->
+    <section class="comeback-section" id="basarilar">
         <h2 class="section-title">Efsanevi Geri Dönüşler (Comeback Hikayeleri)</h2>
-        <p style="text-align: center; color: #64748b; margin-top: -30px; margin-bottom: 50px;">"Matematik yapamıyorum" ön yargısını ispat ve mantık odaklı sistemimizle kırıp zirveye ulaşan öğrencilerimiz:</p>
-        
         <div class="comeback-grid">
             <div class="comeback-card">
                 <div class="student-info">
@@ -654,18 +756,14 @@
     </section>
 
     <!-- İspatlarla Öğrenme Modülü -->
-    <section class="proofs-section">
+    <section class="proofs-section" id="ispatlar">
         <div class="proofs-container">
             <h2 class="section-title">İspat Teknikleriyle Ezbersiz Matematik</h2>
-            <p style="text-align: center; color: #64748b; margin-bottom: 40px; margin-top: -30px;">Formülleri dayatmak yerine mantığını zihne işliyoruz. İşte derslerimizin temelini oluşturan ispat yaklaşımları:</p>
-
-            <!-- İspat 1: Sin2a Açılımı -->
             <div class="proof-box">
                 <h3><i class="fas fa-draw-polygon"></i> 1. Sinüs Alan Formülü ile Yarım Açı İspatı</h3>
                 <div class="formula-highlight">sin(2a) = 2 · sin(a) · cos(a)</div>
                 
                 <div class="visual-container">
-                    <p style="font-size:0.85rem; color:#64748b; margin-bottom:10px;"><i class="fas fa-eye"></i> İspatın Geometrik Modeli:</p>
                     <svg width="280" height="220" viewBox="0 0 280 220" style="background:#ffffff; border-radius:6px;">
                         <polygon points="140,20 60,180 140,180" fill="#eff6ff" stroke="none" />
                         <polygon points="140,20 220,180 140,180" fill="#f0fdf4" stroke="none" />
@@ -691,38 +789,22 @@
                 <ul class="proof-steps">
                     <li>Tepe açısı 2a, yan kenar uzunlukları 1 birim olan bir ABC üçgeni üzerinde, [AD] açıortay doğrusunu (yükseklik) inceleyelim.</li>
                     <li>Açıortay tepe açısını ve olarak ikiye bölerken, trigonometrik oranlardan sol ve sağdaki dik tabanlar sin(a), ortak yükseklik ise cos(a) birim uzunluğa sahip olur.</li>
-                    <li>Şimdi tüm büyük ABC üçgeninin alanını iki farklı matematiksel metotla hesaplayalım:</li>
                     <li>Yol 1 (Sinüs Alan Formülü): Alan = (1 * 1 * sin(2a)) / 2 yani sin(2a) / 2</li>
                     <li>Yol 2 (İki Küçük Parçanın Toplamı): İki dik üçgenin alanları toplamı = 2 * [ (sin(a) * cos(a)) / 2 ] yani sin(a) * cos(a)</li>
-                    <li>Her iki yol da bizi aynı toplam alana götürdüğü için: sin(2a) / 2 = sin(a) * cos(a) eşitliği elde edilir. Paydadaki 2 karşıya atıldığında formülümüz kesin olarak kanıtlanır.</li>
-                </ul>
-            </div>
-
-            <!-- İspat 2: Gauss -->
-            <div class="proof-box">
-                <h3><i class="fas fa-calculator"></i> 2. Gauss Toplam Formülü Mantığı</h3>
-                <div class="formula-highlight">1 + 2 + 3 + ... + n = [ n · (n + 1) ] / 2</div>
-                <ul class="proof-steps">
-                    <li>1'den n'e kadar olan ardışık sayıların toplam değerine matematiksel olarak S diyelim: S = 1 + 2 + 3 + ... + n</li>
-                    <li>Amelece toplamak yerine diziyi tamamen tersten (büyükten küçüğe) altına bir kez daha yazalım: S = n + (n-1) + ... + 1</li>
-                    <li>Bu iki diziyi alt alta topladığımızda harika bir simetri yakalarız. Her dikey kolonun toplamı istisnasız hep (n+1) sonucunu verir.</li>
-                    <li>Seride bu şekilde tam n adet terim olduğu için sağ tarafın toplam değeri: n * (n + 1) olur.</li>
-                    <li>Sol tarafta iki adet S toplandığı için 2S = n * (n + 1) eşitliğini buluruz. Her iki tarafı da 2'ye böldüğümüzde meşhur formül kendiliğinden ortaya çıkar.</li>
+                    <li>sin(2a) / 2 = sin(a) * cos(a) eşitliği elde edilir. Paydadaki 2 karşıya atıldığında formülümüz kesin olarak kanıtlanır.</li>
                 </ul>
             </div>
         </div>
     </section>
 
     <!-- Sıkça Sorulan Sorular -->
-    <section class="faq-section">
+    <section class="faq-section" id="sss">
         <div class="faq-container">
             <h2 class="section-title">Sıkça Sorulan Sorular</h2>
-            
             <div class="faq-item">
                 <h4><i class="fas fa-question-circle"></i> İlk dersin ücretsiz olmasının kapsamı nedir?</h4>
                 <p>İlk dersimiz tamamen ücretsiz bir tanışma, seviye tespit ve rehberlik seansıdır. Öğrencinin eksiklerini analiz eder, çalışma haritasını çıkarır ve metodumuza uyumunu test ederiz.</p>
             </div>
-
             <div class="faq-item">
                 <h4><i class="fas fa-question-circle"></i> Dersler nerede ve nasıl işleniyor?</h4>
                 <p>Muş içi derslerimizi yüz yüze, öğrencinin evinde veya sessiz/verimli bir çalışma ortamında gerçekleştiriyoruz. Online derslerimizi ise profesyonel grafik tablet ve interaktif beyaz tahta altyapısı ile uzaktan canlı gerçekleştiriyoruz.</p>
@@ -730,7 +812,7 @@
         </div>
     </section>
 
-    <!-- Alt Çağrı Alanı (CTA) -->
+    <!-- Alt Çağrı Alanı -->
     <section class="cta">
         <h2>Eksiklerinizi Birlikte Tamamlayalım</h2>
         <p style="margin-bottom: 35px;">Sınavlara hazırlık, okul derslerine takviye ve kalıcı başarı için ilk adımı bugün atın.</p>
@@ -744,9 +826,40 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- REVISED: PROFESYONEL VE ETKİLİ KURUMSAL FOOTER -->
     <footer>
-        <p>&copy; 2026 Yunus Emre Nakış Matematik Akademisi - Tüm Hakları Saklıdır.</p>
+        <div class="footer-container">
+            <!-- Kurumsal Tanım Bloğu -->
+            <div class="footer-brand">
+                <h3>Yunus Emre Nakış<span>.</span></h3>
+                <p>Türkiye Yüzyılı Maarif Modeli doğrultusunda, ezbersiz ve ispat odaklı yeni nesil matematik eğitimi. Muş içi yüz yüze ve tüm Türkiye'ye online özel ders imkanı.</p>
+            </div>
+            
+            <!-- Hızlı Yönlendirme Linkleri (İSTEDİĞİN ÖZELLİK) -->
+            <div class="footer-links">
+                <h4>Hızlı Yönlendirme</h4>
+                <ul>
+                    <li><a href="#anasayfa"><i class="fas fa-chevron-right" style="font-size:0.7rem;"></i> Anasayfa</a></li>
+                    <li><a href="#avantajlar"><i class="fas fa-chevron-right" style="font-size:0.7rem;"></i> Neden Biz?</a></li>
+                    <li><a href="#programlar"><i class="fas fa-chevron-right" style="font-size:0.7rem;"></i> Sınav Kulvarları</a></li>
+                    <li><a href="#ispatlar"><i class="fas fa-chevron-right" style="font-size:0.7rem;"></i> İspat Ekranı</a></li>
+                    <li><a href="#sss"><i class="fas fa-chevron-right" style="font-size:0.7rem;"></i> Sıkça Sorulanlar</a></li>
+                </ul>
+            </div>
+            
+            <!-- Kurumsal İletişim Bloğu -->
+            <div class="footer-contact">
+                <h4>Doğrudan İletişim</h4>
+                <p><i class="fas fa-phone-alt"></i> <a href="tel:5392361836">0539 236 18 36</a></p>
+                <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/905392361836" target="_blank">WhatsApp Destek Hattı</a></p>
+                <p><i class="fas fa-map-marker-alt"></i> Muş Merkez / Türkiye</p>
+            </div>
+        </div>
+        
+        <!-- Telif Hakları Alanı -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 Yunus Emre Nakış Matematik Akademisi - Tüm Hakları Saklıdır.</p>
+        </div>
     </footer>
 
     <!-- Canlı Geri Sayım Hesaplayıcı Motoru -->
@@ -754,7 +867,6 @@
         function updateCounters() {
             var now = new Date().getTime();
 
-            // Sınav Tarihleri (Haziran 2027 Hedefleri)
             var lgsDate = new Date("Jun 6, 2027 09:30:00").getTime();
             var yksDate = new Date("Jun 19, 2027 10:15:00").getTime();
             var kpssDate = new Date("Jul 25, 2027 10:15:00").getTime();
