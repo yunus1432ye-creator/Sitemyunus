@@ -59,7 +59,7 @@
 
         .logo {
             font-weight: 700;
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             color: var(--primary-color);
         }
 
@@ -74,7 +74,7 @@
 
         /* Hero Section (Saydamlaştırılmış Arka Plan) */
         .hero {
-            padding: 160px 20px 100px 20px;
+            padding: 140px 20px 80px 20px;
             background: url('https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
             text-align: center;
             position: relative;
@@ -97,25 +97,25 @@
         }
 
         .hero h1 {
-            font-size: 2.8rem;
+            font-size: 2.2rem;
             color: #ffffff;
             margin-bottom: 20px;
-            line-height: 1.2;
+            line-height: 1.3;
             text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
 
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: #cbd5e1;
-            margin-bottom: 40px;
+            margin-bottom: 35px;
         }
 
         .badge {
             background-color: var(--accent-color);
             color: white;
-            padding: 6px 16px;
+            padding: 6px 14px;
             border-radius: 50px;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             font-weight: 600;
             display: inline-block;
             margin-bottom: 20px;
@@ -124,7 +124,7 @@
 
         @keyframes pulse {
             0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+            50% { transform: scale(1.03); }
             100% { transform: scale(1); }
         }
 
@@ -133,22 +133,23 @@
             display: flex;
             justify-content: center;
             gap: 15px;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
             flex-wrap: wrap;
         }
 
         .countdown-box {
             background: rgba(255, 255, 255, 0.15);
-            padding: 10px 15px;
+            padding: 12px 15px;
             border-radius: 8px;
             color: white;
             border: 1px solid rgba(255, 255, 255, 0.2);
-            min-width: 140px;
+            flex: 1 1 140px;
+            max-width: 180px;
         }
 
         .countdown-box span {
             display: block;
-            font-size: 1.3rem;
+            font-size: 1.25rem;
             font-weight: 700;
             color: #60a5fa;
         }
@@ -157,8 +158,9 @@
         .btn {
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             gap: 10px;
-            padding: 14px 30px;
+            padding: 14px 24px;
             border-radius: 8px;
             font-weight: 600;
             text-decoration: none;
@@ -169,7 +171,7 @@
         .btn-whatsapp {
             background-color: #25d366;
             color: white;
-            font-size: 1.1rem;
+            font-size: 1rem;
             box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);
         }
 
@@ -181,7 +183,7 @@
         .btn-call {
             background-color: var(--primary-color);
             color: white;
-            font-size: 1.1rem;
+            font-size: 1rem;
             box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
         }
 
@@ -199,13 +201,13 @@
 
         /* Sections General */
         section {
-            padding: 80px 20px;
+            padding: 60px 15px;
         }
 
         .section-title {
             text-align: center;
-            font-size: 2rem;
-            margin-bottom: 50px;
+            font-size: 1.8rem;
+            margin-bottom: 40px;
             position: relative;
         }
 
@@ -222,7 +224,7 @@
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
+            gap: 25px;
             max-width: 1200px;
             margin: 0 auto;
         }
@@ -230,7 +232,7 @@
         /* Card Designs */
         .card {
             background: white;
-            padding: 30px;
+            padding: 25px;
             border-radius: 12px;
             box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
             border: 1px solid #e2e8f0;
@@ -243,7 +245,7 @@
         }
 
         .card-icon {
-            font-size: 2.5rem;
+            font-size: 2.3rem;
             color: var(--primary-color);
             margin-bottom: 15px;
         }
@@ -255,8 +257,8 @@
 
         .exam-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
             max-width: 1200px;
             margin: 0 auto;
         }
@@ -265,7 +267,7 @@
             background: var(--light-color);
             border: 1px solid #e2e8f0;
             border-radius: 16px;
-            padding: 35px 25px;
+            padding: 30px 20px;
             transition: all 0.3s ease;
         }
 
@@ -275,7 +277,7 @@
         }
 
         .exam-screen-card h3 {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             color: var(--dark-color);
             margin-bottom: 15px;
             display: flex;
@@ -294,11 +296,12 @@
 
         .exam-features li {
             margin-bottom: 10px;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             color: #475569;
             display: flex;
             align-items: flex-start;
             gap: 8px;
+            text-align: left;
         }
 
         .exam-features li i {
@@ -314,7 +317,7 @@
 
         .comeback-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
             max-width: 1200px;
             margin: 0 auto;
@@ -324,7 +327,7 @@
             background: #ffffff;
             border: 1px solid #e2e8f0;
             border-radius: 12px;
-            padding: 30px;
+            padding: 25px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.02);
             position: relative;
             overflow: hidden;
@@ -338,8 +341,8 @@
         }
 
         .student-avatar {
-            width: 50px;
-            height: 50px;
+            width: 45px;
+            height: 45px;
             background: #eff6ff;
             color: var(--primary-color);
             border-radius: 50%;
@@ -347,17 +350,18 @@
             align-items: center;
             justify-content: center;
             font-weight: bold;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
         }
 
         .stat-badge-group {
             display: flex;
-            gap: 10px;
+            gap: 8px;
             margin-bottom: 15px;
+            flex-wrap: wrap;
         }
 
         .stat-badge {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             padding: 4px 10px;
             border-radius: 4px;
             font-weight: 600;
@@ -388,15 +392,15 @@
         .proof-box {
             background-color: var(--light-color);
             border-left: 5px solid var(--primary-color);
-            padding: 30px;
+            padding: 25px 20px;
             border-radius: 0 8px 8px 0;
-            margin-bottom: 40px;
+            margin-bottom: 35px;
             box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);
         }
 
         .proof-box h3 {
             color: var(--dark-color);
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             margin-bottom: 15px;
             display: flex;
             align-items: center;
@@ -406,21 +410,29 @@
         .formula-highlight {
             background-color: #e0f2fe;
             color: var(--secondary-color);
-            padding: 8px 15px;
+            padding: 8px 12px;
             border-radius: 6px;
             font-weight: 600;
             display: inline-block;
             margin-bottom: 20px;
-            font-size: 1.1rem;
+            font-size: 1rem;
+            max-width: 100%;
+            word-break: break-all;
         }
 
         .visual-container {
             background: #ffffff;
             border: 1px dashed #cbd5e1;
             border-radius: 8px;
-            padding: 20px;
+            padding: 15px;
             margin-bottom: 20px;
             text-align: center;
+            overflow-x: auto; /* Mobilde SVG taşarsa kaydırılsın */
+        }
+
+        .visual-container svg {
+            max-width: 100%;
+            height: auto;
         }
 
         .proof-steps {
@@ -429,9 +441,11 @@
 
         .proof-steps li {
             position: relative;
-            padding-left: 25px;
+            padding-left: 20px;
             margin-bottom: 12px;
             color: #475569;
+            font-size: 0.9rem;
+            text-align: left;
         }
 
         .proof-steps li::before {
@@ -461,22 +475,25 @@
         }
 
         .faq-item h4 {
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: var(--dark-color);
             margin-bottom: 10px;
             display: flex;
             align-items: center;
             gap: 10px;
+            text-align: left;
         }
 
         .faq-item h4 i {
             color: var(--primary-color);
+            flex-shrink: 0;
         }
 
         .faq-item p {
             color: #475569;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             padding-left: 24px;
+            text-align: left;
         }
 
         /* Alt Çağrı Alanı (CTA) */
@@ -485,19 +502,19 @@
                         url('https://images.unsplash.com/photo-1453733190148-c44698c26578?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
             color: white;
             text-align: center;
-            padding: 90px 20px;
+            padding: 80px 15px;
         }
 
         .cta h2 {
-            font-size: 2.2rem;
+            font-size: 1.8rem;
             margin-bottom: 20px;
         }
 
-        /* İSTEDİĞİN GELİŞTİRME: YENİ PROFESYONEL VE ZENGİN FOOTER ALANI */
+        /* Profesyonel Footer Alanı */
         footer {
             background-color: #0f172a;
             color: #94a3b8;
-            padding: 60px 20px 20px 20px;
+            padding: 50px 20px 20px 20px;
             border-top: 1px solid #1e293b;
             font-size: 0.9rem;
         }
@@ -506,15 +523,15 @@
             max-width: 1200px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            padding-bottom: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 35px;
+            padding-bottom: 35px;
             border-bottom: 1px solid #1e293b;
         }
 
         .footer-brand h3 {
             color: #ffffff;
-            font-size: 1.3rem;
+            font-size: 1.25rem;
             margin-bottom: 15px;
         }
 
@@ -525,13 +542,15 @@
         .footer-brand p {
             font-size: 0.85rem;
             line-height: 1.6;
+            text-align: left;
         }
 
         .footer-links h4, .footer-contact h4 {
             color: #ffffff;
-            font-size: 1.1rem;
-            margin-bottom: 20px;
+            font-size: 1.05rem;
+            margin-bottom: 15px;
             position: relative;
+            text-align: left;
         }
 
         .footer-links h4::after, .footer-contact h4::after {
@@ -545,13 +564,13 @@
 
         .footer-links ul {
             list-style: none;
+            text-align: left;
         }
 
         .footer-links ul li {
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
-        /* Hızlı Link Yönlendirmeleri */
         .footer-links ul li a {
             color: #94a3b8;
             text-decoration: none;
@@ -559,6 +578,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
+            font-size: 0.85rem;
         }
 
         .footer-links ul li a:hover {
@@ -570,10 +590,13 @@
             display: flex;
             align-items: center;
             gap: 10px;
+            font-size: 0.85rem;
+            text-align: left;
         }
 
         .footer-contact p i {
             color: var(--primary-color);
+            flex-shrink: 0;
         }
 
         .footer-contact p a {
@@ -592,13 +615,16 @@
             color: #64748b;
         }
 
+        /* Mobil Ekran Kırılma Kuralları */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2rem; }
-            .hero { padding-top: 120px; }
-            .btn { width: 100%; justify-content: center; }
-            .header-buttons .btn { display: none; }
-            .header-buttons .btn-call-nav { display: inline-flex !important; padding: 6px 12px; font-size: 0.8rem; }
+            .hero h1 { font-size: 1.8rem; }
+            .hero p { font-size: 1rem; }
+            .section-title { font-size: 1.5rem; }
+            .btn { width: 100%; } /* Butonlar mobilde tam genişlik kaplar */
+            .header-buttons .btn { display: none; } /* Üst menü butonlarını telefonda gizle */
+            .header-buttons .btn-call-nav { display: inline-flex !important; padding: 6px 12px; font-size: 0.8rem; width: auto; }
             .footer-container { grid-template-columns: 1fr; gap: 30px; }
+            .countdown-box { max-width: 100%; }
         }
     </style>
 </head>
@@ -609,7 +635,7 @@
         <div class="nav-container">
             <div class="logo">Özel Ders<span>Merkezi</span></div>
             <div class="header-buttons">
-                <a href="tel:5392361836" class="btn btn-call btn-call-nav" style="padding: 8px 16px; font-size: 0.9rem;">
+                <a href="tel:5392361836" class="btn btn-call btn-call-nav">
                     <i class="fas fa-phone-alt"></i> Hemen Ara
                 </a>
                 <a href="https://wa.me/905392361836?text=Merhaba,%20ücretsiz%20ilk%20özel%20ders%20hakkında%20bilgi%20almak%20istiyorum." class="btn btn-whatsapp" style="padding: 8px 16px; font-size: 0.9rem;" target="_blank">
@@ -678,14 +704,13 @@
     <!-- Sınav Kulvarları -->
     <section class="exam-screens-section" id="programlar">
         <h2 class="section-title">Sınav Kulvarları ve Müfredat Yaklaşımı</h2>
-        <p style="text-align: center; max-width:800px; margin: -30px auto 55px auto; color: #475569;">
+        <p style="text-align: center; max-width:800px; margin: -20px auto 35px auto; color: #475569; font-size: 0.95rem;">
             Eğitim programlarımızın tamamı, beceri temelli ve derinlemesine öğrenmeyi hedefleyen <b>Türkiye Yüzyılı Maarif Modeli</b> yeni müfredat doğrultusunda tasarlanmıştır.
         </p>
         
         <div class="exam-grid">
             <div class="exam-screen-card">
                 <h3><i class="fas fa-child"></i> LGS Matematik Ekranı</h3>
-                <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 10px;">Mantık-Muhakeme & Beceri Temelli Sorular</p>
                 <ul class="exam-features">
                     <li><i class="fas fa-check"></i> Yeni Maarif müfredatına uygun akıl yürütme problemleri.</li>
                     <li><i class="fas fa-check"></i> Uzun paragraf tipi matematik sorularında hızlı analiz yöntemleri.</li>
@@ -695,7 +720,6 @@
 
             <div class="exam-screen-card">
                 <h3><i class="fas fa-user-graduate"></i> YKS Matematik Ekranı</h3>
-                <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 10px;">TYT & AYT Tam Konsept Yönetimi</p>
                 <ul class="exam-features">
                     <li><i class="fas fa-check"></i> TYT'de hız kazandıran pratik problem çözme stratejileri.</li>
                     <li><i class="fas fa-check"></i> AYT'de formül ezberletmeyen, ispat odaklı kalıcı trigonometri ve fonksiyon mantığı.</li>
@@ -705,7 +729,6 @@
 
             <div class="exam-screen-card">
                 <h3><i class="fas fa-user-tie"></i> KPSS Matematik Ekranı</h3>
-                <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 10px;">Genel Yetenek Pratik Soru Çözümleri</p>
                 <ul class="exam-features">
                     <li><i class="fas fa-check"></i> Sıfırdan başlayanlar için temeli güçlendiren özel anlatımlar.</li>
                     <li><i class="fas fa-check"></i> Zaman yönetimini kusursuzlaştıran test teknikleri.</li>
@@ -717,21 +740,21 @@
 
     <!-- Comeback / Başarı Hikayeleri -->
     <section class="comeback-section" id="basarilar">
-        <h2 class="section-title">Efsanevi Geri Dönüşler (Comeback Hikayeleri)</h2>
+        <h2 class="section-title">Efsanevi Geri Dönüşler (Comeback)</h2>
         <div class="comeback-grid">
             <div class="comeback-card">
                 <div class="student-info">
                     <div class="student-avatar">A.K.</div>
                     <div>
-                        <h4 style="color: var(--dark-color);">A. K. (LGS Hazırlık)</h4>
-                        <p style="font-size: 0.85rem; color: #64748b;">Hedef: Muş Fen Lisesi</p>
+                        <h4 style="color: var(--dark-color); text-align: left;">A. K. (LGS Hazırlık)</h4>
+                        <p style="font-size: 0.8rem; color: #64748b; text-align: left;">Hedef: Muş Fen Lisesi</p>
                     </div>
                 </div>
                 <div class="stat-badge-group">
                     <div class="stat-badge before">Başlangıç: 4 Net</div>
                     <div class="stat-badge after">Sınav Sonucu: 19 Net</div>
                 </div>
-                <p style="font-size: 0.9rem; color: #475569; font-style: italic;">
+                <p style="font-size: 0.9rem; color: #475569; font-style: italic; text-align: left;">
                     "Formülleri ezberlemekten tamamen bıkmıştım. Yunus hoca ile formüllerin geometrik mantığını ve ispatlarını görerek çalışmaya başladık. Netlerim hızla katlandı."
                 </p>
             </div>
@@ -740,16 +763,16 @@
                 <div class="student-info">
                     <div class="student-avatar">B.Y.</div>
                     <div>
-                        <h4 style="color: var(--dark-color);">B. Y. (YKS - AYT Hazırlık)</h4>
-                        <p style="font-size: 0.85rem; color: #64748b;">Hedef: Mühendislik Fakültesi</p>
+                        <h4 style="color: var(--dark-color); text-align: left;">B. Y. (YKS Hazırlık)</h4>
+                        <p style="font-size: 0.8rem; color: #64748b; text-align: left;">Hedef: Mühendislik Fakültesi</p>
                     </div>
                 </div>
                 <div class="stat-badge-group">
                     <div class="stat-badge before">Başlangıç: 8 AYT Net</div>
                     <div class="stat-badge after">Sınav Sonucu: 36 AYT Net</div>
                 </div>
-                <p style="font-size: 0.9rem; color: #475569; font-style: italic;">
-                    "Trigonometri formülleri kabusum gibiydi. Sin2a açılımının sinüs alan formülünden nasıl çıktığını gördüğüm o ilk günü unutmuyorum. Ezber bittiğinde matematikte hata yapma şansınız kalmıyor."
+                <p style="font-size: 0.9rem; color: #475569; font-style: italic; text-align: left;">
+                    "Trigonometri formülleri kabusum gibiydi. Sin2a açılımının mantığını gördüğüm o ilk günü unutmuyorum. Ezber bittiğinde matematikte hata yapma şansınız kalmıyor."
                 </p>
             </div>
         </div>
@@ -764,7 +787,7 @@
                 <div class="formula-highlight">sin(2a) = 2 · sin(a) · cos(a)</div>
                 
                 <div class="visual-container">
-                    <svg width="280" height="220" viewBox="0 0 280 220" style="background:#ffffff; border-radius:6px;">
+                    <svg width="280" height="220" viewBox="0 0 280 220">
                         <polygon points="140,20 60,180 140,180" fill="#eff6ff" stroke="none" />
                         <polygon points="140,20 220,180 140,180" fill="#f0fdf4" stroke="none" />
                         <line x1="140" y1="20" x2="60" y2="180" stroke="#1e293b" stroke-width="2"/>
@@ -788,10 +811,36 @@
 
                 <ul class="proof-steps">
                     <li>Tepe açısı 2a, yan kenar uzunlukları 1 birim olan bir ABC üçgeni üzerinde, [AD] açıortay doğrusunu (yükseklik) inceleyelim.</li>
-                    <li>Açıortay tepe açısını ve olarak ikiye bölerken, trigonometrik oranlardan sol ve sağdaki dik tabanlar sin(a), ortak yükseklik ise cos(a) birim uzunluğa sahip olur.</li>
+                    <li>Açıortay tepe açısını a ve a olarak ikiye bölerken, trigonometrik oranlardan sol ve sağdaki dik tabanlar sin(a), ortak yükseklik ise cos(a) birim uzunluğa sahip olur.</li>
+                    <li>Şimdi tüm büyük ABC üçgeninin alanını iki farklı matematiksel metotla hesaplayalım:</li>
                     <li>Yol 1 (Sinüs Alan Formülü): Alan = (1 * 1 * sin(2a)) / 2 yani sin(2a) / 2</li>
                     <li>Yol 2 (İki Küçük Parçanın Toplamı): İki dik üçgenin alanları toplamı = 2 * [ (sin(a) * cos(a)) / 2 ] yani sin(a) * cos(a)</li>
                     <li>sin(2a) / 2 = sin(a) * cos(a) eşitliği elde edilir. Paydadaki 2 karşıya atıldığında formülümüz kesin olarak kanıtlanır.</li>
+                </ul>
+            </div>
+
+            <!-- İspat 2: Gauss -->
+            <div class="proof-box">
+                <h3><i class="fas fa-calculator"></i> 2. Gauss Toplam Formülü Mantığı</h3>
+                <div class="formula-highlight">1 + 2 + 3 + ... + n = [ n · (n + 1) ] / 2</div>
+                <ul class="proof-steps">
+                    <li>1'den n'e kadar olan ardışık sayıların toplam değerine matematiksel olarak S diyelim: S = 1 + 2 + 3 + ... + n</li>
+                    <li>Aynı toplam serisini hemen altına tamamen tersten (büyükten küçüğe) yazalım: S = n + (n-1) + ... + 1</li>
+                    <li>Bu iki diziyi alt alta topladığımızda harika bir simetri yakalarız. Her dikey kolonun toplamı istisnasız hep (n+1) sonucunu verir.</li>
+                    <li>Seride bu şekilde tam n adet terim olduğu için sağ tarafın toplam değeri: n * (n + 1) olur.</li>
+                    <li>Sol tarafta iki adet S toplandığı için 2S = n * (n + 1) eşitliğini buluruz. Her iki tarafı da 2'ye böldüğümüzde meşhur formül kendiliğinden ortaya çıkar.</li>
+                </ul>
+            </div>
+
+            <!-- İspat 3: e Sayısı -->
+            <div class="proof-box">
+                <h3><i class="fas fa-chart-line"></i> 3. "e" Sayısının (Euler Sayısı) Sezgisel Mantığı</h3>
+                <div class="formula-highlight">e ≈ 2.71828... (Doğal Üstel Büyüme Sınırı)</div>
+                <ul class="proof-steps">
+                    <li>Düşünün ki cebinizde 1 TL var ve bir banka size yılda %100 faiz veriyor. 1 yılın sonunda paranız 1 + 1 = 2 TL olur.</li>
+                    <li>Eğer banka faizi 6 ayda bir (%50 + %50 bileşik faiz şeklinde) işletseydi, yıl sonunda paranız 2.25 TL olurdu.</li>
+                    <li>Peki faiz işletme sıklığını saniyelere bölüp sürekli (sonsuz) bir büyüme modeline çevirirsek paramız sonsuza mı gider? Hayır, doğadaki üstel büyüme limitine takılır.</li>
+                    <li>Dönem sayısını sonsuza doğru götürdüğümüzde ulaştığımız o maksimum üst limit noktası tam olarak 2.71828... yani e sayısıdır!</li>
                 </ul>
             </div>
         </div>
@@ -815,7 +864,7 @@
     <!-- Alt Çağrı Alanı -->
     <section class="cta">
         <h2>Eksiklerinizi Birlikte Tamamlayalım</h2>
-        <p style="margin-bottom: 35px;">Sınavlara hazırlık, okul derslerine takviye ve kalıcı başarı için ilk adımı bugün atın.</p>
+        <p style="margin-bottom: 35px; font-size: 1rem;">Sınavlara hazırlık, okul derslerine takviye ve kalıcı başarı için ilk adımı bugün atın.</p>
         <div class="hero-buttons-wrapper">
             <a href="https://wa.me/905392361836?text=Merhaba,%20özel%20dersleriniz%20ve%20yüz%20yüze%20eğitim%20hakkında%20detaylı%20bilgi%20almak%20istiyorum." class="btn btn-whatsapp" target="_blank">
                 <i class="fab fa-whatsapp"></i> WhatsApp ile Detaylı Bilgi Al
@@ -826,16 +875,14 @@
         </div>
     </section>
 
-    <!-- REVISED: PROFESYONEL VE ETKİLİ KURUMSAL FOOTER -->
+    <!-- Profesyonel Footer -->
     <footer>
         <div class="footer-container">
-            <!-- Kurumsal Tanım Bloğu -->
             <div class="footer-brand">
                 <h3>Yunus Emre Nakış<span>.</span></h3>
                 <p>Türkiye Yüzyılı Maarif Modeli doğrultusunda, ezbersiz ve ispat odaklı yeni nesil matematik eğitimi. Muş içi yüz yüze ve tüm Türkiye'ye online özel ders imkanı.</p>
             </div>
             
-            <!-- Hızlı Yönlendirme Linkleri (İSTEDİĞİN ÖZELLİK) -->
             <div class="footer-links">
                 <h4>Hızlı Yönlendirme</h4>
                 <ul>
@@ -847,7 +894,6 @@
                 </ul>
             </div>
             
-            <!-- Kurumsal İletişim Bloğu -->
             <div class="footer-contact">
                 <h4>Doğrudan İletişim</h4>
                 <p><i class="fas fa-phone-alt"></i> <a href="tel:5392361836">0539 236 18 36</a></p>
@@ -856,7 +902,6 @@
             </div>
         </div>
         
-        <!-- Telif Hakları Alanı -->
         <div class="footer-bottom">
             <p>&copy; 2026 Yunus Emre Nakış Matematik Akademisi - Tüm Hakları Saklıdır.</p>
         </div>
