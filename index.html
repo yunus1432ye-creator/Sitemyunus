@@ -201,7 +201,7 @@
             margin-bottom: 15px;
         }
 
-        /* Proofs Section (İspat Odaklı Öğrenme) */
+        /* Proofs Section (İspat Odaklı Öğrenme Alanı) */
         .proofs-section {
             background-color: #ffffff;
             padding: 80px 20px;
@@ -300,14 +300,14 @@
             h1 { font-size: 2rem; }
             .hero { padding-top: 120px; }
             .btn { width: 100%; justify-content: center; }
-            .header-buttons .btn { display: none; } /* Mobilde menü butonlarını gizle veya küçült */
+            .header-buttons .btn { display: none; }
             .header-buttons .btn-call-nav { display: inline-flex !important; padding: 6px 12px; font-size: 0.8rem; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header -->
+    <!-- Header / Navigasyon -->
     <header>
         <div class="nav-container">
             <div class="logo">Özel Ders<span>Merkezi</span></div>
@@ -322,7 +322,7 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Bölümü -->
     <section class="hero">
         <div class="hero-container">
             <div class="badge"><i class="fas fa-gift"></i> Sınırlı Kontenjan: İlk Ders Tamamen Ücretsiz!</div>
@@ -339,7 +339,7 @@
         </div>
     </section>
 
-    <!-- Features Section -->
+    <!-- Avantajlar / Özellikler Bölümü -->
     <section class="features">
         <h2 class="section-title">Neden Bu Eğitimi Seçmelisiniz?</h2>
         <div class="grid">
@@ -361,23 +361,23 @@
         </div>
     </section>
 
-    <!-- REVISED/NEW: İspatlarla Öğrenme Modülü -->
+    <!-- İspat Odaklı Öğrenme Bölümü -->
     <section class="proofs-section">
         <div class="proofs-container">
             <h2 class="section-title">İspat Teknikleriyle Ezbersiz Matematik</h2>
-            <p style="text-align: center; color: #64748b; margin-bottom: 40px; margin-top: -30px;">Formülleri dayatmak yerine mantığını zihne işliyoruz. İşte derslerimizdeki yaklaşımlardan birkaç örnek:</p>
+            <p style="text-align: center; color: #64748b; margin-bottom: 40px; margin-top: -30px;">Formülleri dayatmak yerine mantığını zihne işliyoruz. İşte derslerimizin temelini oluşturan ispat yaklaşımları:</p>
 
             <!-- İspat 1: Sin2a Açılımı -->
             <div class="proof-box">
                 <h3><i class="fas fa-draw-polygon"></i> 1. Sinüs Alan Formülü ile Yarım Açı İspatı</h3>
                 <div class="formula-highlight">sin(2a) = 2 · sin(a) · cos(a)</div>
                 <ul class="proof-steps">
-                    <li>Tepe açısı 2a olan bir ABC üçgeni çizelim ve bu açıyı tam ortasından ikiye bölen (açıortay) bir yükseklik [AD] indirelim. Yan kenar uzunluklarımız da 1 birim olsun.</li>
-                    <li>Bu durumda oluşan sağdaki ve soldaki eş dik üçgenlerin taban uzunlukları <b>sin(a)</b>, yükseklikleri ise <b>cos(a)</b> birim olur.</li>
-                    <li>Şimdi büyük üçgenin alanını iki farklı yolla bulup eşitleyelim:</li>
-                    <li><b>Yol 1 (Sinüs Alan Formülü):</b> Alan = (1 · 1 · sin(2a)) / 2  ➔  Yani <b>sin(2a) / 2</b></li>
-                    <li><b>Yol 2 (Parçaların Toplamı):</b> İki dik üçgenin alanları toplamı = 2 · [ (sin(a) · cos(a)) / 2 ]  ➔  Yani <b>sin(a) · cos(a)</b></li>
-                    <li>İki alanı eşitlediğimizde: sin(2a) / 2 = sin(a) · cos(a) elde edilir. İçler dışlar çarpımı ile formül ispatlanır.</li>
+                    <li>Tepe açısı 2a olan bir ABC üçgeni hayal edelim ve bu açıyı tam ortasından ikiye bölen bir [AD] açıortay doğrusu (yükseklik) indirelim. Hipotenüs uzunlukları (yan kenarlar) da 1 birim olsun.</li>
+                    <li>Oluşan sağdaki ve soldaki eş dik üçgenlerin geometrik oranlarından dolayı taban uzunlukları <b>sin(a)</b>, yükseklikleri ise <b>cos(a)</b> birim olur.</li>
+                    <li>Şimdi tüm büyük üçgenin alanını iki farklı matematiksel yolla hesaplayıp birbirine eşitleyelim:</li>
+                    <li><b>Yol 1 (Sinüs Alan Formülü ile):</b> Alan = (1 · 1 · sin(2a)) / 2 ➔ Yani <b>sin(2a) / 2</b></li>
+                    <li><b>Yol 2 (İki Küçük Parçanın Toplamı ile):</b> İki dik üçgenin alanları toplamı = 2 · [ (sin(a) · cos(a)) / 2 ] ➔ Yani <b>sin(a) · cos(a)</b></li>
+                    <li>Her iki alan da aynı üçgüne ait olduğundan: sin(2a) / 2 = sin(a) · cos(a) eşitliği kurulur. Paydadaki 2 karşıya çarpım olarak geçtiğinde formülümüz tam olarak ispatlanmış olur.</li>
                 </ul>
             </div>
 
@@ -386,29 +386,29 @@
                 <h3><i class="fas fa-calculator"></i> 2. Gauss Toplam Formülü Mantığı</h3>
                 <div class="formula-highlight">1 + 2 + 3 + ... + n = [ n · (n + 1) ] / 2</div>
                 <ul class="proof-steps">
-                    <li>1'den n'e kadar olan sayıların toplamına <b>S</b> diyelim: S = 1 + 2 + 3 + ... + n</li>
-                    <li>Aynı toplamı altına tamamen ters sırada yazalım: S = n + (n-1) + ... + 1</li>
-                    <li>Bu iki ifadeyi alt alta topladığımızda harika bir örüntü oluşur: (1+n) + (2+n-1) + (3+n-2)... Dikkat ederseniz alt alta gelen her çiftin toplamı sabit ve hep <b>(n+1)</b> olur.</li>
-                    <li>Sırada bu şekilde tam <b>n</b> adet çift/terim olduğu için sağ tarafın toplamı: <b>n · (n + 1)</b> yapar.</li>
-                    <li>Sol tarafta iki adet S toplandığı için 2S = n · (n + 1) olur. Her iki tarafı 2'ye böldüğümüzde formül kendiliğinden ortaya çıkar.</li>
+                    <li>1'den n'e kadar olan ardışık sayıların toplam değerine matematiksel olarak <b>S</b> diyelim: S = 1 + 2 + 3 + ... + n</li>
+                    <li>Aynı toplam serisini hemen altına tamamen tersten (büyükten küçüğe) yazalım: S = n + (n-1) + ... + 1</li>
+                    <li>Bu iki denklemi alt alta topladığımızda harika bir simetri yakalarız: (1+n) + (2+n-1) + (3+n-2)... Dikkat ederseniz her dikey kolonun toplamı istisnasız hep <b>(n+1)</b> sonucunu verir.</li>
+                    <li>Seride bu şekilde tam <b>n</b> adet kolon/terim olduğu için sağ tarafın toplam değeri: <b>n · (n + 1)</b> olur.</li>
+                    <li>Sol tarafta iki adet S toplandığı için 2S = n · (n + 1) eşitliğini buluruz. Her iki tarafı da 2'ye böldüğümüzde meşhur formül kendiliğinden ortaya çıkar.</li>
                 </ul>
             </div>
 
             <!-- İspat 3: e Sayısının Mantığı -->
             <div class="proof-box">
                 <h3><i class="fas fa-chart-line"></i> 3. "e" Sayısının (Euler Sayısı) Sezgisel Mantığı</h3>
-                <div class="formula-highlight">e ≈ 2.71828... (Bileşik Faiz ve Sürekli Büyüme Sabiti)</div>
+                <div class="formula-highlight">e ≈ 2.71828... (Doğal Üstel Büyüme Sınırı)</div>
                 <ul class="proof-steps">
-                    <li>Düşünün ki bankaya 1 TL yatırdınız ve banka size yılda %100 faiz veriyor. Yıl sonunda paranız 1 + 1 = 2 TL olur.</li>
-                    <li>Eğer banka faizi 6 ayda bir (%50 + %50 bileşik) işletseydi: 6. ayda 1.5 TL, yıl sonunda ise 1.5'un %50 fazlasıyla 2.25 TL'niz olurdu.</li>
-                    <li>Faiz işletme süresini aylara, günlere, saatlere hatta saniyelere bölüp <b>sürekli (sonsuz) büyüme</b> modeline çevirirseniz paranız sonsuza gitmez, doğadaki üstel büyüme sınırına takılır.</li>
-                    <li>İşte faiz dönemini sonsuza götürdüğümüzde ulaştığımız o maksimum limit noktası tam olarak <b>2.71828...</b> yani <b>e</b> sayısıdır! Doğadaki tüm organik büyümelerin kalbidir.</li>
+                    <li>Düşünün ki cebinizde 1 TL var ve bir banka size yılda %100 faiz veriyor. 1 yılın sonunda paranız 1 + 1 = 2 TL olur.</li>
+                    <li>Eğer banka faizi 6 ayda bir (yani yılda 2 kez, %50 + %50 bileşik faiz şeklinde) işletseydi: 6. ayda 1.5 TL'niz, yıl sonunda ise 1.5'un %50 fazlasıyla 2.25 TL'niz olurdu.</li>
+                    <li>Peki faiz işletme sıklığını aylara, günlere, dakikalara hatta saniyelere bölüp <b>sürekli (sonsuz) bir büyüme</b> modeline çevirirsek paramız sonsuza mı gider? Hayır, doğadaki üstel büyüme limitine takılır.</li>
+                    <li>Dönem sayısını sonsuza doğru götürdüğümüzde ulaştığımız o maksimum üst limit noktası tam olarak <b>2.71828...</b> yani <b>e</b> sayısıdır! Doğadaki tüm organik ve sürekli büyümelerin evrensel sınırıdır.</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
+    <!-- Alt Çağrı Alanı (CTA) -->
     <section class="cta">
         <h2>Eksiklerinizi Birlikte Tamamlayalım</h2>
         <p>Sınavlara hazırlık, okul derslerine takviye ve kalıcı başarı için ilk adımı bugün atın.</p>
