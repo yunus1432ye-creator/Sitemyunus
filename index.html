@@ -3,378 +3,428 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yunus Emre Nakış | İspat Odaklı Matematik Akademisi</title>
-    <!-- Google Fonts & FontAwesome -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <title>Online & Muş Yüz Yüze Özel Matematik Dersi</title>
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         :root {
-            --brand-primary: #1e3a8a; /* Kurumsal Güven Mavisi */
-            --brand-secondary: #0f172a;
-            --brand-accent: #10b981; /* Başarı Yeşili */
-            --bg-light: #fdfbf7; /* Gözü yormayan premium hafif krem tonu */
-            --text-dark: #1e293b;
-            --text-muted: #64748b;
+            --primary-color: #2563eb;
+            --secondary-color: #1d4ed8;
+            --accent-color: #10b981;
+            --dark-color: #1e293b;
+            --light-color: #f8fafc;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
+            font-family: 'Poppins', sans-serif;
         }
 
         body {
-            background-color: var(--bg-light);
-            color: var(--text-dark);
+            background-color: var(--light-color);
+            color: var(--dark-color);
             line-height: 1.6;
         }
 
-        /* Global Elegant Container */
-        .container {
-            max-width: 1140px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header Navbar */
+        /* Header / Navbar */
         header {
-            background-color: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            border-bottom: 1px solid #e2e8f0;
         }
 
-        .nav-wrapper {
+        .nav-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 18px 0;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
         }
 
-        .brand-logo {
-            font-family: 'Playfair Display', serif;
+        .logo {
             font-weight: 700;
-            font-size: 1.45rem;
-            color: var(--brand-primary);
-            letter-spacing: -0.5px;
+            font-size: 1.4rem;
+            color: var(--primary-color);
         }
 
-        .brand-logo span {
-            color: var(--brand-accent);
-            font-family: 'Inter', sans-serif;
-            font-size: 0.9rem;
-            margin-left: 5px;
-            font-weight: 500;
+        .logo span {
+            color: var(--accent-color);
         }
 
-        /* Hero / Tanıtım Alanı */
-        .hero-section {
-            padding: 160px 0 80px 0;
-            background: radial-gradient(circle at top right, #eff6ff 0%, var(--bg-light) 60%);
+        .header-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 140px 20px 60px 20px;
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
             text-align: center;
         }
 
-        .badge-premium {
-            background-color: rgba(16, 185, 129, 0.1);
-            color: var(--brand-accent);
-            padding: 8px 18px;
-            border-radius: 30px;
-            font-size: 0.85rem;
+        .hero-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .badge {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.9rem;
             font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 25px;
-            border: 1px solid rgba(16, 185, 129, 0.2);
+            display: inline-block;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
         }
 
         h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3rem;
-            color: var(--brand-secondary);
+            font-size: 2.8rem;
+            color: var(--dark-color);
+            margin-bottom: 20px;
             line-height: 1.2;
-            margin-bottom: 20px;
-            font-weight: 700;
         }
 
-        .hero-section p {
-            font-size: 1.15rem;
-            color: var(--text-muted);
-            max-width: 750px;
-            margin: 0 auto 35px auto;
-        }
-
-        /* Buttons */
-        .btn-premium {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            padding: 15px 35px;
-            border-radius: 6px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.2s ease-in-out;
-            font-size: 1.05rem;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-            background-color: #25d366;
-            color: white;
-        }
-
-        .btn-premium:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
-        }
-
-        /* Eğitim Modelleri (Muş & Online) */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-            margin: 60px 0;
-        }
-
-        .service-card {
-            background: white;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            padding: 40px 30px;
-            transition: all 0.3s ease;
-        }
-
-        .service-card:hover {
-            border-color: var(--brand-primary);
-            box-shadow: 0 10px 30px rgba(30, 58, 138, 0.04);
-        }
-
-        .icon-box {
-            width: 50px;
-            height: 50px;
-            background-color: #eff6ff;
-            color: var(--brand-primary);
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-        }
-
-        .service-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 12px;
-            color: var(--brand-secondary);
-        }
-
-        /* İSPAT EKRANI MODÜLÜ */
-        .proof-section {
-            background-color: white;
-            border: 1px solid #e2e8f0;
-            border-radius: 12px;
-            padding: 50px 40px;
-            margin: 40px 0 80px 0;
-        }
-
-        .section-header {
-            text-align: center;
+        .hero p {
+            font-size: 1.2rem;
+            color: #64748b;
             margin-bottom: 40px;
         }
 
-        .section-header h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.2rem;
-            color: var(--brand-secondary);
-        }
-
-        .section-header p {
-            color: var(--text-muted);
-            margin-top: 8px;
-        }
-
-        .proof-tabs {
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-        }
-
-        .proof-display-screen {
-            background-color: #0f172a; /* Dijital Kara Tahta Efekti */
-            color: #f8fafc;
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 30px;
             border-radius: 8px;
-            padding: 30px;
-            font-family: 'Courier New', Courier, monospace;
-            border-left: 5px solid var(--brand-accent);
-            box-shadow: inset 0 2px 8px rgba(0,0,0,0.5);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
         }
 
-        .proof-screen-title {
-            color: var(--brand-accent);
-            font-weight: bold;
+        .btn-whatsapp {
+            background-color: #25d366;
+            color: white;
             font-size: 1.1rem;
-            margin-bottom: 15px;
-            font-family: 'Inter', sans-serif;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);
         }
 
-        .math-equation {
-            font-family: 'Times New Roman', Times, serif;
-            font-style: italic;
-            font-size: 1.4rem;
-            color: #f59e0b;
-            margin: 15px 0;
+        .btn-whatsapp:hover {
+            background-color: #20ba5a;
+            transform: translateY(-2px);
+        }
+
+        .btn-call {
+            background-color: var(--primary-color);
+            color: white;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+        }
+
+        .btn-call:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        .hero-buttons-wrapper {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
             text-align: center;
-            background: rgba(255,255,255,0.05);
-            padding: 10px;
-            border-radius: 4px;
+            font-size: 2rem;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary-color);
+            margin: 10px auto 0 auto;
+            border-radius: 2px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        /* Proofs Section (İspat Odaklı Öğrenme) */
+        .proofs-section {
+            background-color: #ffffff;
+            padding: 80px 20px;
+            border-top: 1px solid #e2e8f0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .proofs-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .proof-box {
+            background-color: var(--light-color);
+            border-left: 5px solid var(--primary-color);
+            padding: 25px;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 35px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .proof-box h3 {
+            color: var(--dark-color);
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .proof-box h3 i {
+            color: var(--primary-color);
+        }
+
+        .formula-highlight {
+            background-color: #e0f2fe;
+            color: var(--secondary-color);
+            padding: 8px 15px;
+            border-radius: 6px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
         }
 
         .proof-steps {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.95rem;
-            line-height: 1.7;
-            color: #cbd5e1;
-            padding-left: 20px;
+            list-style-type: none;
         }
 
         .proof-steps li {
+            position: relative;
+            padding-left: 25px;
             margin-bottom: 10px;
+            color: #475569;
         }
 
-        /* CTA Alt Alan */
-        .cta-banner {
-            background: linear-gradient(135deg, var(--brand-secondary) 0%, #020617 100%);
+        .proof-steps li::before {
+            content: "➔";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(135deg, var(--dark-color) 0%, #0f172a 100%);
             color: white;
-            border-radius: 12px;
-            padding: 60px 40px;
             text-align: center;
-            margin-bottom: 80px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+            padding: 80px 20px;
         }
 
-        .cta-banner h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            margin-bottom: 15px;
+        .cta h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+
+        .cta p {
+            color: #94a3b8;
+            margin-bottom: 35px;
+            font-size: 1.1rem;
         }
 
         /* Footer */
         footer {
-            background-color: var(--brand-secondary);
-            color: #94a3b8;
-            padding: 30px 0;
+            background-color: #0f172a;
+            color: #64748b;
             text-align: center;
-            font-size: 0.9rem;
+            padding: 20px;
             border-top: 1px solid #1e293b;
+            font-size: 0.9rem;
         }
 
+        /* Responsive Design */
         @media (max-width: 768px) {
-            h1 { font-size: 2.2rem; }
-            .proof-section { padding: 25px 15px; }
-            .btn-premium { width: 100%; justify-content: center; }
+            h1 { font-size: 2rem; }
+            .hero { padding-top: 120px; }
+            .btn { width: 100%; justify-content: center; }
+            .header-buttons .btn { display: none; } /* Mobilde menü butonlarını gizle veya küçült */
+            .header-buttons .btn-call-nav { display: inline-flex !important; padding: 6px 12px; font-size: 0.8rem; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header Navigation -->
+    <!-- Header -->
     <header>
-        <div class="container">
-            <div class="nav-wrapper">
-                <div class="brand-logo">Yunus Emre Nakış <span>| Matematik Eğitim Ofisi</span></div>
-                <a href="https://wa.me/905392361836?text=Merhaba,%20profesyonel%20ispat%20odaklı%20ders%20modeliniz%20ve%20ücretsiz%20ilk%20seans%20hakkında%20bilgi%20almak%20istiyorum." class="btn-premium" style="padding: 10px 20px; font-size: 0.9rem;" target="_blank">
-                    <i class="fab fa-whatsapp"></i> İletişim
+        <div class="nav-container">
+            <div class="logo">Özel Ders<span>Merkezi</span></div>
+            <div class="header-buttons">
+                <a href="tel:5392361836" class="btn btn-call btn-call-nav" style="padding: 8px 16px; font-size: 0.9rem;">
+                    <i class="fas fa-phone-alt"></i> Hemen Ara
+                </a>
+                <a href="https://wa.me/905392361836?text=Merhaba,%20ücretsiz%20ilk%20özel%20ders%20hakkında%20bilgi%20almak%20istiyorum." class="btn btn-whatsapp" style="padding: 8px 16px; font-size: 0.9rem;" target="_blank">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
                 </a>
             </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="container">
-            <div class="badge-premium"><i class="fas fa-graduation-cap"></i> Ezbere Karşı İspatla Öğrenme Akımı</div>
-            <h1>Formülleri Unutun.<br>Mantığını <span style="color: var(--brand-primary)">İspatlarla</span> Keşfedin.</h1>
-            <p>Matematikte başarı, kalıcı öğrenmeyle gelir. Muş içi yüz yüze veya Türkiye geneli interaktif online derslerle, her konunun temel mantığını canlı ekran simülasyonları ve ispatlarla işliyoruz.</p>
-            <a href="https://wa.me/905392361836?text=Merhaba,%20ücretsiz%20tanışma%20ve%20analiz%20dersinizi%20planlamak%20istiyorum." class="btn-premium" target="_blank">
-                <i class="fab fa-whatsapp"></i> Ücretsiz İlk Dersinizi Bugün Planlayın
-            </a>
+    <section class="hero">
+        <div class="hero-container">
+            <div class="badge"><i class="fas fa-gift"></i> Sınırlı Kontenjan: İlk Ders Tamamen Ücretsiz!</div>
+            <h1>Başarıya Giden Yolda <br><span style="color: var(--primary-color);">Birebir Özel Ders</span> Deneyimi</h1>
+            <p>Hedeflerinize ulaşmanız için tamamen size özel hazırlanan ders planları ile başarıyı şansa bırakmayın. İster online, ister Muş içinde yüz yüze eğitimle eksiklerinizi hızla kapatın.</p>
+            <div class="hero-buttons-wrapper">
+                <a href="https://wa.me/905392361836?text=Merhaba,%20ücretsiz%20ilk%20özel%20ders%20hakkında%20bilgi%20almak%20istiyorum." class="btn btn-whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Ücretsiz İlk Dersini Planla
+                </a>
+                <a href="tel:5392361836" class="btn btn-call">
+                    <i class="fas fa-phone-alt"></i> Beni Aramak İçin Tıklayın
+                </a>
+            </div>
         </div>
     </section>
 
-    <!-- Hizmet ve Lokasyon Seçenekleri -->
-    <section class="container">
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="icon-box"><i class="fas fa-map-marker-alt"></i></div>
+    <!-- Features Section -->
+    <section class="features">
+        <h2 class="section-title">Neden Bu Eğitimi Seçmelisiniz?</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="card-icon"><i class="fas fa-laptop-house"></i></div>
+                <h3>Türkiye Geneli Online Ders</h3>
+                <p>Mekandan bağımsız, evinizin konforunda, interaktif dijital araçlar ve materyallerle desteklenmiş yüksek verimli online dersler.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon"><i class="fas fa-map-marker-alt"></i></div>
                 <h3>Muş İçi Yüz Yüze Eğitim</h3>
-                <p>Muş merkezde, öğrencinin seviyesine ve ders açıklarına göre optimize edilmiş, odaklanma problemi yaşatmayan konforlu birebir eğitim seansları.</p>
+                <p>Muş merkezde, öğrencinin ihtiyacına uygun planlamayla, odaklanmayı en üst düzeye çıkaran yüz yüze birebir eğitim imkanı.</p>
             </div>
-            <div class="service-card">
-                <div class="icon-box"><i class="fas fa-laptop"></i></div>
-                <h3>Profesyonel Online Altyapı</h3>
-                <p>Grafik tablet entegrasyonu, yüksek çözünürlüklü dijital beyaz tahta kullanımı ve ders sonu anında iletilen PDF akıllı tahta notları.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- CANLI İSPAT TEKNİĞİ EKRANI -->
-    <section class="container">
-        <div class="proof-section">
-            <div class="section-header">
-                <h2>Canlı Ders İspat Ekranı Simülasyonu</h2>
-                <p>Öğrencilerimize formülleri dayatmak yerine, ders esnasında tahtada birlikte inşa ettiğimiz ispat süreçlerinden kesitler:</p>
-            </div>
-
-            <div class="proof-tabs">
-                <!-- İspat 1 -->
-                <div class="proof-display-screen">
-                    <div class="proof-screen-title">[EKRAN 1] - Cebirsel İspat: Gauss Toplam Formülü</div>
-                    <div style="color: #94a3b8; margin-bottom: 10px;">// Ardışık sayıların toplam formülü ezberlenmeden nasıl çıkarılır?</div>
-                    <div class="math-equation">1 + 2 + 3 + ... + n = [ n × (n + 1) ] / 2</div>
-                    <ul class="proof-steps">
-                        <li>1. Aradığımız toplama S diyoruz: S = 1 + 2 + 3 + ... + n</li>
-                        <li>2. Aynı toplamı altına tamamen ters sırada yazıyoruz: S = n + (n-1) + ... + 1</li>
-                        <li>3. Bu iki satırı alt alta topladığımızda, her kolonun toplamı istisnasız (n+1) olur.</li>
-                        <li>4. Satırda tam n tane kolon olduğu için toplam: 2S = n × (n + 1) halini alır.</li>
-                        <li>5. Buradan S yalnız bırakıldığında formül kendiliğinden ispatlanmış olur.</li>
-                    </ul>
-                </div>
-
-                <!-- İspat 2 -->
-                <div class="proof-display-screen">
-                    <div class="proof-screen-title">[EKRAN 2] - Geometrik İspat: İki Kare Farkı</div>
-                    <div style="color: #94a3b8; margin-bottom: 10px;">// Özdeşliklerin geometrik alan kesme mantığıyla görselleştirilmesi</div>
-                    <div class="math-equation">a² - b² = (a - b) × (a + b)</div>
-                    <ul class="proof-steps">
-                        <li>1. Bir kenarı "a" olan büyük bir karenin alanını (a²) baz alıyoruz.</li>
-                        <li>2. Köşesinden bir kenarı "b" olan küçük bir kareyi (b²) kesip çıkarıyoruz.</li>
-                        <li>3. Kalan L şeklindeki alanı iki adet dikdörtgen parçaya ayırıyoruz.</li>
-                        <li>4. Bu parçaları uç uca eklediğimizde kenarları (a-b) ve (a+b) olan kusursuz yeni bir dikdörtgen elde ederiz. Alan değişmediği için eşitlik kanıtlanır.</li>
-                    </ul>
-                </div>
+            <div class="card">
+                <div class="card-icon"><i class="fas fa-star"></i></div>
+                <h3>İlk Ders Ücretsiz!</h3>
+                <p>Eğitim kalitemizi ve iletişimimizi görmeniz için ilk tanışma dersimiz tamamen ücretsizdir. Kendinizi denemeden karar vermeyin.</p>
             </div>
         </div>
     </section>
 
-    <!-- Alt Çağrı Alanı (CTA) -->
-    <section class="container">
-        <div class="cta-banner">
-            <h2>Matematikte Yeni Bir Dönem Başlatın</h2>
-            <p style="color: #94a3b8; margin-bottom: 30px;">İlk ders tamamen ücretsizdir. Tanışalım, seviye ve eksik analizi haritanızı çıkaralım.</p>
-            <a href="https://wa.me/905392361836?text=Merhaba,%20ücretsiz%20ilk%20özel%20ders%20hakkında%20bilgi%20almak%20istiyorum." class="btn-premium" target="_blank">
-                <i class="fab fa-whatsapp"></i> WhatsApp ile Şimdi İletişime Geçin
+    <!-- REVISED/NEW: İspatlarla Öğrenme Modülü -->
+    <section class="proofs-section">
+        <div class="proofs-container">
+            <h2 class="section-title">İspat Teknikleriyle Ezbersiz Matematik</h2>
+            <p style="text-align: center; color: #64748b; margin-bottom: 40px; margin-top: -30px;">Formülleri dayatmak yerine mantığını zihne işliyoruz. İşte derslerimizdeki yaklaşımlardan birkaç örnek:</p>
+
+            <!-- İspat 1: Sin2a Açılımı -->
+            <div class="proof-box">
+                <h3><i class="fas fa-draw-polygon"></i> 1. Sinüs Alan Formülü ile Yarım Açı İspatı</h3>
+                <div class="formula-highlight">sin(2a) = 2 · sin(a) · cos(a)</div>
+                <ul class="proof-steps">
+                    <li>Tepe açısı 2a olan bir ABC üçgeni çizelim ve bu açıyı tam ortasından ikiye bölen (açıortay) bir yükseklik [AD] indirelim. Yan kenar uzunluklarımız da 1 birim olsun.</li>
+                    <li>Bu durumda oluşan sağdaki ve soldaki eş dik üçgenlerin taban uzunlukları <b>sin(a)</b>, yükseklikleri ise <b>cos(a)</b> birim olur.</li>
+                    <li>Şimdi büyük üçgenin alanını iki farklı yolla bulup eşitleyelim:</li>
+                    <li><b>Yol 1 (Sinüs Alan Formülü):</b> Alan = (1 · 1 · sin(2a)) / 2  ➔  Yani <b>sin(2a) / 2</b></li>
+                    <li><b>Yol 2 (Parçaların Toplamı):</b> İki dik üçgenin alanları toplamı = 2 · [ (sin(a) · cos(a)) / 2 ]  ➔  Yani <b>sin(a) · cos(a)</b></li>
+                    <li>İki alanı eşitlediğimizde: sin(2a) / 2 = sin(a) · cos(a) elde edilir. İçler dışlar çarpımı ile formül ispatlanır.</li>
+                </ul>
+            </div>
+
+            <!-- İspat 2: Gauss Toplamı -->
+            <div class="proof-box">
+                <h3><i class="fas fa-calculator"></i> 2. Gauss Toplam Formülü Mantığı</h3>
+                <div class="formula-highlight">1 + 2 + 3 + ... + n = [ n · (n + 1) ] / 2</div>
+                <ul class="proof-steps">
+                    <li>1'den n'e kadar olan sayıların toplamına <b>S</b> diyelim: S = 1 + 2 + 3 + ... + n</li>
+                    <li>Aynı toplamı altına tamamen ters sırada yazalım: S = n + (n-1) + ... + 1</li>
+                    <li>Bu iki ifadeyi alt alta topladığımızda harika bir örüntü oluşur: (1+n) + (2+n-1) + (3+n-2)... Dikkat ederseniz alt alta gelen her çiftin toplamı sabit ve hep <b>(n+1)</b> olur.</li>
+                    <li>Sırada bu şekilde tam <b>n</b> adet çift/terim olduğu için sağ tarafın toplamı: <b>n · (n + 1)</b> yapar.</li>
+                    <li>Sol tarafta iki adet S toplandığı için 2S = n · (n + 1) olur. Her iki tarafı 2'ye böldüğümüzde formül kendiliğinden ortaya çıkar.</li>
+                </ul>
+            </div>
+
+            <!-- İspat 3: e Sayısının Mantığı -->
+            <div class="proof-box">
+                <h3><i class="fas fa-chart-line"></i> 3. "e" Sayısının (Euler Sayısı) Sezgisel Mantığı</h3>
+                <div class="formula-highlight">e ≈ 2.71828... (Bileşik Faiz ve Sürekli Büyüme Sabiti)</div>
+                <ul class="proof-steps">
+                    <li>Düşünün ki bankaya 1 TL yatırdınız ve banka size yılda %100 faiz veriyor. Yıl sonunda paranız 1 + 1 = 2 TL olur.</li>
+                    <li>Eğer banka faizi 6 ayda bir (%50 + %50 bileşik) işletseydi: 6. ayda 1.5 TL, yıl sonunda ise 1.5'un %50 fazlasıyla 2.25 TL'niz olurdu.</li>
+                    <li>Faiz işletme süresini aylara, günlere, saatlere hatta saniyelere bölüp <b>sürekli (sonsuz) büyüme</b> modeline çevirirseniz paranız sonsuza gitmez, doğadaki üstel büyüme sınırına takılır.</li>
+                    <li>İşte faiz dönemini sonsuza götürdüğümüzde ulaştığımız o maksimum limit noktası tam olarak <b>2.71828...</b> yani <b>e</b> sayısıdır! Doğadaki tüm organik büyümelerin kalbidir.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <h2>Eksiklerinizi Birlikte Tamamlayalım</h2>
+        <p>Sınavlara hazırlık, okul derslerine takviye ve kalıcı başarı için ilk adımı bugün atın.</p>
+        <div class="hero-buttons-wrapper">
+            <a href="https://wa.me/905392361836?text=Merhaba,%20özel%20dersleriniz%20ve%20yüz%20yüze%20eğitim%20hakkında%20detaylı%20bilgi%20almak%20istiyorum." class="btn btn-whatsapp" target="_blank">
+                <i class="fab fa-whatsapp"></i> WhatsApp ile Detaylı Bilgi Al
+            </a>
+            <a href="tel:5392361836" class="btn btn-call">
+                <i class="fas fa-phone-alt"></i> Beni Doğrudan Ara
             </a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Yunus Emre Nakış Matematik Akademisi. Tüm Hakları Saklıdır.</p>
+        <p>&copy; 2026 Özel Ders Merkezi - Tüm Hakları Saklıdır.</p>
     </footer>
 
 </body>
