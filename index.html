@@ -222,7 +222,7 @@
             margin-bottom: 15px;
         }
 
-        /* RAKİPLERDE OLMAYAN ALAN 1: Ders Katılım Modelleri (Bireysel / Grup) */
+        /* Paketler ve Detaylar Bölümü */
         .pricing-section {
             background-color: #ffffff;
         }
@@ -343,14 +343,14 @@
         }
 
         .proof-steps li::before {
-            content: "➔";
+            content: "-";
             position: absolute;
             left: 0;
             color: var(--accent-color);
             font-weight: bold;
         }
 
-        /* RAKİPLERDE OLMAYAN ALAN 2: Sıkça Sorulan Sorular (FAQ) - SEO İçin Dev Değer */
+        /* Sıkça Sorulan Sorular (FAQ) */
         .faq-section {
             background-color: var(--light-color);
         }
@@ -428,7 +428,7 @@
 </head>
 <body>
 
-    <!-- Header -->
+    <!-- Header / Navbar -->
     <header>
         <div class="nav-container">
             <div class="logo">Özel Ders<span>Merkezi</span></div>
@@ -460,7 +460,7 @@
         </div>
     </section>
 
-    <!-- Features Section -->
+    <!-- Özellikler / Avantajlar Bölümü -->
     <section class="features">
         <h2 class="section-title">Neden Bu Eğitimi Seçmelisiniz?</h2>
         <div class="grid">
@@ -472,7 +472,7 @@
             <div class="card">
                 <div class="card-icon"><i class="fas fa-map-marker-alt"></i></div>
                 <h3>Muş İçi Yüz Yüze Eğitim</h3>
-                <p>Muş merkezde, öğrencinin ihtiyacına uygun planlamayla, odaklanmayı en üst düzeni çıkaran yüz yüze birebir eğitim imkanı.</p>
+                <p>Muş merkezde, öğrencinin ihtiyacına uygun planlamayla, odaklanmayı en üst düzeye çıkaran yüz yüze birebir eğitim imkanı.</p>
             </div>
             <div class="card">
                 <div class="card-icon"><i class="fas fa-star"></i></div>
@@ -482,7 +482,7 @@
         </div>
     </section>
 
-    <!-- NEW/SEO ÖZEL ALAN: Ders Çalışma Paketleri ve Detayları -->
+    <!-- Eğitim Paketleri ve Katılım Modelleri -->
     <section class="pricing-section">
         <h2 class="section-title">Eğitim Paketleri ve Katılım Modelleri</h2>
         <div class="grid">
@@ -521,7 +521,7 @@
             <h2 class="section-title">İspat Teknikleriyle Ezbersiz Matematik</h2>
             <p style="text-align: center; color: #64748b; margin-bottom: 40px; margin-top: -30px;">Formülleri dayatmak yerine mantığını zihne işliyoruz. İşte derslerimizin temelini oluşturan ispat yaklaşımları:</p>
 
-            <!-- İspat 1: Sin2a -->
+            <!-- İspat 1: Sin2a Açılımı -->
             <div class="proof-box">
                 <h3><i class="fas fa-draw-polygon"></i> 1. Sinüs Alan Formülü ile Yarım Açı İspatı</h3>
                 <div class="formula-highlight">sin(2a) = 2 · sin(a) · cos(a)</div>
@@ -552,11 +552,11 @@
 
                 <ul class="proof-steps">
                     <li>Tepe açısı 2a, yan kenar uzunlukları 1 birim olan bir ABC üçgeni üzerinde, [AD] açıortay doğrusunu (yükseklik) inceleyelim.</li>
-                    <li>Açıortay tepe açısını <b>a</b> ve <b>a</b> olarak ikiye bölerken, trigonometrik oranlardan sol ve sağdaki dik tabanlar <b>sin(a)</b>, ortak yükseklik ise <b>cos(a)</b> birim uzunluğa sahip olur.</li>
+                    <li>Açıortay tepe açısını ve olarak ikiye bölerken, trigonometrik oranlardan sol ve sağdaki dik tabanlar sin(a), ortak yükseklik ise cos(a) birim uzunluğa sahip olur.</li>
                     <li>Şimdi tüm büyük ABC üçgeninin alanını iki farklı matematiksel metotla hesaplayalım:</li>
-                    <li><b>Yol 1 (Sinüs Alan Formülü):</b> Alan = (1 · 1 · sin(2a)) / 2 ➔ Yani <b>sin(2a) / 2</b></li>
-                    <li><b>Yol 2 (İki Küçük Parçanın Toplamı):</b> İki dik üçgenin alanları toplamı = 2 · [ (sin(a) · cos(a)) / 2 ] ➔ Yani <b>sin(a) · cos(a)</b></li>
-                    <li>Her iki yol da bizi aynı toplam alana götürdüğü için: sin(2a) / 2 = sin(a) · cos(a) eşitliği elde edilir. Paydadaki 2 karşıya atıldığında formülümüz kesin olarak kanıtlanır.</li>
+                    <li>Yol 1 (Sinüs Alan Formülü): Alan = (1 * 1 * sin(2a)) / 2 yani sin(2a) / 2</li>
+                    <li>Yol 2 (İki Küçük Parçanın Toplamı): İki dik üçgenin alanları toplamı = 2 * [ (sin(a) * cos(a)) / 2 ] yani sin(a) * cos(a)</li>
+                    <li>Her iki yol da bizi aynı toplam alana götürdüğü için: sin(2a) / 2 = sin(a) * cos(a) eşitliği elde edilir. Paydadaki 2 karşıya atıldığında formülümüz kesin olarak kanıtlanır.</li>
                 </ul>
             </div>
 
@@ -565,11 +565,11 @@
                 <h3><i class="fas fa-calculator"></i> 2. Gauss Toplam Formülü Mantığı</h3>
                 <div class="formula-highlight">1 + 2 + 3 + ... + n = [ n · (n + 1) ] / 2</div>
                 <ul class="proof-steps">
-                    <li>1'den n'e kadar olan ardışık sayıların toplam değerine matematiksel olarak <b>S</b> diyelim: S = 1 + 2 + 3 + ... + n</li>
+                    <li>1'den n'e kadar olan ardışık sayıların toplam değerine matematiksel olarak S diyelim: S = 1 + 2 + 3 + ... + n</li>
                     <li>Aynı toplam serisini hemen altına tamamen tersten (büyükten küçüğe) yazalım: S = n + (n-1) + ... + 1</li>
-                    <li>Bu iki diziyi alt alta topladığımızda harika bir simetri yakalarız. Her dikey kolonun toplamı istisnasız hep <b>(n+1)</b> sonucunu verir.</li>
-                    <li>Seride bu şekilde tam <b>n</b> adet terim olduğu için sağ tarafın toplam değeri: <b>n · (n + 1)</b> olur.</li>
-                    <li>Sol tarafta iki adet S toplandığı için 2S = n · (n + 1) eşitliğini buluruz. Her iki tarafı da 2'ye böldüğümüzde meşhur formül kendiliğinden ortaya çıkar.</li>
+                    <li>Bu iki diziyi alt alta topladığımızda harika bir simetri yakalarız. Her dikey kolonun toplamı istisnasız hep (n+1) sonucunu verir.</li>
+                    <li>Seride bu şekilde tam n adet terim olduğu için sağ tarafın toplam değeri: n * (n + 1) olur.</li>
+                    <li>Sol tarafta iki adet S toplandığı için 2S = n * (n + 1) eşitliğini buluruz. Her iki tarafı da 2'ye böldüğümüzde meşhur formül kendiliğinden ortaya çıkar.</li>
                 </ul>
             </div>
 
@@ -580,14 +580,14 @@
                 <ul class="proof-steps">
                     <li>Düşünün ki cebinizde 1 TL var ve bir banka size yılda %100 faiz veriyor. 1 yılın sonunda paranız 1 + 1 = 2 TL olur.</li>
                     <li>Eğer banka faizi 6 ayda bir (%50 + %50 bileşik faiz şeklinde) işletseydi, yıl sonunda paranız 2.25 TL olurdu.</li>
-                    <li>Peki faiz işletme sıklığını saniyelere bölüp <b>sürekli (sonsuz) bir büyüme</b> modeline çevirirsek paramız sonsuza mı gider? Hayır, doğadaki üstel büyüme limitine takılır.</li>
-                    <li>Dönem sayısını sonsuza doğru götürdüğümüzde ulaştığımız o maksimum üst limit noktası tam olarak <b>2.71828...</b> yani <b>e</b> sayısıdır!</li>
+                    <li>Peki faiz işletme sıklığını saniyelere bölüp sürekli (sonsuz) bir büyüme modeline çevirirsek paramız sonsuza mı gider? Hayır, doğadaki üstel büyüme limitine takılır.</li>
+                    <li>Dönem sayısını sonsuza doğru götürdüğümüzde ulaştığımız o maksimum üst limit noktası tam olarak 2.71828... yani e sayısıdır!</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- NEW/SEO ÖZEL ALAN 2: Sıkça Sorulan Sorular (Google'da Üst Sıralar İçin Altın Anahtar) -->
+    <!-- Sıkça Sorulan Sorular -->
     <section class="faq-section">
         <div class="faq-container">
             <h2 class="section-title">Sıkça Sorulan Sorular</h2>
@@ -609,10 +609,10 @@
         </div>
     </section>
 
-    <!-- Alt Çağrı Alanı -->
+    <!-- Alt Çağrı Alanı (CTA) -->
     <section class="cta">
         <h2>Eksiklerinizi Birlikte Tamamlayalım</h2>
-        <p>Sınavlara hazırlık, okul derslerine takviye ve kalıcı başarı için ilk adımı bugün atın.</p>
+        <p>Sınavlara hazırlık, okul derslerine takviye and kalıcı başarı için ilk adımı bugün atın.</p>
         <div class="hero-buttons-wrapper">
             <a href="https://wa.me/905392361836?text=Merhaba,%20özel%20dersleriniz%20ve%20yüz%20yüze%20eğitim%20hakkında%20detaylı%20bilgi%20almak%20istiyorum." class="btn btn-whatsapp" target="_blank">
                 <i class="fab fa-whatsapp"></i> WhatsApp ile Detaylı Bilgi Al
