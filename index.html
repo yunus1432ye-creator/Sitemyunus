@@ -289,60 +289,66 @@
             display: block;
         }
 
-        /* YENİ ALAN: ODAKLANMA TABANLI DERS SAATLERİ VE ÇALIŞMA MODELLERİ */
-        .focus-hours-section {
+        /* GÜNCELLENEN ALAN: ÖĞRENCİ ODAKLANMASINA GÖRE UYGUN HAFTALIK ÇALIŞMA SAATLERİ REHBERİ */
+        .study-hours-section {
             background-color: #ffffff;
             max-width: 100%;
             border-top: 1px solid #e2e8f0;
         }
 
-        .focus-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            max-width: 1200px;
-            margin: 0 auto;
+        .table-responsive {
             width: 100%;
-        }
-
-        .focus-card {
-            background: var(--light-color);
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 20px 0;
             border: 1px solid #e2e8f0;
-            border-radius: 16px;
-            padding: 30px 20px;
+            border-radius: 12px;
+            background: var(--light-color);
+        }
+
+        .hours-table {
+            width: 100%;
+            border-collapse: collapse;
             text-align: left;
+            min-width: 650px; 
         }
 
-        .focus-card h3 {
-            font-size: 1.3rem;
-            color: var(--primary-color);
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+        .hours-table th, .hours-table td {
+            padding: 15px 20px;
+            border-bottom: 1px solid #e2e8f0;
+            font-size: 0.9rem;
         }
 
-        .focus-card h3 svg {
-            width: 24px;
-            height: 24px;
-            fill: var(--primary-color);
+        .hours-table th {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 600;
         }
 
-        .time-badge {
-            background-color: rgba(37, 99, 235, 0.1);
-            color: var(--primary-color);
-            padding: 4px 12px;
+        .hours-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .hours-table tr:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.6);
+        }
+
+        .hours-badge {
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--accent-color);
+            padding: 4px 10px;
             border-radius: 6px;
             font-weight: 600;
-            font-size: 0.85rem;
             display: inline-block;
-            margin-bottom: 15px;
         }
 
-        .focus-card p {
-            font-size: 0.9rem;
-            color: #475569;
-            margin-bottom: 15px;
+        .focus-badge {
+            background: rgba(37, 99, 235, 0.1);
+            color: var(--primary-color);
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-weight: 600;
+            display: inline-block;
         }
 
         /* Sınav Ekranları Bölümü */
@@ -721,7 +727,7 @@
             height: 16px;
             fill: #94a3b8;
             flex-shrink: 0;
-            transition: fill 0.2s ease;
+            text-align: center;
         }
 
         .footer-contact p:hover svg {
@@ -853,27 +859,44 @@
         </div>
     </section>
 
-    <!-- STRATEJİK YENİLİK: ODAKLANMA TABANLI ÇALIŞMA MODELLERİ VE SEANSLAR -->
-    <section class="focus-hours-section" id="odaklanma">
-        <h2 class="section-title">Odaklanma Sürelerine Göre Ders Planlaması</h2>
-        <p style="text-align: center; max-width:800px; margin: -30px auto 40px auto; color: #475569; font-size: 0.95rem; padding: 0 10px;">
-            Her öğrencinin dikkat eşiği farklıdır. Ezbere dayalı uzun bloklar yerine, bilimsel odaklanma kriterlerini baz alarak bireysel ve grup çalışmalarımızı kişiye özel saat dökümleriyle planlıyoruz.
+    <!-- GÜNCELLEŞTİRİLEN BÖLÜM: ODAKLANMA ESASLI HAFTALIK ÇALIŞMA SAATLERİ REHBERİ -->
+    <section class="study-hours-section" id="calismasaatleri">
+        <h2 class="section-title">Öğrenci Odaklanmasına Göre Özelleştirilmiş Ders Saatleri</h2>
+        <p style="text-align: center; max-width:800px; margin: -30px auto 35px auto; color: #475569; font-size: 0.95rem; padding: 0 10px;">
+            Her yaş grubunun dikkat ve algı süresi farklıdır. Aşağıdaki tabloda, sınav türlerine ve öğrencilerin bilişsel odaklanma kapasitelerine göre optimize edilmiş haftalık program rutinlerimizi inceleyebilirsiniz:
         </p>
         
-        <div class="focus-grid">
-            <!-- Bireysel Çalışma Modeli -->
-            <div class="focus-card" style="border-top: 4px solid var(--primary-color);">
-                <h3><svg viewBox="0 0 448 512"><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 363.8 0 440.5c0 39.5 24.4 71.5 54.5 71.5H393.5c30.1 0 54.5-32 54.5-71.5c0-76.7-79.8-136.5-178.3-136.5H178.3z"/></svg> Bireysel (Birebir) Çalışma</h3>
-                <div class="time-badge">Seans Süresi: 50 Dk Ders + 10 Dk Mola</div>
-                <p>Öğrencinin dikkat dağınıklığı seviyesine ve soru çözme hızına göre saf odaklanma sağlayan Pomodoro seansları uygulanır. Öğretmen tüm süre boyunca sadece tek bir öğrencinin eksiklerine ve ispat süreçlerine yoğunlaşır.</p>
-            </div>
-
-            <!-- Grup Çalışma Modeli -->
-            <div class="focus-card" style="border-top: 4px solid var(--accent-color);">
-                <h3><svg viewBox="0 0 640 512"><path d="M144 160a80 80 0 1 1 160 0A80 80 0 1 1 144 160zm368 0a80 80 0 1 1 160 0A80 80 0 1 1 512 160zM0 384c0-53 43-96 96-96h128c53 0 96 43 96 96v48c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V384zm448-96h128c53 0 96 43 96 96v48c0 17.7-14.3 32-32 32H480c-17.7 0-32-14.3-32-32V384c0-53 43-96 96-96z"/></svg> Butik Grup Çalışması</h3>
-                <div class="time-badge">Seans Süresi: 80 Dk Blok Ders + 15 Dk Mola</div>
-                <p>2-4 kişilik seviye gruplarında, öğrencilerin karşılıklı akıl yürütme ve tartışma süreçlerini tetiklemek için daha uzun blok seanslar tercih edilir. Akran öğrenmesi ile odaklanma süresi kolektif olarak yukarı çekilir.</p>
-            </div>
+        <div class="table-responsive">
+            <table class="hours-table">
+                <thead>
+                    <tr>
+                        <th>Hedef Kulvar</th>
+                        <th>Haftalık Birebir Ders</th>
+                        <th>Odaklanmaya Göre Ders Saati Yapısı</th>
+                        <th>Tavsiye Edilen Ev Çalışması</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>LGS (8. Sınıf Hazırlık)</b></td>
+                        <td>2 - 4 Saat</td>
+                        <td><span class="focus-badge">40 Dk Ders + 10 Dk Mola (Pomodoro Rutini)</span></td>
+                        <td><span class="hours-badge">Haftalık 12 - 15 Saat</span></td>
+                    </tr>
+                    <tr>
+                        <td><b>YKS (TYT - AYT Maratonu)</b></td>
+                        <td>4 - 6 Saat</td>
+                        <td><span class="focus-badge">50 Dk Ders + 10 Dk Mola (Saf Odak Seansı)</span></td>
+                        <td><span class="hours-badge">Haftalık 24 - 30 Saat</span></td>
+                    </tr>
+                    <tr>
+                        <td><b>KPSS (Genel Yetenek)</b></td>
+                        <td>2 - 4 Saat</td>
+                        <td><span class="focus-badge">75 Dk Blok Ders + 15 Dk Mola (İleri Düzey Odak)</span></td>
+                        <td><span class="hours-badge">Haftalık 18 - 22 Saat</span></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </section>
 
@@ -981,6 +1004,7 @@
                 <ul class="proof-steps">
                     <li>Tepe açısı 2a, yan kenar uzunlukları 1 birim olan bir ABC üçgeni üzerinde, [AD] açıortay doğrusunu (yükseklik) inceleyelim.</li>
                     <li>Açıortay tepe açısını a ve a olarak ikiye bölerken, trigonometrik oranlardan sol ve sağdaki dik tabanlar sin(a), ortak yükseklik ise cos(a) birim uzunluğa sahip olur.</li>
+                    <li>Şimdi tüm büyük ABC üçgeninin alanını iki farklı matematiksel metotla hesaplayalım:</li>
                     <li>Yol 1 (Sinüs Alan Formülü): Alan = (1 * 1 * sin(2a)) / 2 yani sin(2a) / 2</li>
                     <li>Yol 2 (İki Küçük Parçanın Toplamı): İki dik üçgenin alanları toplamı = 2 * [ (sin(a) * cos(a)) / 2 ] yani sin(a) * cos(a)</li>
                     <li>sin(2a) / 2 = sin(a) * cos(a) eşitliği elde edilir. Paydadaki 2 karşıya atıldığında formülümüz kesin olarak kanıtlanır.</li>
@@ -995,7 +1019,11 @@
             <h2 class="section-title">Sıkça Sorulan Sorular</h2>
             <div class="faq-item">
                 <h4><i class="fa-solid fa-circle-question"></i> Soru: İlk dersin ücretsiz olmasının kapsamı nedir?</h4>
-                <p>İlk dersimiz tamamen ücretsiz bir tanışma, seviye tespit ve rehberlik seansıdır. Öğrencinin eksiklerini analiz eder, çalışma haritasını çıkarır ve metodumuza uyumunu test ederiz.</p>
+                <p>İlk dersimiz tamamen ücretsiz bir tanışma, seviye tespit ve rehberlik seansıdır. Öğrencinin eksiklerini analiz eder, çalışma haritasını çıkarırer ve metodumuza uyumunu test ederiz.</p>
+            </div>
+            <div class="faq-item">
+                <h4><i class="fa-solid fa-circle-question"></i> Soru: Dersler nerede ve nasıl işleniyor?</h4>
+                <p>Muş içi derslerimizi yüz yüze, öğrencinin evinde veya sessiz/verimli bir çalışma ortamında gerçekleştiriyoruz. Online derslerimizi ise profesyonel grafik tablet ve interaktif beyaz tahta altyapısı ile uzaktan canlı gerçekleştiriyoruz.</p>
             </div>
         </div>
     </section>
@@ -1024,7 +1052,7 @@
                 <ul>
                     <li><a href="#anasayfa">👉 Anasayfa</a></li>
                     <li><a href="#avantajlar">👉 Neden Biz?</a></li>
-                    <li><a href="#odaklanma">👉 Ders Saatleri</a></li>
+                    <li><a href="#calismasaatleri">👉 Çalışma Saatleri</a></li>
                     <li><a href="#programlar">👉 Sınav Kulvarları</a></li>
                 </ul>
             </div>
@@ -1032,7 +1060,7 @@
             <div class="footer-contact">
                 <h4>Doğrudan İletişim</h4>
                 <p><svg viewBox="0 0 512 512"><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40 c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 264.3 144 193.3L184 153c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg> <a href="tel:5392361836">0539 236 18 36</a></p>
-                <p><svg viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-117zm-157 341.6c-33.2 0-65.7-8.9-93.8-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 89.3-184.4 184.6-184.4 46.1 0 89.4 18 122 50.3 32.6 32.3 50.6 75.3 50.6 121.4 0 101.8-89.3 184.4-184.7 184.4zm103.6-141.2c-5.7-2.8-33.7-16.6-39-18.5-5.3-2-9.2-2.9-13.1 2.9-3.9 5.7-15 18.5-18.4 22.4-3.4 3.9-6.8 4.4-12.5 1.6-5.7-2.8-24.3-9-46.3-28.7-17.1-15.3-28.7-34.2-32-40-3.4-5.7-.4-8.8 2.5-11.6 2.6-2.5 5.7-6.1 8.6-9.2 2.8-3.1 3.8-5.3 5.7-8.9 1.9-3.6 1-6.7-.5-9.5-1.5-2.9-13.1-31.5-18-43.3-4.7-11.5-9.6-9.9-13.1-10.1-3.4-.2-7.3-.2-11.2-.2s-10.2 1.5-15.5 5.7c-5.3 4.2-20.3 19.8-20.3 48.3s14.6 56 16.6 58.7c2 2.8 28.7 43.8 69.6 61.6 9.7 4.2 17.3 6.7 23.2 8.6 9.8 3.1 18.7 2.7 25.8 1.6 7.9-1.1 33.7-13.8 38.4-27.1 4.7-13.4 4.7-24.9 3.3-27.3-1.5-2.4-5.4-3.8-11-6.6z"/></svg> <a href="https://wa.me/905392361836" target="_blank">WhatsApp Destek</a></p>
+                <p><svg viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-117zm-157 341.6c-33.2 0-65.7-8.9-93.8-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 89.3-184.4 184.6-184.4 46.1 0 89.4 18 122 50.3 32.6 32.3 50.6 75.3 50.6 121.4 0 101.8-89.3 184.4-184.7 184.4zm103.6-141.2c-5.7-2.8-33.7-16.6-39-18.5-5.3-2-9.2-2.9-13.1 2.9-3.9 5.7-15 18.5-18.4 22.4-3.4 3.9-6.8 4.4-12.5 1.6-5.7-2.8-24.3-9-46.3-28.7-17.1-15.3-28.7-34.2-32-40-3.4-5.7-.4-8.8 2.5-11.6 2.6-2.5 5.7-6.1 8.6-9.2 2.8-3.1 3.8-5.3 5.7-8.9 1.9-3.6 1 order-32-40-3.4-5.7-.4-8.8 2.5-11.6 2.6-2.5 5.7-6.1 8.6-9.2 2.8-3.1 3.8-5.3 5.7-8.9 1.9-3.6 1-6.7-.5-9.5-1.5-2.9-13.1-31.5-18-43.3-4.7-11.5-9.6-9.9-13.1-10.1-3.4-.2-7.3-.2-11.2-.2s-10.2 1.5-15.5 5.7c-5.3 4.2-20.3 19.8-20.3 48.3s14.6 56 16.6 58.7c2 2.8 28.7 43.8 69.6 61.6 9.7 4.2 17.3 6.7 23.2 8.6 9.8 3.1 18.7 2.7 25.8 1.6 7.9-1.1 33.7-13.8 38.4-27.1 4.7-13.4 4.7-24.9 3.3-27.3-1.5-2.4-5.4-3.8-11-6.6z"/></svg> <a href="https://wa.me/905392361836" target="_blank">WhatsApp Destek</a></p>
                 <p><svg viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM402.4 377.3c-7.8 19.6-22.9 34.7-42.6 42.5-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.5-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.5 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.5 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg> <a href="https://instagram.com/yunusemre.nakis" target="_blank">@yunusemre.nakis</a></p>
                 <p><svg viewBox="0 0 384 512"><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg> Muş Merkez / Türkiye</p>
             </div>
@@ -1043,7 +1071,7 @@
         </div>
     </footer>
 
-    <!-- 2027 Sınav Dönemi Aktif Geri Sayım Motoru -->
+    <!-- Yeni Sezon 2027 Canlı Geri Sayım Motoru -->
     <script>
         function updateCounters() {
             var now = new Date().getTime();
