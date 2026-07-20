@@ -289,7 +289,7 @@
             display: block;
         }
 
-        /* GÜNCELLENEN ALAN: ÖĞRENCİ ODAKLANMASINA GÖRE UYGUN HAFTALIK ÇALIŞMA SAATLERİ REHBERİ */
+        /* ÇALIŞMA SAATLERİ REHBERİ (ESNEK YAPI DÜZENLEMESİ) */
         .study-hours-section {
             background-color: #ffffff;
             max-width: 100%;
@@ -310,7 +310,7 @@
             width: 100%;
             border-collapse: collapse;
             text-align: left;
-            min-width: 650px; 
+            min-width: 680px; 
         }
 
         .hours-table th, .hours-table td {
@@ -351,9 +351,90 @@
             display: inline-block;
         }
 
+        /* YENİ ÖZELLİK: DİJİTAL GELİŞİM KARNESİ PANEL SİMÜLASYONU */
+        .dashboard-section {
+            background-color: var(--light-color);
+            max-width: 100%;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .dashboard-mockup {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+            max-width: 900px;
+            margin: 0 auto;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .db-header {
+            background: #0f172a;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+        }
+
+        .db-dot-group {
+            display: flex;
+            gap: 6px;
+        }
+
+        .db-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+
+        .db-body {
+            padding: 25px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .db-card {
+            background: var(--light-color);
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+        .db-card h5 {
+            margin: 0 0 10px 0;
+            font-size: 0.85rem;
+            color: #64748b;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .db-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--dark-color);
+        }
+
+        .progress-bar-bg {
+            background: #e2e8f0;
+            height: 8px;
+            border-radius: 4px;
+            margin-top: 10px;
+            overflow: hidden;
+        }
+
+        .progress-bar-fill {
+            background: var(--accent-color);
+            height: 100%;
+            border-radius: 4px;
+        }
+
         /* Sınav Ekranları Bölümü */
         .exam-screens-section {
-            background-color: var(--light-color);
+            background-color: #ffffff;
             border-top: 1px solid #e2e8f0;
             max-width: 100%;
         }
@@ -368,7 +449,7 @@
         }
 
         .exam-screen-card {
-            background: #ffffff;
+            background: var(--light-color);
             border: 1px solid #e2e8f0;
             border-radius: 16px;
             padding: 25px 20px;
@@ -416,7 +497,7 @@
 
         /* Comeback / Başarı Hikayeleri Alanı */
         .comeback-section {
-            background-color: #ffffff;
+            background-color: var(--light-color);
             max-width: 100%;
             border-top: 1px solid #e2e8f0;
         }
@@ -429,7 +510,7 @@
         }
 
         .comeback-card {
-            background: var(--light-color);
+            background: #ffffff;
             border: 1px solid #e2e8f0;
             border-radius: 12px;
             padding: 25px;
@@ -486,7 +567,7 @@
 
         /* Proofs Section */
         .proofs-section {
-            background-color: var(--light-color);
+            background-color: #ffffff;
             max-width: 100%;
             border-top: 1px solid #e2e8f0;
             border-bottom: 1px solid #e2e8f0;
@@ -499,7 +580,7 @@
         }
 
         .proof-box {
-            background-color: #ffffff;
+            background-color: var(--light-color);
             border-left: 5px solid var(--primary-color);
             padding: 25px 20px;
             border-radius: 0 8px 8px 0;
@@ -828,7 +909,7 @@
 
             <div class="hero-buttons-wrapper">
                 <a href="https://wa.me/905392361836?text=Merhaba,%20ücretsiz%20ilk%20özel%20ders%20hakkında%20bilgi%20almak%20istiyorum." class="btn btn-whatsapp" target="_blank">
-                    <svg viewBox="0 0 448 512" style="width:18px; height:18px; fill:white;"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-117zm-157 341.6c-33.2 0-65.7-8.9-93.8-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 89.3-184.4 184.6-184.4 46.1 0 89.4 18 122 50.3 32.6 32.3 50.6 75.3 50.6 121.4 0 101.8-89.3 184.4-184.7 184.4zm103.6-141.2c-5.7-2.8-33.7-16.6-39-18.5-5.3-2-9.2-2.9-13.1 2.9-3.9 5.7-15 18.5-18.4 22.4-3.4 3.9-6.8 4.4-12.5 1.6-5.7-2.8-24.3-9-46.3-28.7-17.1-15.3-28.7-34.2-32-40-3.4-5.7-.4-8.8 2.5-11.6 2.6-2.5 5.7-6.1 8.6-9.2 2.8-3.1 3.8-5.3 5.7-8.9 1.9-3.6 1-6.7-.5-9.5-1.5-2.9-13.1-31.5-18-43.3-4.7-11.5-9.6-9.9-13.1-10.1-3.4-.2-7.3-.2-11.2-.2s-10.2 1.5-15.5 5.7c-5.3 4.2-20.3 19.8-20.3 48.3s14.6 56 16.6 58.7c2 2.8 28.7 43.8 69.6 61.6 9.7 4.2 17.3 6.7 23.2 8.6 9.8 3.1 18.7 2.7 25.8 1.6 7.9-1.1 33.7-13.8 38.4-27.1 4.7-13.4 4.7-24.9 3.3-27.3-1.5-2.4-5.4-3.8-11-6.6z"/></svg> Ücretsiz İlk Dersini Planla
+                    <svg viewBox="0 0 448 512" style="width:18px; height:18px; fill:white;"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-117zm-157 341.6c-33.2 0-65.7-8.9-93.8-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 89.3-184.4 184.6-184.4 46.1 0 89.4 18 122 50.3 32.6 32.3 50.6 75.3 50.6 121.4 0 101.8-89.3 184.4-184.7 184.4zm103.6-141.2c-5.7-2.8-33.7-16.6-39-18.5-5.3-2-9.2-2.9-13.1 2.9-3.9 5.7-15 18.5-18.4 22.4-3.4 3.9-6.8 4.4-12.5 1.6-5.7-2.8-24.3-9-46.3-28.7-17.1-15.3-28.7-34.2-32-40-3.4-5.7-.4-8.8 2.5-11.6 2.6-2.5 5.7-6.1 8.6-9.2 2.8-3.1 3.8-5.3 5.7-8.9 1.9-3.6 1-6.7-.5-9.5-1.5-2.9-13.1-31.5-18-43.3-4.7-11.5-9.6-9.9-13.1-10.1-3.4-.2-7.3-.2-11.2-.2s-10.2 1.5-15.5 5.7c-5.3 4.2-20.3 19.8-20.3 48.3s14.6 56 16.6 58.7c2 2.8 28.7 43.8 69.6 61.6 9.7 4.2 17.3 6.7 23.2 8.6 9.8 3.1 18.7 2.7 25.8 1.6 7.9-1.1 33.7-13.8 38.4-27.1 4.7-13.4 4.7-24.9 3.3-27.3-1.5-2.4-5.4-3.8-11-6.6z"/></svg> Birebir Tanışma Dersi Planla
                 </a>
                 <a href="https://instagram.com/yunusemre.nakis" class="btn btn-instagram" target="_blank">
                     <svg viewBox="0 0 448 512" style="width:18px; height:18px; fill:white;"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM402.4 377.3c-7.8 19.6-22.9 34.7-42.6 42.5-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.5-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.5 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.5 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg> Instagram'dan Takip Et
@@ -859,11 +940,11 @@
         </div>
     </section>
 
-    <!-- GÜNCELLEŞTİRİLEN BÖLÜM: ODAKLANMA ESASLI HAFTALIK ÇALIŞMA SAATLERİ REHBERİ -->
+    <!-- HAFTALIK ÇALIŞMA SAATLERİ REHBERİ (ESNEK ODAK MODELİ) -->
     <section class="study-hours-section" id="calismasaatleri">
-        <h2 class="section-title">Öğrenci Odaklanmasına Göre Özelleştirilmiş Ders Saatleri</h2>
+        <h2 class="section-title">Haftalık Çalışma Saatleri ve Esnek Seans Rutinleri</h2>
         <p style="text-align: center; max-width:800px; margin: -30px auto 35px auto; color: #475569; font-size: 0.95rem; padding: 0 10px;">
-            Her yaş grubunun dikkat ve algı süresi farklıdır. Aşağıdaki tabloda, sınav türlerine ve öğrencilerin bilişsel odaklanma kapasitelerine göre optimize edilmiş haftalık program rutinlerimizi inceleyebilirsiniz:
+            Öğrencinin yorgunluk durumu, konu ağırlığı ve algı dalgalanmalarına göre <b>süre süreçleri esnek olarak yönetilir</b>. Önemli olan kronometre değil, seansın verimliliğidir. Tavsiye edilen haftalık döküm:
         </p>
         
         <div class="table-responsive">
@@ -872,7 +953,7 @@
                     <tr>
                         <th>Hedef Kulvar</th>
                         <th>Haftalık Birebir Ders</th>
-                        <th>Odaklanmaya Göre Ders Saati Yapısı</th>
+                        <th>Odaklanmaya Göre Ders Saati Yapısı (Esnek)</th>
                         <th>Tavsiye Edilen Ev Çalışması</th>
                     </tr>
                 </thead>
@@ -880,23 +961,63 @@
                     <tr>
                         <td><b>LGS (8. Sınıf Hazırlık)</b></td>
                         <td>2 - 4 Saat</td>
-                        <td><span class="focus-badge">40 Dk Ders + 10 Dk Mola (Pomodoro Rutini)</span></td>
+                        <td><span class="focus-badge">~40-45 Dk Odak Seansları (Öğrenciye Göre Dinamik)</span></td>
                         <td><span class="hours-badge">Haftalık 12 - 15 Saat</span></td>
                     </tr>
                     <tr>
                         <td><b>YKS (TYT - AYT Maratonu)</b></td>
                         <td>4 - 6 Saat</td>
-                        <td><span class="focus-badge">50 Dk Ders + 10 Dk Mola (Saf Odak Seansı)</span></td>
+                        <td><span class="focus-badge">~50-60 Dk Bireysel Bloklama (Konu Ağırlıklı Esnek)</span></td>
                         <td><span class="hours-badge">Haftalık 24 - 30 Saat</span></td>
                     </tr>
                     <tr>
                         <td><b>KPSS (Genel Yetenek)</b></td>
                         <td>2 - 4 Saat</td>
-                        <td><span class="focus-badge">75 Dk Blok Ders + 15 Dk Mola (İleri Düzey Odak)</span></td>
+                        <td><span class="focus-badge">~60-80 Dk İleri Düzey Soru Çözüm Blokları (Değişken)</span></td>
                         <td><span class="hours-badge">Haftalık 18 - 22 Saat</span></td>
                     </tr>
                 </tbody>
             </table>
+        </div>
+    </section>
+
+    <!-- YENİ ÖZELLİK: DİJİTAL GELİŞİM KARNESİ PANEL SİMÜLASYONU -->
+    <section class="dashboard-section" id="karne">
+        <h2 class="section-title">Şeffaf Takip: Dijital Gelişim Karnesi Panel Simülasyonu</h2>
+        <p style="text-align: center; max-width:800px; margin: -30px auto 35px auto; color: #475569; font-size: 0.95rem; padding: 0 10px;">
+            Velilerimiz ve öğrencilerimiz için uyguladığımız modern gelişim takip yazılım arayüzünün canlı bir simülasyonu. Başarı tesadüf değildir, anlık olarak izlenir.
+        </p>
+        
+        <div class="dashboard-mockup">
+            <div class="db-header">
+                <div class="db-dot-group">
+                    <div class="db-dot" style="background: #ef4444;"></div>
+                    <div class="db-dot" style="background: #eab308;"></div>
+                    <div class="db-dot" style="background: #22c55e;"></div>
+                </div>
+                <div>Yunus Hoca Öğrenci Takip Sistemi v2.4 (Örnek Panel)</div>
+            </div>
+            <div class="db-body">
+                <div class="db-card">
+                    <h5>Ödev Tamamlama Oranı</h5>
+                    <div class="db-value">%94</div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" style="width: 94%;"></div>
+                    </div>
+                </div>
+                <div class="db-card">
+                    <h5>Maarif Modeli Kazanım Uyumu</h5>
+                    <div class="db-value">%88</div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" style="width: 88%; background: var(--primary-color);"></div>
+                    </div>
+                </div>
+                <div class="db-card">
+                    <h5>Aylık Net Artış Trendi</h5>
+                    <div class="db-value">+14.2 Net</div>
+                    <div style="font-size: 0.75rem; color: var(--accent-color); font-weight: 600; margin-top: 10px;">📈 İstikrarlı Yükseliş</div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -1019,7 +1140,7 @@
             <h2 class="section-title">Sıkça Sorulan Sorular</h2>
             <div class="faq-item">
                 <h4><i class="fa-solid fa-circle-question"></i> Soru: İlk dersin ücretsiz olmasının kapsamı nedir?</h4>
-                <p>İlk dersimiz tamamen ücretsiz bir tanışma, seviye tespit ve rehberlik seansıdır. Öğrencinin eksiklerini analiz eder, çalışma haritasını çıkarırer ve metodumuza uyumunu test ederiz.</p>
+                <p>İlk dersimiz tamamen ücretsiz bir tanışma, seviye tespit ve rehberlik seansıdır. Öğrencinin eksiklerini analiz eder, çalışma haritasını çıkarır ve metodumuza uyumunu test ederiz.</p>
             </div>
             <div class="faq-item">
                 <h4><i class="fa-solid fa-circle-question"></i> Soru: Dersler nerede ve nasıl işleniyor?</h4>
@@ -1071,7 +1192,7 @@
         </div>
     </footer>
 
-    <!-- Yeni Sezon 2027 Canlı Geri Sayım Motoru -->
+    <!-- Canlı Geri Sayım Motoru -->
     <script>
         function updateCounters() {
             var now = new Date().getTime();
