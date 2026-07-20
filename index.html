@@ -289,7 +289,7 @@
             display: block;
         }
 
-        /* ÇALIŞMA SAATLERİ REHBERİ (ESNEK YAPI DÜZENLEMESİ) */
+        /* HAFTALIK ÇALIŞMA SAATLERİ REHBERİ */
         .study-hours-section {
             background-color: #ffffff;
             max-width: 100%;
@@ -351,7 +351,7 @@
             display: inline-block;
         }
 
-        /* YENİ ÖZELLİK: DİJİTAL GELİŞİM KARNESİ PANEL SİMÜLASYONU */
+        /* DİJİTAL GELİŞİM KARNESİ PANEL SİMÜLASYONU */
         .dashboard-section {
             background-color: var(--light-color);
             max-width: 100%;
@@ -432,9 +432,60 @@
             border-radius: 4px;
         }
 
+        /* YENİ ALAN: TÜRKİYE YÜZYILI MAARİF MODELİ BİLGİ EKRANI */
+        .maarif-info-section {
+            background-color: #ffffff;
+            max-width: 100%;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .maarif-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .maarif-card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .maarif-detail-card {
+            background: var(--light-color);
+            border-left: 4px solid var(--primary-color);
+            padding: 20px;
+            border-radius: 0 12px 12px 0;
+            border-top: 1px solid #e2e8f0;
+            border-right: 1px solid #e2e8f0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .maarif-detail-card h3 {
+            font-size: 1.1rem;
+            color: #0f172a;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .maarif-detail-card h3 svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--primary-color);
+        }
+
+        .maarif-detail-card p {
+            font-size: 0.85rem;
+            color: #475569;
+            line-height: 1.5;
+        }
+
         /* Sınav Ekranları Bölümü */
         .exam-screens-section {
-            background-color: #ffffff;
+            background-color: var(--light-color);
             border-top: 1px solid #e2e8f0;
             max-width: 100%;
         }
@@ -449,7 +500,7 @@
         }
 
         .exam-screen-card {
-            background: var(--light-color);
+            background: #ffffff;
             border: 1px solid #e2e8f0;
             border-radius: 16px;
             padding: 25px 20px;
@@ -497,7 +548,7 @@
 
         /* Comeback / Başarı Hikayeleri Alanı */
         .comeback-section {
-            background-color: var(--light-color);
+            background-color: #ffffff;
             max-width: 100%;
             border-top: 1px solid #e2e8f0;
         }
@@ -510,7 +561,7 @@
         }
 
         .comeback-card {
-            background: #ffffff;
+            background: var(--light-color);
             border: 1px solid #e2e8f0;
             border-radius: 12px;
             padding: 25px;
@@ -567,7 +618,7 @@
 
         /* Proofs Section */
         .proofs-section {
-            background-color: #ffffff;
+            background-color: var(--light-color);
             max-width: 100%;
             border-top: 1px solid #e2e8f0;
             border-bottom: 1px solid #e2e8f0;
@@ -580,7 +631,7 @@
         }
 
         .proof-box {
-            background-color: var(--light-color);
+            background-color: #ffffff;
             border-left: 5px solid var(--primary-color);
             padding: 25px 20px;
             border-radius: 0 8px 8px 0;
@@ -887,7 +938,7 @@
     <!-- Hero Section -->
     <section class="hero" id="anasayfa">
         <div class="hero-container">
-            <div class="badge">📢 Türkiye Yüzyılı Maarif Modeline Tam Uyumlu</div>
+            <div class="badge">📢 Yeni Maarif Müfredatına Tam Uyumlu Eğitim Altyapısı</div>
             <h1>Yunus Hoca ile<br><span style="color: #60a5fa;">Muş Özel Matematik Dersi</span> Deneyimi</h1>
             <p>Hedeflerinize ulaşmanız için tamamen size özel hazırlanan ders planları ile başarıyı şansa bırakmayın. İster online, ister Muş içinde yüz yüze eğitimle eksiklerinizi hızla kapatın.</p>
             
@@ -930,7 +981,7 @@
             <div class="card">
                 <svg class="card-icon-svg" viewBox="0 0 384 512"><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
                 <h3>Muş İçi Yüz Yüze Eğitim</h3>
-                <p>Muş merkezde, öğrencinin ihtiyacına uygun planlamayla, odaklanmayı en üst düzeye çıkaran yüz yüze birebir eğitim imkanı.</p>
+                <p>Muş merkezde, öğrencinin ihtiyacına uygun planlamayla, odaklanmayı en üst düzenleyen yüz yüze birebir eğitim imkanı.</p>
             </div>
             <div class="card">
                 <svg class="card-icon-svg" viewBox="0 0 576 512"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 45.1 171.5c-12 1.7-22 10.2-25.7 21.7s-.7 24.2 8 32.7L137.8 329 111.6 479c-2.1 12 3 24.2 12.9 31.3s23 8 33.8 2.3L288 439.8l129.7 72.7c10.8 5.7 23.9 4.9 33.8-2.3s15-19.3 12.9-31.3l-26.3-150 110.4-103.1c8.7-8.5 11.7-21.2 8-32.7s-13.7-20-25.7-21.7L381 150.3 316.9 18z"/></svg>
@@ -940,11 +991,11 @@
         </div>
     </section>
 
-    <!-- HAFTALIK ÇALIŞMA SAATLERİ REHBERİ (ESNEK ODAK MODELİ) -->
+    <!-- HAFTALIK ÇALIŞMA SAATLERİ REHBERİ -->
     <section class="study-hours-section" id="calismasaatleri">
         <h2 class="section-title">Haftalık Çalışma Saatleri ve Esnek Seans Rutinleri</h2>
         <p style="text-align: center; max-width:800px; margin: -30px auto 35px auto; color: #475569; font-size: 0.95rem; padding: 0 10px;">
-            Öğrencinin yorgunluk durumu, konu ağırlığı ve algı dalgalanmalarına göre <b>süre süreçleri esnek olarak yönetilir</b>. Önemli olan kronometre değil, seansın verimliliğidir. Tavsiye edilen haftalık döküm:
+            Öğrencinin anlık yorgunluk durumu, konu ağırlığı ve algı dalgalanmalarına göre <b>seans süreleri esnek olarak yönetilir</b>. Önemli olan kronometre değil, seansın verimliliğidir. Tavsiye edilen haftalık döküm:
         </p>
         
         <div class="table-responsive">
@@ -981,9 +1032,9 @@
         </div>
     </section>
 
-    <!-- YENİ ÖZELLİK: DİJİTAL GELİŞİM KARNESİ PANEL SİMÜLASYONU -->
+    <!-- DİJİTAL GELİŞİM KARNESİ PANEL SİMÜLASYONU -->
     <section class="dashboard-section" id="karne">
-        <h2 class="section-title">Şeffaf Takip: Dijital Gelişim Karnesi Panel Simülasyonu</h2>
+        <h2 class="section-title">Şeffaf Takip: Gelişim Karnesi Panel Simülasyonu</h2>
         <p style="text-align: center; max-width:800px; margin: -30px auto 35px auto; color: #475569; font-size: 0.95rem; padding: 0 10px;">
             Velilerimiz ve öğrencilerimiz için uyguladığımız modern gelişim takip yazılım arayüzünün canlı bir simülasyonu. Başarı tesadüf değildir, anlık olarak izlenir.
         </p>
@@ -995,27 +1046,59 @@
                     <div class="db-dot" style="background: #eab308;"></div>
                     <div class="db-dot" style="background: #22c55e;"></div>
                 </div>
-                <div>Yunus Hoca Öğrenci Takip Sistemi v2.4 (Örnek Panel)</div>
+                <div>Yunus Hoca Gelişim Takip Sistemi v2.5 (Örnek Öğrenci Verisi)</div>
             </div>
             <div class="db-body">
                 <div class="db-card">
                     <h5>Ödev Tamamlama Oranı</h5>
-                    <div class="db-value">%94</div>
+                    <div class="db-value">%91</div>
                     <div class="progress-bar-bg">
-                        <div class="progress-bar-fill" style="width: 94%;"></div>
+                        <div class="progress-bar-fill" style="width: 91%;"></div>
                     </div>
                 </div>
                 <div class="db-card">
                     <h5>Maarif Modeli Kazanım Uyumu</h5>
-                    <div class="db-value">%88</div>
+                    <div class="db-value">%100</div>
                     <div class="progress-bar-bg">
-                        <div class="progress-bar-fill" style="width: 88%; background: var(--primary-color);"></div>
+                        <div class="progress-bar-fill" style="width: 100%; background: var(--accent-color);"></div>
                     </div>
                 </div>
                 <div class="db-card">
                     <h5>Aylık Net Artış Trendi</h5>
-                    <div class="db-value">+14.2 Net</div>
-                    <div style="font-size: 0.75rem; color: var(--accent-color); font-weight: 600; margin-top: 10px;">📈 İstikrarlı Yükseliş</div>
+                    <div class="db-value">+4.2 Net</div>
+                    <div style="font-size: 0.75rem; color: var(--accent-color); font-weight: 600; margin-top: 10px;">📈 Gerçekçi ve İstikrarlı İlerleme</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TÜRKİYE YÜZYILI MAARİF MODELİ BİLGİ EKRANI -->
+    <section class="maarif-info-section" id="maarif-rehberi">
+        <div class="maarif-container">
+            <h2 class="section-title">Türkiye Yüzyılı Maarif Modeli Matematik Rehberi</h2>
+            <p style="text-align: center; max-width: 800px; margin: -30px auto 30px auto; color: #475569; font-size: 0.95rem;">
+                Yeni müfredat, salt işlem ezberletmek yerine <b>matematiksel muhakeme, problem çözme ve modelleme</b> becerilerini merkeze almaktadır. İşte veli ve öğrencilerimizin bilmesi gereken en radikal değişiklikler:
+            </p>
+            
+            <div class="maarif-card-grid">
+                <div class="maarif-detail-card">
+                    <h3><svg viewBox="0 0 448 512"><path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"/></svg> İntegral Kaldırıldı, Limit ve Türev Derinleşti</h3>
+                    <p>Eski programda yer alan işlem odaklı <b>İntegral konusu tamamen müfredattan çıkarılmıştır</b>. Bunun yerine Limit ve Türev kavramları, fonksiyonların uç davranışlarını ve değişim oranlarını anlamlandırmak üzere çok daha kapsamlı ve derinlemesine işlenmektedir.</p>
+                </div>
+
+                <div class="maarif-detail-card" style="border-left-color: var(--accent-color);">
+                    <h3><svg viewBox="0 0 448 512"><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg> Yeni Eklenen Kritik Kavramlar</h3>
+                    <p>Türevin mantıksal altyapısını güçlendirmek adına daha önce lise müfredatında bulunmayan <b>Diferansiyel kavramı, Ortalama Değer Teoremi ve Rolle Teoremi</b> yeni 12. sınıf "Değişimin Matematiği" temasına eklenmiştir.</p>
+                </div>
+
+                <div class="maarif-detail-card" style="border-left-color: #f59e0b;">
+                    <h3><svg viewBox="0 0 512 512"><path d="M0 96C0 61.8 27.8 34 62 34h388c34.2 0 62 27.8 62 62v320c0 34.2-27.8 62-62 62H62c-34.2 0-62-27.8-62-62V96zm64 48v224h384V144H64z"/></svg> Konuların Sınıf Düzeyleri Değişti</h3>
+                    <p><b>Polinomlar</b> 10. sınıftan 12. sınıfa taşınmıştır. <b>Trigonometriye giriş</b> (birim çember, sinüs/kosinüs teoremleri) 10. sınıfa çekilmiş, 11. sınıfta ise radyan ve periyotlarla derinleşmektedir. Ayrıca dörtgenler 11'e, çember ise 12. sınıfa konumlandırılmıştır.</p>
+                </div>
+
+                <div class="maarif-detail-card" style="border-left-color: #e1306c;">
+                    <h3><svg viewBox="0 0 512 512"><path d="M448 96c0-17.7-14.3-32-32-32H96C78.3 64 64 78.3 64 96v320c0 17.7 14.3 32 32 32h320c17.7 0 32-14.3 32-32V96zM128 160h256v32H128v-32zm0 96h256v32H128v-32zm0 96h192v32H128v-32z"/></svg> Algoritma ve Veri Analizi Güçlendi</h3>
+                    <p>Yeni nesil sınavlarda sadece formül uygulamak yetersiz kalmaktadır. Müfredata güçlü bir şekilde entegre edilen <b>Algoritma ve Bilişim temaları</b> ile öğrencilerin istatistiksel araştırma süreçlerini yönetmesi ve veriye dayalı karar verme alan becerilerini kazanması hedeflenmektedir.</p>
                 </div>
             </div>
         </div>
@@ -1172,8 +1255,8 @@
                 <h4>Hızlı Yönlendirme</h4>
                 <ul>
                     <li><a href="#anasayfa">👉 Anasayfa</a></li>
-                    <li><a href="#avantajlar">👉 Neden Biz?</a></li>
                     <li><a href="#calismasaatleri">👉 Çalışma Saatleri</a></li>
+                    <li><a href="#maarif-rehberi">👉 Müfredat Rehberi</a></li>
                     <li><a href="#programlar">👉 Sınav Kulvarları</a></li>
                 </ul>
             </div>
@@ -1181,7 +1264,7 @@
             <div class="footer-contact">
                 <h4>Doğrudan İletişim</h4>
                 <p><svg viewBox="0 0 512 512"><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40 c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 264.3 144 193.3L184 153c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg> <a href="tel:5392361836">0539 236 18 36</a></p>
-                <p><svg viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-117zm-157 341.6c-33.2 0-65.7-8.9-93.8-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 89.3-184.4 184.6-184.4 46.1 0 89.4 18 122 50.3 32.6 32.3 50.6 75.3 50.6 121.4 0 101.8-89.3 184.4-184.7 184.4zm103.6-141.2c-5.7-2.8-33.7-16.6-39-18.5-5.3-2-9.2-2.9-13.1 2.9-3.9 5.7-15 18.5-18.4 22.4-3.4 3.9-6.8 4.4-12.5 1.6-5.7-2.8-24.3-9-46.3-28.7-17.1-15.3-28.7-34.2-32-40-3.4-5.7-.4-8.8 2.5-11.6 2.6-2.5 5.7-6.1 8.6-9.2 2.8-3.1 3.8-5.3 5.7-8.9 1.9-3.6 1 order-32-40-3.4-5.7-.4-8.8 2.5-11.6 2.6-2.5 5.7-6.1 8.6-9.2 2.8-3.1 3.8-5.3 5.7-8.9 1.9-3.6 1-6.7-.5-9.5-1.5-2.9-13.1-31.5-18-43.3-4.7-11.5-9.6-9.9-13.1-10.1-3.4-.2-7.3-.2-11.2-.2s-10.2 1.5-15.5 5.7c-5.3 4.2-20.3 19.8-20.3 48.3s14.6 56 16.6 58.7c2 2.8 28.7 43.8 69.6 61.6 9.7 4.2 17.3 6.7 23.2 8.6 9.8 3.1 18.7 2.7 25.8 1.6 7.9-1.1 33.7-13.8 38.4-27.1 4.7-13.4 4.7-24.9 3.3-27.3-1.5-2.4-5.4-3.8-11-6.6z"/></svg> <a href="https://wa.me/905392361836" target="_blank">WhatsApp Destek</a></p>
+                <p><svg viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-117zm-157 341.6c-33.2 0-65.7-8.9-93.8-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 89.3-184.4 184.6-184.4 46.1 0 89.4 18 122 50.3 32.6 32.3 50.6 75.3 50.6 121.4 0 101.8-89.3 184.4-184.7 184.4zm103.6-141.2c-5.7-2.8-33.7-16.6-39-18.5-5.3-2-9.2-2.9-13.1 2.9-3.9 5.7-15 18.5-18.4 22.4-3.4 3.9-6.8 4.4-12.5 1.6-5.7-2.8-24.3-9-46.3-28.7-17.1-15.3-28.7-34.2-32-40-3.4-5.7-.4-8.8 2.5-11.6 2.6-2.5 5.7-6.1 8.6-9.2 2.8-3.1 3.8-5.3 5.7-8.9 1.9-3.6 1-6.7-.5-9.5-1.5-2.9-13.1-31.5-18-43.3-4.7-11.5-9.6-9.9-13.1-10.1-3.4-.2-7.3-.2-11.2-.2s-10.2 1.5-15.5 5.7c-5.3 4.2-20.3 19.8-20.3 48.3s14.6 56 16.6 58.7c2 2.8 28.7 43.8 69.6 61.6 9.7 4.2 17.3 6.7 23.2 8.6 9.8 3.1 18.7 2.7 25.8 1.6 7.9-1.1 33.7-13.8 38.4-27.1 4.7-13.4 4.7-24.9 3.3-27.3-1.5-2.4-5.4-3.8-11-6.6z"/></svg> <a href="https://wa.me/905392361836" target="_blank">WhatsApp Destek</a></p>
                 <p><svg viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM402.4 377.3c-7.8 19.6-22.9 34.7-42.6 42.5-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.5-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.5 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.5 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg> <a href="https://instagram.com/yunusemre.nakis" target="_blank">@yunusemre.nakis</a></p>
                 <p><svg viewBox="0 0 384 512"><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg> Muş Merkez / Türkiye</p>
             </div>
@@ -1192,7 +1275,7 @@
         </div>
     </footer>
 
-    <!-- Canlı Geri Sayım Motoru -->
+    <!-- Yeni Sezon Canlı Geri Sayım Motoru -->
     <script>
         function updateCounters() {
             var now = new Date().getTime();
